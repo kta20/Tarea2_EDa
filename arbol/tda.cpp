@@ -91,22 +91,24 @@ public:
 int main() {
     ArbolTernario arbol;
 
-    arbol.setRaiz(0, "Comida");
-    arbol.insertar(0, 1, "Frutas");
-    arbol.insertar(0, 2, "Verduras");
-    arbol.insertar(0, 3, "Postres");
+    arbol.setRaiz(0, "Lugares");
+    arbol.insertar(0, 1, "Playa");
+    arbol.insertar(0, 2, "Bosque");
+    arbol.insertar(0, 3, "Montaña");
 
-    arbol.insertar(1, 4, "Manzana");
-    arbol.insertar(1, 5, "Plátano");
-    arbol.insertar(1, 6, "Uva");
+    arbol.insertar(1, 4, "Olas");
+    arbol.insertar(1, 5, "Corales");
+    arbol.insertar(1, 6, "Rocas");
 
-    arbol.insertar(2, 7, "Zanahoria");
-    arbol.insertar(2, 8, "Lechuga");
-    arbol.insertar(2, 9, "Tomate");
+    arbol.insertar(2, 7, "Pantano");
+    arbol.insertar(2, 8, "Selva");
+    arbol.insertar(2, 9, "Cueva");
 
-    arbol.insertar(3, 10, "Helado");
-    arbol.insertar(3, 11, "Pastel");
-    arbol.insertar(3, 12, "Flan");
+
+    arbol.insertar(3, 10, "Montañas nevadas");
+    arbol.insertar(3, 11, "Glaciares");
+    arbol.insertar(3, 12, "Río helado");
+
 
     cout << "Árbol Ternario:\n";
     arbol.imprimir();
