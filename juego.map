@@ -2,33 +2,33 @@ INICIO DE ARCHIVO
 HABITACIONES
 19
 0 ESTACION:Puente Cal y Canto (INICIO)
-DESCRIPCION:Te adentras en Cal y Canto...
-1 Linea 2 (COMBATE)
-DESCRIPCION 
+Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estación Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si están vivas. Te lanzas resuelto en su búsqueda teniendo en cuenta que su hogar era próximo a la estación Ñuñoa.  
+1 Línea 2 (COMBATE)
+Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.
 2 Santa Ana (EVENTO)
-Caminas por el sendero, cuando se te acerca un grupo de sospechosos! 
+Encuentras una oficina de seguridad abierta con recursos en su interior. 
 3 Plaza de Armas (COMBATE)
-A la orilla de la laguna encuentras una gema... 
+Ves una fogata entre la oscuridad de un andén, te acercas y te embiste algo. 
 4 Baquedano (COMBATE)
-Subes la colina y te encuentras en una batalla! 
+Contemplas uno de los cuadros decorativos de la estación, de repente escuchas gruñidos y sonidos metálicos. 
 5 Irarrazabal (EVENTO)
-Caminando por la llanura, cansado de tus viajes, notas algo extraño... 
+Logras salir brevemente a las afueras del metro observando un panorama desolador...
 6 Ñuñoa (FIN)
-Te encuentras en un pantano. El fango se pega a tus pies, y te da tanto asco que mueres :
+Finalmente hayas a tu familia, están vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
 7 Plaza Egaña (FIN)
-Encuentras una apertura diminuta y oscura. Cualquier persona razonable se mantendría alejada, pero has visto muchos tiktok de exploración de cavernas. Te quedas atascado, y despues de una semana te mueres por abstinencia de redes sociales. 
+Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. Mueres a causa de un gas toxico que se filtraba a la estación desde el exterior. 
 8 Ñuble(FIN)
-Se te olvida que no eres un pez y te adentras al fondo de la laguna. Te encuentras a un pez que se le olvido que no es una persona. Sale al exterior y te reemplaza en la selección chilena. Quedas en el olvido, mientras un pez gana el mundial.
+Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  
 9 Tobalaba (FIN)
-La playa está tan comoda que te acuestas de chill. Te quedas dormido, y despiertas ayer. *Vuelves al nodo ante-anterior!* (Este es un ejemplo del requisito especial 3)
+Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás a los peligros que te asechan sin poder defenderte. 
 10 Bellas artes (FIN)
-Caminas en subida hasta alcanzar las nubes. Estas mirando el atardecer cuando recuerdas que dejaste el horno prendido! Aún peor, notas que lo que pensabas que era el sol era realmente tu casa a lo lejos...  
-11 Cuming (FIN)
-¿Que es una tundra? Mueres.
+Ves la estación destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  
+11 Cumming (FIN)
+Sientes la tierra moverse bruscamente. La tierra se abre y te traga. 
 12 Patronato (FIN)
-Te recoge una nave alienígena. Te preguntan tu nombre y por mera casualidad es una palabra que hace cortocircuito en su cerebro! Salvaste a la humanidad :D 
+La estación esta llena de supervivientes en pánico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
 13 Linea 3 (COMBATE)
-Te quedas dormido y sueñas con una tarea de estructuras de datos donde tienes que hacer un juego. Llegas a la parte de escribir la historia y no se te ocurre mejor final que uno en el que el jugador se queda dormido y sueña con una tarea de estructuras de datos donde tienes que hacer un juego. Llegas a la parte de escribir la historia... 
+Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
 14 Irarrazabal (EVENTO)
 DESCRIPCION
 15 Plaza de Armas (EVENTO)
