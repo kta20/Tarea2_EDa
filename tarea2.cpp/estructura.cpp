@@ -43,6 +43,19 @@ public:
     }
 };
 
+void mostrarArbol(estacion* nodo, int n) {
+    if (nodo == nullptr) return;
+
+    for (int i = 0; i < n; ++i) {
+        cout << "   ";
+    }
+    cout << nodo->nombre << endl;
+
+    mostrarArbol(nodo->n1, n + 1);
+    mostrarArbol(nodo->n2, n + 1);
+    mostrarArbol(nodo->n3, n + 1);
+}
+
 int main() {
 const int cant = 19;
 estacion** nodos = new estacion*[cant];
@@ -50,7 +63,7 @@ for (int i = 0; i < cant; ++i) {
     nodos[i] = nullptr;
 } 
 
-    // Crear habitaciones (nodos)
+    // Crear nodos
     nodos[0] = new estacion(0, "Puente Cal y Canto", "descripcion", "INICIO");
     nodos[1] = new estacion(1, "Linea 2", "descripcion", "COMBATE");
     nodos[2]  = new estacion(2, "Santa Ana", "..", "EVENTO");
@@ -76,7 +89,7 @@ for (int i = 0; i < cant; ++i) {
     arbolTernario arbol;
     arbol.asignarRaiz(nodos[0]);
 
-    // Conexiones actualizadas
+    // Conexiones entre nodos
     arbol.insertarNodo(nodos[0], nodos[1]);
     arbol.insertarNodo(nodos[0], nodos[13]);
     arbol.insertarNodo(nodos[1], nodos[2]);
@@ -97,7 +110,9 @@ for (int i = 0; i < cant; ++i) {
     arbol.insertarNodo(nodos[17], nodos[18]);
     arbol.insertarNodo(nodos[16], nodos[18]);
 
-    cout << "Árbol cargado con 19 estaciones." << endl;
+
+    mostrarArbol(arbol.obtenRaiz(), 0);
 
     return 0;
 }
+
