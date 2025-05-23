@@ -15,7 +15,7 @@ struct estacion {
 
     estacion(int id, string nombre, string descripcion, string tipo)
         : id(id), nombre(nombre), descripcion(descripcion), tipo(tipo),
-        n1(nullptr), n2(nullptr), n3(nullptr) {}
+        n1(NULL), n2(NULL), n3(NULL) {}
 };
 
 class arbolTernario {
@@ -23,7 +23,7 @@ private:
     estacion* raiz;
 
 public:
-    arbolTernario() : raiz(nullptr) {}
+    arbolTernario() : raiz(NULL) {}
 
     void asignarRaiz(estacion* nodo) {
         raiz = nodo;
@@ -43,25 +43,27 @@ public:
     }
 };
 
-void mostrarArbol(estacion* nodo, int n) {
-    if (nodo == nullptr) return;
+void arbolPreOrden(estacion* nodo, int n) {
+    if (nodo == NULL) return;
 
     for (int i = 0; i < n; ++i) {
-        cout << "   ";
+        cout << "  ";
     }
     cout << nodo->nombre << endl;
 
-    mostrarArbol(nodo->n1, n + 1);
-    mostrarArbol(nodo->n2, n + 1);
-    mostrarArbol(nodo->n3, n + 1);
+    arbolPreOrden(nodo->n1, n + 1);
+    arbolPreOrden(nodo->n2, n + 1);
+    arbolPreOrden(nodo->n3, n + 1);
 }
 
 int main() {
+
 const int cant = 19;
 estacion** nodos = new estacion*[cant];
 for (int i = 0; i < cant; ++i) {
-    nodos[i] = nullptr;
+    nodos[i] = NULL;
 } 
+
 
     // Crear nodos
     nodos[0] = new estacion(0, "Puente Cal y Canto", "descripcion", "INICIO");
@@ -111,7 +113,10 @@ for (int i = 0; i < cant; ++i) {
     arbol.insertarNodo(nodos[16], nodos[18]);
 
 
-    mostrarArbol(arbol.obtenRaiz(), 0);
+    arbolPreOrden(arbol.obtenRaiz(), 0);
+
+
+
 
     return 0;
 }
