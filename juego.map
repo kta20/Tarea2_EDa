@@ -17,7 +17,7 @@ Logras salir brevemente a las afueras del metro observando un panorama desolador
 Finalmente hayas a tu familia, están vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
 7 Plaza Egaña (FIN)
 Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. Mueres a causa de un gas toxico que se filtraba a la estación desde el exterior. 
-8 Ñuble(FIN)
+8 Ñuble (FIN)
 Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  
 9 Tobalaba (FIN)
 Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás a los peligros que te asechan sin poder defenderte. 
@@ -62,7 +62,7 @@ Araña Gigante | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.2
 Saqueador | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.4
 Mutante | Vida 30 | Ataque 100 | Precision 0.001 | Probabilidad 0.1
 EVENTOS
-3
+4
 &
 Tesoro
 Probabilidad 0.3
