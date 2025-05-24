@@ -66,25 +66,23 @@ for (int i = 0; i < cant; ++i) {
 
 
     // Crear nodos
-    nodos[0] = new estacion(0, "Puente Cal y Canto", "descripcion", "INICIO");
-    nodos[1] = new estacion(1, "Linea 2", "descripcion", "COMBATE");
-    nodos[2]  = new estacion(2, "Santa Ana", "..", "EVENTO");
-    nodos[3] = new estacion(3, "Plaza de Armas", "..", "COMBATE");
-    nodos[4] = new estacion(4, "Baquedano", "..", "COMBATE");
-    nodos[5] = new estacion(5, "Irarrazabal", "..", "EVENTO");
-    nodos[6] = new estacion(6, "Ñuñoa", "..", "FIN");
-    nodos[7] = new estacion(7, "Plaza Egaña", "..", "FIN");
-    nodos[8] = new estacion(8, "Ñuble", "..", "FIN");
-    nodos[9] = new estacion(9, "Tobalaba", "..", "FIN");
-    nodos[10] = new estacion(10, "Bellas Artes", "..", "FIN");
-    nodos[11] = new estacion(11, "Cuming", "..", "FIN");
-    nodos[12] = new estacion(12, "Patronato", "..", "FIN");
-    nodos[13] = new estacion(13, "Linea 3", "..", "COMBATE");
-    nodos[14] = new estacion(14, "Irarrazabal","..", "EVENTO");
-    nodos[15] = new estacion(15, "Plaza de Armas","..", "EVENTO");
-    nodos[16] = new estacion(16, "Pajaritos","..","COMBATE");
-    nodos[17] = new estacion(17, "Estacion Central","..","COMBATE");
-    nodos[18] = new estacion(18, "Baquedano","..","EVENTO");
+    nodos[0] = new estacion(0, "Puente Cal y Canto", "Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estación Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si están vivas. Te lanzas resuelto en su búsqueda teniendo en cuenta que su hogar era próximo a la estación Ñuñoa.", "INICIO");
+    nodos[1] = new estacion(1, "Linea 2", "Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.", "COMBATE");
+    nodos[2]  = new estacion(2, "Santa Ana", "Encuentras una oficina de seguridad abierta con recursos en su interior. ", "EVENTO");
+    nodos[3] = new estacion(3, "Plaza de Armas", "Ves una fogata entre la oscuridad de un andén, te acercas y te embiste algo. ", "COMBATE");
+    nodos[4] = new estacion(4, "Baquedano", "Contemplas uno de los cuadros decorativos de la estación, de repente escuchas gruñidos y sonidos metálicos. ", "COMBATE");
+    nodos[5] = new estacion(5, "Irarrazabal", "Logras salir brevemente a las afueras del metro observando un panorama desolador...", "EVENTO");
+    nodos[6] = new estacion(6, "Ñuñoa", "Finalmente hayas a tu familia, están vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. ", "FIN");
+    nodos[7] = new estacion(7, "Plaza Egaña", "Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. Mueres a causa de un gas toxico que se filtraba a la estación desde el exterior. ", "FIN");
+    nodos[8] = new estacion(8, "Ñuble", "Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  ", "FIN");
+    nodos[9] = new estacion(9, "Tobalaba", "Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás a los peligros que te asechan sin poder defenderte. ", "FIN");
+    nodos[10] = new estacion(10, "Bellas Artes", "Ves la estación destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  ", "FIN");
+    nodos[11] = new estacion(11, "Cuming", "Sientes la tierra moverse bruscamente. La tierra se abre y te traga. ", "FIN");
+    nodos[12] = new estacion(12, "Patronato", ".La estación esta llena de supervivientes en pánico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. ", "FIN");
+    nodos[13] = new estacion(13, "Linea 3", "Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...", "COMBATE");
+    nodos[14] = new estacion(14, "Parque Almagro","Sientes algo jadear que te asecha, giras en una esquina para sorprenderlo, esperas en guardia para atacarlo... cada vez más cerca de ti... ¡ES UN PERRO!", "EVENTO");
+    nodos[15] = new estacion(15, "Pajaritos","Te diriges a la terminal pajaritos pensando en que alguien habrá abandonado su equipaje entre tanto caos. No te equivocaste... ","COMBATE");
+    nodos[16] = new estacion(16, "Estacion Central","Ves una farmacia saqueada al interior de la estación. Te encaminas a ver si queda algo... ","COMBATE");
 
 
 
@@ -106,11 +104,11 @@ for (int i = 0; i < cant; ++i) {
     arbol.insertarNodo(nodos[5], nodos[7]);
     arbol.insertarNodo(nodos[5], nodos[8]);
     arbol.insertarNodo(nodos[13], nodos[14]);
-    arbol.insertarNodo(nodos[13], nodos[15]);
-    arbol.insertarNodo(nodos[15], nodos[16]);
-    arbol.insertarNodo(nodos[15], nodos[17]);
-    arbol.insertarNodo(nodos[17], nodos[18]);
-    arbol.insertarNodo(nodos[16], nodos[18]);
+    arbol.insertarNodo(nodos[13], nodos[5]);
+    arbol.insertarNodo(nodos[14], nodos[16]);
+    arbol.insertarNodo(nodos[14], nodos[15]);
+    arbol.insertarNodo(nodos[15], nodos[4]);
+    arbol.insertarNodo(nodos[16], nodos[4]);
 
 
     arbolPreOrden(arbol.obtenRaiz(), 0);
