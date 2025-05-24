@@ -29,12 +29,12 @@ Sientes la tierra moverse bruscamente. La tierra se abre y te traga.
 La estación esta llena de supervivientes en pánico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
 13 Linea 3 (COMBATE)
 Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
-14 Parque Alamgro (EVENTO)
-DESCRIPCION
+14 Parque Almagro (EVENTO)
+Sientes algo jadear que te asecha, giras en una esquina para sorprenderlo, esperas en guardia para atacarlo... cada vez más cerca de ti... !ES UN PERRO¡
 15 Pajaritos (EVENTO)
-DESCRIPCION
+Te diriges a la terminal pajaritos pensando en que alguien habrá abandonado su equipaje entre tanto caos. No te equivocaste... 
 16 Estación Central (COMBATE)
-DESCRIPCION
+Ves una farmacia saqueada al interior de la estación. Te encaminas a ver si queda algo... 
 ARCOS
 19  
 0 -> 1 
