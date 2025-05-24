@@ -1,0 +1,101 @@
+INICIO DE ARCHIVO
+ESTACIONES
+19
+0 Puente Cal y Canto (INICIO)
+Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estación Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si están vivas. Te lanzas resuelto en su búsqueda teniendo en cuenta que su hogar era próximo a la estación Ñuñoa.  
+1 Línea 2 (COMBATE)
+Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.
+2 Santa Ana (EVENTO)
+Encuentras una oficina de seguridad abierta con recursos en su interior. 
+3 Plaza de Armas (COMBATE)
+Ves una fogata entre la oscuridad de un andén, te acercas y te embiste algo. 
+4 Baquedano (COMBATE)
+Contemplas uno de los cuadros decorativos de la estación, de repente escuchas gruñidos y sonidos metálicos. 
+5 Irarrazabal (EVENTO)
+Logras salir brevemente a las afueras del metro observando un panorama desolador...
+6 Ñuñoa (FIN)
+Finalmente hayas a tu familia, están vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
+7 Plaza Egaña (FIN)
+Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. Mueres a causa de un gas toxico que se filtraba a la estación desde el exterior. 
+8 Ñuble (FIN)
+Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  
+9 Tobalaba (FIN)
+Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás a los peligros que te asechan sin poder defenderte. 
+10 Bellas artes (FIN)
+Ves la estación destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  
+11 Cumming (FIN)
+Sientes la tierra moverse bruscamente. La tierra se abre y te traga. 
+12 Patronato (FIN)
+La estación esta llena de supervivientes en pánico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
+13 Linea 3 (COMBATE)
+Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
+14 Parque Almagro (EVENTO)
+Sientes algo jadear que te asecha, giras en una esquina para sorprenderlo, esperas en guardia para atacarlo... cada vez más cerca de ti... ¡ES UN PERRO!
+15 Pajaritos (EVENTO)
+Te diriges a la terminal pajaritos pensando en que alguien habrá abandonado su equipaje entre tanto caos. No te equivocaste... 
+16 Estación Central (COMBATE)
+Ves una farmacia saqueada al interior de la estación. Te encaminas a ver si queda algo... 
+ARCOS
+19  
+0 -> 1 
+0 -> 13 
+1 -> 2 
+1 -> 12 
+2 -> 3 
+2 -> 11 
+3 -> 4 
+3 -> 10 
+4 -> 5 
+4 -> 9 
+5 -> 6 
+5 -> 7
+5 -> 8 
+13 -> 5 
+13 -> 14 
+14 -> 15
+14 -> 16 
+15 -> 4
+16 -> 4
+ENEMIGOS 
+4
+Araña Gigante | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.2
+Saqueador | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.4
+Mutante | Vida 30 | Ataque 100 | Precision 0.001 | Probabilidad 0.1
+EVENTOS
+4
+&
+Tesoro
+Probabilidad 0.3
+Encuentras un tesoro!...
+A: Abrirlo
+Era una mímica! El terror afecta tu psique.
+-0.2 PRECISION
+B: Dejarlo
+Se ve sus, lo dejas pasar.
+Ninguna consecuencia.
+&
+Sentimiento
+Probabilidad 0.3
+Te empiezas a sentir extraño...
+A: Te acuestas en el suelo
+Te despiertas muy relajado y feliz!
++10 Vida
+B: Tratas de continuar
+Te mareas, te tropiezas, y te esguinzas la articulación metacarpofalángica!
+-5 Vida
+&
+Silueta
+Probabilidad 0.4
+Ves una silueta misteriosa a lo lejos.
+A: La tratas de dibujar.
+Logras un dibujo excelente, impresionando a todos tus amigos!
++7 Vida
+B: Lo tratas de identificar.
+Tras horas de forzar la vista logras entender que era una mancha en el cielo simplemente. Tu vista se agotó.
+-0.3 Precision
+MEJORAS DE COMBATE
++4 Vida
++0.1 Precision
++1 Ataque
++1 Recuperacion
+FIN DE ARCHIVO

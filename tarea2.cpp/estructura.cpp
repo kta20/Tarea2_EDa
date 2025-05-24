@@ -1,6 +1,10 @@
 using namespace std;
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <iostream>
+#include <fstream>
+
 
 
 
@@ -18,6 +22,38 @@ struct estacion {
         n1(NULL), n2(NULL), n3(NULL) {}
 };
 
+estacion** listaEstaciones(ifstream& archivo) {
+    string inicio, caracter,nombreEstacion; 
+    int estaciones_leidas , i;
+    for (i = 0; i < 19; ++i) {
+        if (inicio == "ESTACIONES") {
+        getline(archivo, caracter);
+        estaciones_leidas= stoi(caracter);
+        estacion** nodos = new estacion*[estaciones_leidas];
+        for (int i = 0; i < estaciones_leidas; ++i) {
+            getline(archivo, inicio);
+            getline(archivo, caracter);
+            estacion* nueva =new estacion( );
+            size_t pos = inicio.find(" ");
+            size_t pos2 = caracter.find(" ", pos + 1);
+            nombreEstacion=inicio.substr(pos + 1, pos2 - pos - 1);
+            nueva->id = i;
+            nueva->nombre = inicio;
+            nueva->descripcion = caracter;
+            nueva->n1 = NULL;
+            nueva->n2 = NULL;
+            nueva->n3 = NULL;
+            nodos[i] = nueva;
+    }
+    return nodos;
+    }
+    else {
+        cout << "No se pudo leer el archivo correctamente." << endl;
+        return NULL;
+    }
+
+
+/*
 class arbolTernario {
 private:
     estacion* raiz;
@@ -43,6 +79,7 @@ public:
     }
 };
 
+
 void arbolPreOrden(estacion* nodo, int n) {
     if (nodo == NULL) return;
 
@@ -56,8 +93,11 @@ void arbolPreOrden(estacion* nodo, int n) {
     arbolPreOrden(nodo->n3, n + 1);
 }
 
-
-
+void Combate(estacion* nodo) {
+    cout << "Has encontrado un enemigo en " << nodo->nombre << endl;
+    cout << "¡Prepárate para el combate!" << endl;
+    }
+*/
 int main() {
 
 const int cant = 19;
@@ -66,7 +106,7 @@ for (int i = 0; i < cant; ++i) {
     nodos[i] = NULL;
 } 
 
-
+/*
     // Crear nodos
     nodos[0] = new estacion(0, "Puente Cal y Canto", "Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estación Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si están vivas. Te lanzas resuelto en su búsqueda teniendo en cuenta que su hogar era próximo a la estación Ñuñoa.", "INICIO");
     nodos[1] = new estacion(1, "Linea 2", "Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.", "COMBATE");
@@ -116,13 +156,13 @@ for (int i = 0; i < cant; ++i) {
 
     arbolPreOrden(arbol.obtenRaiz(), 0);
 
-    /*/BONUS
+    /BONUS
     arbol.insertarNodo(nodos[13], nodos[5]);
     arbol.insertarNodo(nodos[15], nodos[4]);
     arbol.insertarNodo(nodos[16], nodos[4]);*/
 // Ya tienes tus nodos creados previamente...
 
-// Declaramos el puntero "actual" e inicializamos con la raíz
+/* Declaramos el puntero "actual" e inicializamos con la raíz
 estacion* actual = nodos[0];
 
 int opcion; 
@@ -172,10 +212,10 @@ do {
         break;
     }
 
-} while (true);
+} while (true);*/
 
-
-
+ifstream listaEstaciones("juego.txt");
+cout << "********************************" << endl;
 
     return 0;
 }
