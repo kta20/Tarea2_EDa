@@ -56,6 +56,8 @@ void arbolPreOrden(estacion* nodo, int n) {
     arbolPreOrden(nodo->n3, n + 1);
 }
 
+
+
 int main() {
 
 const int cant = 19;
@@ -107,11 +109,70 @@ for (int i = 0; i < cant; ++i) {
     arbol.insertarNodo(nodos[13], nodos[5]);
     arbol.insertarNodo(nodos[14], nodos[16]);
     arbol.insertarNodo(nodos[14], nodos[15]);
-    arbol.insertarNodo(nodos[15], nodos[4]);
-    arbol.insertarNodo(nodos[16], nodos[4]);
+
+
+
 
 
     arbolPreOrden(arbol.obtenRaiz(), 0);
+
+    /*/BONUS
+    arbol.insertarNodo(nodos[13], nodos[5]);
+    arbol.insertarNodo(nodos[15], nodos[4]);
+    arbol.insertarNodo(nodos[16], nodos[4]);*/
+// Ya tienes tus nodos creados previamente...
+
+// Declaramos el puntero "actual" e inicializamos con la raíz
+estacion* actual = nodos[0];
+
+int opcion; 
+
+do {
+
+    cout << "********************************" << endl;
+    cout << "Estás en: " << actual->nombre << endl;
+    cout << actual->descripcion << endl;
+    cout << "********************************" << endl;
+
+    // Mostrar opciones de avance
+    if (actual->n1) cout << "1. Ir a " << actual->n1->nombre << endl;
+    if (actual->n2) cout << "2. Ir a " << actual->n2->nombre << endl;
+    if (actual->n3) cout << "3. Ir a " << actual->n3->nombre << endl;
+
+    // Obtener decisión
+    cout << "Elige tu opción: ";
+    cin >> opcion;
+
+    switch (opcion) {
+        case 1:
+            if (actual->n1) actual = actual->n1;
+            else { cout << "Fin del juego :c" << endl;
+            return 0; }
+            break;
+        case 2:
+            if (actual->n2) actual = actual->n2;
+            else { cout << "Fin del juego :c" << endl;
+            return 0; }
+            break;
+        case 3:
+            if (actual->n3) actual = actual->n3;
+            else { cout << "Fin del juego :c" << endl; 
+            return 0; }
+            break;
+        default:
+            cout << "Fin del juego :c" << endl;
+            return 0;
+    }
+
+    if (actual->tipo == "FIN") {
+        cout << "********************************" << endl;
+        cout << "Has llegado a un final: " << actual->nombre << endl;
+        cout << actual->descripcion << endl;
+        cout << "********************************" << endl;
+        break;
+    }
+
+} while (true);
 
 
 
