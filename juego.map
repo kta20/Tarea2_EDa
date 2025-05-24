@@ -60,10 +60,9 @@ ARCOS
 
 ENEMIGOS 
 4
-Pim | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.2
-Pomplin | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.4
-Tomp | Vida 30 | Ataque 100 | Precision 0.001 | Probabilidad 0.1
-Momplin | Vida 1 | Ataque 5 | Precision 1 | Probabilidad 0.3
+Araña Gigante | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.2
+Saqueador | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.4
+Mutante | Vida 30 | Ataque 100 | Precision 0.001 | Probabilidad 0.1
 EVENTOS
 3
 &
