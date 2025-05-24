@@ -22,35 +22,6 @@ struct estacion {
         n1(NULL), n2(NULL), n3(NULL) {}
 };
 
-estacion** listaEstaciones(ifstream& archivo) {
-    string inicio, caracter,nombreEstacion; 
-    int estaciones_leidas , i;
-    for (i = 0; i < 19; ++i) {
-        if (inicio == "ESTACIONES") {
-        getline(archivo, caracter);
-        estaciones_leidas= stoi(caracter);
-        estacion** nodos = new estacion*[estaciones_leidas];
-        for (int i = 0; i < estaciones_leidas; ++i) {
-            getline(archivo, inicio);
-            getline(archivo, caracter);
-            estacion* nueva =new estacion( );
-            size_t pos = inicio.find(" ");
-            size_t pos2 = caracter.find(" ", pos + 1);
-            nombreEstacion=inicio.substr(pos + 1, pos2 - pos - 1);
-            nueva->id = i;
-            nueva->nombre = inicio;
-            nueva->descripcion = caracter;
-            nueva->n1 = NULL;
-            nueva->n2 = NULL;
-            nueva->n3 = NULL;
-            nodos[i] = nueva;
-    }
-    return nodos;
-    }
-    else {
-        cout << "No se pudo leer el archivo correctamente." << endl;
-        return NULL;
-    }
 
 
 /*

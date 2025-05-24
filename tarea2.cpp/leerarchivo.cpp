@@ -60,12 +60,6 @@ int main() {
 }*/
 
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-
-using namespace std;
 
 struct estacion {
     int id;
@@ -78,8 +72,15 @@ struct estacion {
 
     estacion(int id, string nombre, string descripcion, string tipo)
         : id(id), nombre(nombre), descripcion(descripcion), tipo(tipo),
-        n1(nullptr), n2(nullptr), n3(nullptr) {}
+        n1(nullptr), n2(nullptr), n3(nullptr) 
+    
+
+    {
+        // Constructor para inicializar los atributos de la estación
+    }
+
 };
+// Función para leer las estaciones desde el archivo
 
 estacion** listaEstaciones(ifstream& archivo) {
     string inicio;
@@ -95,6 +96,11 @@ estacion** listaEstaciones(ifstream& archivo) {
                 if (!getline(archivo, inicio)) {
                     break;
                 }
+                if (inicio.find("ARCOS|19") == 0) {
+                    break;
+                }
+                estacion* actual = new estacion(    0, "", "", "");
+
 
                 size_t pos1 = inicio.find('|');
                 size_t pos2 = inicio.find('|', pos1 + 1);
@@ -106,18 +112,19 @@ estacion** listaEstaciones(ifstream& archivo) {
                 string tipo = inicio.substr(pos2 + 1, pos3 - pos2 - 1);
                 string descripcion = inicio.substr(pos3 + 1);
 
-                nodos[i] = new estacion(id, nombre, descripcion, tipo);
+                actual -> id = id;
+                actual -> nombre = nombre;
+                actual -> descripcion = descripcion;
+                actual -> tipo = tipo;
+                actual -> n1 = NULL;
+                actual -> n2 = NULL;
+                actual -> n3 = NULL;
+                nodos[i] = actual;
             }
-
-            cout << "ID primera estación: " << nodos[0]->id << endl;
-            cout << "Nombre primera estación: " << nodos[0]->nombre << endl;
-            cout << "Descripción primera estación: " << nodos[0]->descripcion << endl;
-            cout << "Tipo primera estación: " << nodos[0]->tipo << endl;
-
             return nodos;
         }
     }
-    return nullptr;
+    return NULL;
 }
 
 
