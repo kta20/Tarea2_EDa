@@ -48,6 +48,5 @@ Ruidos|Probabilidad 0.3|Escuchas pasos detras de ti...|A: Correr|Te tropiezas y 
 MEJORAS DE COMBATE
 5|0.1|3|3
 BONUS|1
-&
 Viaje al pasado|7|RETORNO|Despiertas confundido en Cal y Canto sin recordar nada de tu travesia
 FIN DE ARCHIVO
