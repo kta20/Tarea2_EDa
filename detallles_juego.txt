@@ -1,0 +1,17 @@
+HABITACIONES: 
+id|nombre estacion|tipo habitacion|descripcion
+
+ARCOS:
+inicio|llegada
+
+ENEMIGOS:
+enemigo|vida,ataque|precision|probabilidad
+
+EVENTOS:
+evento|probabilidad|contar evento|mostrar A|descripcion consecuencia de A|efecto A|mostrar B|descripcion consecuencia B|efecto B
+
+MEJORAS DE COMBATE:
+vida|precision|ataque|recuperacion
+
+BONUS
+nombre de especial|id origen|accion|descripcion post retorno
