@@ -6,7 +6,7 @@ Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a
 1 Línea 2 (COMBATE)
 Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.
 2 Santa Ana (EVENTO)
-Encuentras una oficina de seguridad abierta con recursos en su interior. 
+Encuentras una oficina de seguridad abierta, vas a investigar... 
 3 Plaza de Armas (COMBATE)
 Ves una fogata entre la oscuridad de un andén, te acercas y te embiste algo. 
 4 Baquedano (COMBATE)
@@ -20,7 +20,7 @@ Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. 
 8 Ñuble (FIN)
 Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  
 9 Tobalaba (FIN)
-Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás a los peligros que te asechan sin poder defenderte. 
+Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás frente a los peligros que te asechan sin poder defenderte. 
 10 Bellas artes (FIN)
 Ves la estación destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  
 11 Cumming (FIN)
@@ -30,11 +30,11 @@ La estación esta llena de supervivientes en pánico y desquiciados. Estas en me
 13 Linea 3 (COMBATE)
 Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
 14 Parque Almagro (EVENTO)
-Sientes algo jadear que te asecha, giras en una esquina para sorprenderlo, esperas en guardia para atacarlo... cada vez más cerca de ti... ¡ES UN PERRO!
-15 Pajaritos (EVENTO)
-Te diriges a la terminal pajaritos pensando en que alguien habrá abandonado su equipaje entre tanto caos. No te equivocaste... 
-16 Estación Central (COMBATE)
+Divagas caminando pensando si vale la pena buscar a tu familia o preocuparte por seguir sobreviviendo...
+15 Pajaritos (COMBATE)
 Ves una farmacia saqueada al interior de la estación. Te encaminas a ver si queda algo... 
+16 Estación Central (EVENTO)
+Te diriges a revisar el andén pensando en que alguien habrá abandonado su equipaje entre tanto caos...
 ARCOS
 19  
 0 -> 1 
@@ -58,44 +58,44 @@ ARCOS
 16 -> 4
 ENEMIGOS 
 4
-Araña Gigante | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.2
-Saqueador | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.4
+Araña Gigante | Vida 10 | Ataque 2 | Precision 0.8 | Probabilidad 0.3
+Saqueador | Vida 12 | Ataque 7 | Precision 0.3 | Probabilidad 0.6
 Mutante | Vida 30 | Ataque 100 | Precision 0.001 | Probabilidad 0.1
 EVENTOS
 4
 &
-Tesoro
-Probabilidad 0.3
-Encuentras un tesoro!...
-A: Abrirlo
-Era una mímica! El terror afecta tu psique.
--0.2 PRECISION
-B: Dejarlo
-Se ve sus, lo dejas pasar.
-Ninguna consecuencia.
-&
-Sentimiento
-Probabilidad 0.3
-Te empiezas a sentir extraño...
-A: Te acuestas en el suelo
-Te despiertas muy relajado y feliz!
-+10 Vida
-B: Tratas de continuar
-Te mareas, te tropiezas, y te esguinzas la articulación metacarpofalángica!
--5 Vida
-&
-Silueta
+Botellas
 Probabilidad 0.4
-Ves una silueta misteriosa a lo lejos.
-A: La tratas de dibujar.
-Logras un dibujo excelente, impresionando a todos tus amigos!
-+7 Vida
-B: Lo tratas de identificar.
-Tras horas de forzar la vista logras entender que era una mancha en el cielo simplemente. Tu vista se agotó.
--0.3 Precision
+Ves dos botellas. Una roja y otra verde chillón
+A: Beber de la botella roja
+Es jugo de frutilla
++15 Vida
+B: Beber de la botella verde chillón
+Es agua contaminada con algo desconocido. Te intoxicas
+-10 Vida
+&
+Refugio
+Probabilidad 0.3
+Encuentras un refugio abandonado con suministros
+A: Tomar kit médico
+Te curas y recuperas vida
++20 Vida
+B: Tomar un arma
+Agarras una pistola y la guardas
++7 Ataque
+&
+Ruidos
+Probabilidad 0.3
+Escuchas pasos detras de ti...
+A: Correr
+Te tropiezas y quedando en el piso adolorido
+-7 Vida
+B: Esconderte
+Logras estar a salvo por el momento
+Ninguna consecuencia
 MEJORAS DE COMBATE
-+4 Vida
++5 Vida
 +0.1 Precision
-+1 Ataque
-+1 Recuperacion
++3 Ataque
++3 Recuperacion
 FIN DE ARCHIVO
