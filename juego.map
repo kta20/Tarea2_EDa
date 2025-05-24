@@ -2,39 +2,39 @@ INICIO DE ARCHIVO
 HABITACIONES
 19
 0 Puente Cal y Canto (INICIO)
-Eres un superviviente de una explosión nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estación Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si están vivas. Te lanzas resuelto en su búsqueda teniendo en cuenta que su hogar era próximo a la estación Ñuñoa.  
-1 Línea 2 (COMBATE)
-Transitas por la boletería para acceder a las vías del metro, cuando visualizas a lo lejos un tumulto acercándote.
+Eres un superviviente de una explosion nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estacion Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si estan vivas. Te lanzas resuelto en su busqueda teniendo en cuenta que su hogar era proximo a la estacion Ñuñoa.  
+1 Linea 2 (COMBATE)
+Transitas por la boleteria para acceder a las vias del metro, cuando visualizas a lo lejos un tumulto acercandote.
 2 Santa Ana (EVENTO)
 Encuentras una oficina de seguridad abierta, vas a investigar... 
 3 Plaza de Armas (COMBATE)
-Ves una fogata entre la oscuridad de un andén, te acercas y te embiste algo. 
+Ves una fogata entre la oscuridad de un anden, te acercas y te embiste algo. 
 4 Baquedano (COMBATE)
-Contemplas uno de los cuadros decorativos de la estación, de repente escuchas gruñidos y sonidos metálicos. 
+Contemplas uno de los cuadros decorativos de la estacion, de repente escuchas gruñidos y sonidos metalicos. 
 5 Irarrazabal (EVENTO)
 Logras salir brevemente a las afueras del metro observando un panorama desolador...
 6 Ñuñoa (FIN)
-Finalmente hayas a tu familia, están vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
-7 Plaza Egaña (FIN)
-Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas. Mueres a causa de un gas toxico que se filtraba a la estación desde el exterior. 
+Finalmente hayas a tu familia, estan vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
+7 Plaza Egaña (ESPECIAL)
+Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas... 
 8 Ñuble (FIN)
 Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres.  
 9 Tobalaba (FIN)
-Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Morirás frente a los peligros que te asechan sin poder defenderte. 
+Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Moriras frente a los peligros que te asechan sin poder defenderte. 
 10 Bellas artes (FIN)
-Ves la estación destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  
+Ves la estacion destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber...  
 11 Cumming (FIN)
 Sientes la tierra moverse bruscamente. La tierra se abre y te traga. 
 12 Patronato (FIN)
-La estación esta llena de supervivientes en pánico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
+La estacion esta llena de supervivientes en panico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
 13 Linea 3 (COMBATE)
-Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentáculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
+Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentaculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
 14 Parque Almagro (EVENTO)
 Divagas caminando pensando si vale la pena buscar a tu familia o preocuparte por seguir sobreviviendo...
 15 Pajaritos (COMBATE)
-Ves una farmacia saqueada al interior de la estación. Te encaminas a ver si queda algo... 
-16 Estación Central (EVENTO)
-Te diriges a revisar el andén pensando en que alguien habrá abandonado su equipaje entre tanto caos...
+Ves una farmacia saqueada al interior de la estacion. Te encaminas a ver si queda algo... 
+16 Estacion Central (EVENTO)
+Te diriges a revisar el anden pensando en que alguien habra abandonado su equipaje entre tanto caos...
 ARCOS
 19  
 0 -> 1 
@@ -66,18 +66,18 @@ EVENTOS
 &
 Botellas
 Probabilidad 0.4
-Ves dos botellas. Una roja y otra verde chillón
+Ves dos botellas. Una roja y otra verde chillon
 A: Beber de la botella roja
 Es jugo de frutilla
 +15 Vida
-B: Beber de la botella verde chillón
+B: Beber de la botella verde chillon
 Es agua contaminada con algo desconocido. Te intoxicas
 -10 Vida
 &
 Refugio
 Probabilidad 0.3
 Encuentras un refugio abandonado con suministros
-A: Tomar kit médico
+A: Tomar kit medico
 Te curas y recuperas vida
 +20 Vida
 B: Tomar un arma
@@ -98,4 +98,11 @@ MEJORAS DE COMBATE
 +0.1 Precision
 +3 Ataque
 +3 Recuperacion
+BONUS
+1
+&
+Viaje al pasado
+Nodo: 7
+A: RETORNO
+Despiertas confundido en Cal y Canto sin recordar nada de tu travesia
 FIN DE ARCHIVO
