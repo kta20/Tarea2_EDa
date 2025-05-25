@@ -7,60 +7,6 @@ using namespace std;
 
 
 
-/*
-struct estacion {
-    int id;
-    string nombre;
-    string descripcion;
-    string tipo; 
-    estacion* n1;
-    estacion* n2;
-    estacion* n3;
-
-    estacion(int id, string nombre, string descripcion, string tipo)
-        : id(id), nombre(nombre), descripcion(descripcion), tipo(tipo),
-        n1(NULL), n2(NULL), n3(NULL) {
-};
-    }
-estacion** listaEstaciones(ifstream& archivo) {
-    string inicio, caracter,nombreEstacion; 
-    int total_estaciones , i;
-    while (getline(archivo, inicio)) {
-        if (inicio.find("HABITACIONES|") == 0) {
-            size_t pos = inicio.find('|');
-            total_estaciones = stoi(inicio.substr(pos + 1));
-            cout << "Total de estaciones: " << total_estaciones << endl;
-
-
-        }
-            }
-
-    }
-            
-
-
-
-
-
-using namespace std;
-
-int main() {
-    fstream archivo("juego.txt");  // abrir archivo
-
-    if (!archivo.is_open()) {
-        cout << "Error al abrir el archivo." << endl;
-        return 1;  // termina el programa con error
-    }
-
-    // Aquí puedes continuar con la lectura y procesamiento del archivo
-
-    archivo.close();  // cerrar archivo al final
-
-    return 0;  // todo bien
-}*/
-
-
-
 struct estacion {
     int id;
     string nombre;
@@ -76,11 +22,10 @@ struct estacion {
     
 
     {
-        // Constructor para inicializar los atributos de la estación
+
     }
 
 };
-// Función para leer las estaciones desde el archivo
 
 estacion** listaEstaciones(ifstream& archivo) {
     string inicio;
@@ -129,6 +74,35 @@ estacion** listaEstaciones(ifstream& archivo) {
 
 
 
+
+void leerArcos(ifstream& archivo, estacion** nodos) {
+    string inicio;
+    while (getline(archivo, inicio)) {
+        if (inicio.find("ARCOS|19") == 0) {
+            size_t pos = inicio.find('|');
+            int total_arcos = stoi(inicio.substr(pos + 1));
+
+            for (int i = 0; i < total_arcos; ++i) {
+                if (!getline(archivo, inicio)) {
+                    break;
+                }
+                size_t pos1 = inicio.find('|');
+                if (pos1 == string::npos) {
+                    cout << "Error en línea de arco: " << inicio << endl;
+                    continue;
+                }
+
+                int id1 = stoi(inicio.substr(0, pos1));
+                int id2 = stoi(inicio.substr(pos1 + 1));
+                nodos[id1]->n1 = nodos[id2];  
+
+                cout << "Conectando " << nodos[id1]->nombre << " con " << nodos[id2]->nombre << endl;
+
+            }
+        }
+    }
+}
+
 int main() {
     ifstream archivo("juego.txt");  // abrir archivo en modo lectura
 
@@ -138,6 +112,8 @@ int main() {
     }
 
     estacion** estaciones = listaEstaciones(archivo);
+    leerArcos(archivo, estaciones);
+
 
     if (estaciones == nullptr) {
         cout << "No se encontró la sección HABITACIONES|" << endl;
