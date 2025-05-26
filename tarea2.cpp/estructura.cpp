@@ -20,6 +20,16 @@ struct estacion {
     estacion(int id, string nombre, string descripcion, string tipo)
         : id(id), nombre(nombre), descripcion(descripcion), tipo(tipo),
         n1(NULL), n2(NULL), n3(NULL) {}
+        
+    //         estacion(int id, string nombre, string descripcion, string tipo){
+    //     id = -1;
+    //     nombre = _nombre;
+    //     descripcion = _descripcion;
+    //     tipo = _tipo ;
+    //     n1 = NULL;
+    //     n2 = NULL;
+    //     n3 = NULL;
+    // }
 };
 
 
