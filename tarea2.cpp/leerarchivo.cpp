@@ -87,17 +87,9 @@ void leerArcos(ifstream& archivo, estacion** nodos) {
                     break;
                 }
                 size_t pos1 = inicio.find('|');
-                if (pos1 == string::npos) {
-                    cout << "Error en línea de arco: " << inicio << endl;
-                    continue;
-                }
-
                 int id1 = stoi(inicio.substr(0, pos1));
                 int id2 = stoi(inicio.substr(pos1 + 1));
                 nodos[id1]->n1 = nodos[id2];  
-
-                cout << "Conectando " << nodos[id1]->nombre << " con " << nodos[id2]->nombre << endl;
-
             }
         }
     }
