@@ -115,3 +115,33 @@ int main() {
 
     return 0;
 }
+
+estacion** leerEnemigos(ifstream& archivo) {
+    string inicio;
+    int total_enemigos=0;
+    float vida, ataque, descripcion;
+        while (getline(archivo, inicio)) {
+        if (inicio.find("ENEMIGOS|") == 0) {
+            size_t pos = inicio.find('|');
+            total_enemigos = stoi(inicio.substr(pos + 1));
+            estacion** nodos = new estacion*[total_enemigos];
+            for (int i = 0; i < total_enemigos; ++i) {
+                if (!getline(archivo, inicio)) {
+                    break;
+            estacion* actual = new estacion("",0,0,0,0);
+            size_t pos1 = inicio.find('|');
+                size_t pos2 = inicio.find('|', pos1 + 1);
+                size_t pos3 = inicio.find('|', pos2 + 1);
+                size_t pos4 = inicio.find('|', pos3 +1);
+
+            string enemigo = (inicio.substr(0, pos1));
+            float vida=stoi(inicio.substr(pos1 + 1));
+            float ataque= stoi(inicio.substr(pos2 + 1));
+            float precision = stoi(inicio.substr(pos3 + 1));
+            float probabilidad= stoi(inicio.substr(pos4 + 1));
+
+        }
+    }
+}
+        }
+    };

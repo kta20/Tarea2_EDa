@@ -5,7 +5,7 @@ ARCOS:
 inicio|llegada
 
 ENEMIGOS:
-enemigo|vida,ataque|precision|probabilidad
+enemigo|vida|ataque|precision|probabilidad
 
 EVENTOS:
 evento|probabilidad|contar evento|mostrar A|descripcion consecuencia de A|efecto A|mostrar B|descripcion consecuencia B|efecto B
