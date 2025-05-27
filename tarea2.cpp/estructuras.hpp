@@ -1,3 +1,6 @@
+#ifndef ESTRUCTURAS_HPP
+#define ESTRUCTURAS_HPP
+
 #include <string>
 using namespace std;
 
@@ -56,3 +59,5 @@ struct cola_enemigo{
   enemigo* dato;
   cola_enemigo* sig;
 };
+
+#endif
