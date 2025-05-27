@@ -4,6 +4,7 @@ using namespace std;
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include "estructuras.hpp"
 
 
 
@@ -116,33 +117,33 @@ int main() {
     return 0;
 }
 
-estacion** leerEnemigos(ifstream& archivo) {
+enemigo** leerEnemigos(ifstream& archivo) {
     string inicio;
-    int total_enemigos=0;
-    float vida, ataque, descripcion;
-        while (getline(archivo, inicio)) {
+    int total_enemigos = 0;
+    while (getline(archivo, inicio)) {
         if (inicio.find("ENEMIGOS|") == 0) {
             size_t pos = inicio.find('|');
             total_enemigos = stoi(inicio.substr(pos + 1));
-            estacion** nodos = new estacion*[total_enemigos];
+            enemigo** enemigos = new enemigo*[total_enemigos];
             for (int i = 0; i < total_enemigos; ++i) {
                 if (!getline(archivo, inicio)) {
                     break;
-            size_t pos1 = inicio.find('|');
-            size_t pos2 = inicio.find('|', pos1 + 1);
-            size_t pos3 = inicio.find('|', pos2 + 1);
-            size_t pos4 = inicio.find('|', pos3 + 1);
+                }
+                size_t pos1 = inicio.find('|');
+                size_t pos2 = inicio.find('|', pos1 + 1);
+                size_t pos3 = inicio.find('|', pos2 + 1);
+                size_t pos4 = inicio.find('|', pos3 + 1);
 
-            string enemigo = inicio.substr(0, pos1);
-            float vida = stoi(inicio.substr(pos1 + 1, pos2 - pos1 - 1));
-            float ataque = stoi(inicio.substr(pos2 + 1, pos3 - pos2 - 1));
-            float precision = stoi(inicio.substr(pos3 + 1, pos4 - pos3 - 1));
-            float probabilidad = stoi(inicio.substr(pos4 + 1));
+                string nombre = inicio.substr(0, pos1);
+                int vida = stoi(inicio.substr(pos1 + 1, pos2 - pos1 - 1));
+                int ataque = stoi(inicio.substr(pos2 + 1, pos3 - pos2 - 1));
+                float precision = stof(inicio.substr(pos3 + 1, pos4 - pos3 - 1));
+                float prob_spawn = stof(inicio.substr(pos4 + 1));
 
-            estacion* actual = new estacion(0, enemigo, "", "");
-
+                enemigos[i] = new enemigo{nombre, vida, ataque, precision, prob_spawn};
+            }
+            return enemigos;
         }
     }
+    return nullptr;
 }
-        }
-    };
