@@ -165,6 +165,35 @@ evento** leerEventos(ifstream& archivo, int& total_eventos) {
     total_eventos = 0;
     return nullptr;
 }
+mejora** leerMejoras(ifstream& archivo, int& total_mejoras) {
+    string linea;
+    while (getline(archivo, linea)) {
+        if (linea.find("MEJORAS DE COMBATE") == 0) {
+            size_t pos = linea.find('|');
+            total_mejoras = stoi(linea.substr(pos + 1));
+            mejora** mejoras = new mejora*[total_mejoras];
+
+            for (int i = 0; i < total_mejoras; ++i) {
+                if (!getline(archivo, linea)) break;
+
+                size_t p1 = linea.find('|');
+                size_t p2 = linea.find('|', p1 + 1);
+                size_t p3 = linea.find('|', p2 + 1);
+                size_t p4 = linea.find('|', p3 + 1);
+
+                int vida = stoi(linea.substr(0, p1));
+                float precision = stof(linea.substr(p1 + 1, p2 - p1 - 1));
+                int ataque = stoi(linea.substr(p2 + 1, p3 - p2 - 1));
+                int recuperacion = stoi(linea.substr(p3 + 1, p4 - p3 - 1));
+
+                mejoras[i] = new mejora{vida, precision, ataque, recuperacion};
+            }
+            return mejoras;
+        }
+    }
+    total_mejoras = 0;
+    return nullptr;
+}
 
 int main() {
     ifstream archivo("juego.txt");  // abrir archivo en modo lectura
