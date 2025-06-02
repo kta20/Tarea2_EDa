@@ -19,7 +19,7 @@ struct enemigo {
   int vida;
   int ataque;
   float precision;
-  float prob_spawn;
+  float prob_esq;
 };
 
 struct evento {

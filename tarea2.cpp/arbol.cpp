@@ -1,4 +1,5 @@
 #include "arbol.hpp"
+#include <set>
 
 ArbolTernario::ArbolTernario() : raiz(NULL) {}
 
@@ -60,14 +61,15 @@ void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
     recorrer_preorden(nodo->n3, nivel + 1);
 }
 
+// Liberar árbol evitando doble free
+// Liberar árbol (no control de doble free, asume estructura de árbol puro)
 void ArbolTernario::liberar_arbol(estacion* nodo) {
-    if (nodo == NULL) return;
-    liberar_arbol(nodo->n1); // si un nodo no tiene hijos llama  liberar_arbol 3 veces y luego se borra
+    if (nodo == nullptr) return;
+    liberar_arbol(nodo->n1);
     liberar_arbol(nodo->n2);
     liberar_arbol(nodo->n3);
     delete nodo;
 }
-
 // busca cualquier habitacion a partir de su id
 estacion* ArbolTernario::buscar_estacion(estacion* nodo, int id) {
     if (nodo == NULL) return NULL;
@@ -78,3 +80,4 @@ estacion* ArbolTernario::buscar_estacion(estacion* nodo, int id) {
     if (nodo_hijo) return nodo_hijo;
     return buscar_estacion(nodo->n3, id);
 }
+
