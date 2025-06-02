@@ -23,6 +23,9 @@ int main() {
 
     jugador player = {30, 7, 0.7, 5};
 
+    // Asigna un evento global aleatorio
+    // habitaciones[id]->evento_asociado = eventos_globales[idx];
+
     // Recorrido principal del juego
     while (actual != NULL && player.vida > 0) {
         cout << "\nEstás en: " << actual->nombre << endl;

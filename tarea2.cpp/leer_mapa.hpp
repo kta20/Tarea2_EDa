@@ -2,6 +2,7 @@
 #define LEER_MAPA_HPP
 
 #include "arbol.hpp"
+#include "estructuras.hpp"
 #include <string>
 using namespace std;
 
@@ -16,5 +17,9 @@ public:
     // Devuelve la raíz del árbol (habitaciones[0])
     estacion* obtener_raiz(estacion** habitaciones);
 };
+
+// Declaraciones de funciones auxiliares:
+enemigo** leer_enemigos_globales(string filename, int& total_enemigos);
+evento** leer_eventos_globales(string filename, int& total_eventos);
 
 #endif
