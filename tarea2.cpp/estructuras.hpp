@@ -27,7 +27,7 @@ struct evento {
   float prob_ev;
   string desc_ev;
   string opcionA;
-  string consecA; //muestra consecuencia de A
+  string consecA;
   string efectoA;
   string opcionB;
   string consecB;

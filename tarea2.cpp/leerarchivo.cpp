@@ -96,27 +96,6 @@ void leerArcos(ifstream& archivo, estacion** nodos) {
     }
 }
 
-int main() {
-    ifstream archivo("juego.txt");  // abrir archivo en modo lectura
-
-    if (!archivo.is_open()) {
-        cout << "Error al abrir el archivo." << endl;
-        return 1;  // termina el programa con error
-    }
-
-    estacion** estaciones = listaEstaciones(archivo);
-    leerArcos(archivo, estaciones);
-
-
-    if (estaciones == nullptr) {
-        cout << "No se encontró la sección HABITACIONES|" << endl;
-    }
-
-    archivo.close();
-
-    return 0;
-}
-
 enemigo** leerEnemigos(ifstream& archivo) {
     string inicio;
     int total_enemigos = 0;
@@ -146,4 +125,64 @@ enemigo** leerEnemigos(ifstream& archivo) {
         }
     }
     return nullptr;
+}
+
+evento** leerEventos(ifstream& archivo, int& total_eventos) {
+    string linea;
+    while (getline(archivo, linea)) {
+        if (linea.find("EVENTOS|") == 0) {
+            size_t pos = linea.find('|');
+            total_eventos = stoi(linea.substr(pos + 1));
+            evento** eventos = new evento*[total_eventos];
+
+            for (int i = 0; i < total_eventos; ++i) {
+                if (!getline(archivo, linea)) break;
+                
+                size_t p1 = linea.find('|');
+                size_t p2 = linea.find('|', p1 + 1);
+                size_t p3 = linea.find('|', p2 + 1);
+                size_t p4 = linea.find('|', p3 + 1);
+                size_t p5 = linea.find('|', p4 + 1);
+                size_t p6 = linea.find('|', p5 + 1);
+                size_t p7 = linea.find('|', p6 + 1);
+                size_t p8 = linea.find('|', p7 + 1);
+
+                string nombre = linea.substr(0, p1);
+                float prob_ev = stof(linea.substr(p1 + 1, p2 - p1 - 1));
+                string desc_ev = linea.substr(p2 + 1, p3 - p2 - 1);
+                string opcionA = linea.substr(p3 + 1, p4 - p3 - 1);
+                string consecA = linea.substr(p4 + 1, p5 - p4 - 1);
+                string efectoA = linea.substr(p5 + 1, p6 - p5 - 1);
+                string opcionB = linea.substr(p6 + 1, p7 - p6 - 1);
+                string consecB = linea.substr(p7 + 1, p8 - p7 - 1);
+                string efectoB = linea.substr(p8 + 1);
+
+                eventos[i] = new evento{nombre,prob_ev,desc_ev,opcionA,consecA,efectoA,opcionB,consecB,efectoB};
+            }
+            return eventos;
+        }
+    }
+    total_eventos = 0;
+    return nullptr;
+}
+
+int main() {
+    ifstream archivo("juego.txt");  // abrir archivo en modo lectura
+
+    if (!archivo.is_open()) {
+        cout << "Error al abrir el archivo." << endl;
+        return 1;  // termina el programa con error
+    }
+
+    estacion** estaciones = listaEstaciones(archivo);
+    leerArcos(archivo, estaciones);
+
+
+    if (estaciones == nullptr) {
+        cout << "No se encontró la sección HABITACIONES|" << endl;
+    }
+
+    archivo.close();
+
+    return 0;
 }
