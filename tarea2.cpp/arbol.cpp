@@ -1,10 +1,13 @@
 #include "arbol.hpp"
 #include <set>
+#include <iostream>
+using namespace std;
 
 ArbolTernario::ArbolTernario() : raiz(NULL) {}
 
 ArbolTernario::~ArbolTernario() {
-    liberar_arbol(raiz);
+    std::set<estacion*> visitados;
+    liberar_arbol(raiz, visitados);
 }
 
 void ArbolTernario::set_raiz(estacion* r) {
@@ -22,6 +25,7 @@ void ArbolTernario::mostrar_preorden() {
 estacion* ArbolTernario::buscar(int id) {
     return buscar_estacion(raiz, id);
 }
+
 // crea una nueva estacion con sus datos correspondientes y retorna un puntero a la estacion creada
 estacion* ArbolTernario::crear_estacion(int id, string nombre, string tipo, string descripcion) {
     estacion* nueva = new estacion;
@@ -61,15 +65,26 @@ void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
     recorrer_preorden(nodo->n3, nivel + 1);
 }
 
-// Liberar árbol evitando doble free
-// Liberar árbol (no control de doble free, asume estructura de árbol puro)
-void ArbolTernario::liberar_arbol(estacion* nodo) {
+// --- CORREGIDO: Liberar árbol evitando doble free ---
+void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados) {
     if (nodo == nullptr) return;
-    liberar_arbol(nodo->n1);
-    liberar_arbol(nodo->n2);
-    liberar_arbol(nodo->n3);
+    if (visitados.count(nodo)) return; // Ya fue liberado
+    visitados.insert(nodo);
+    liberar_arbol(nodo->n1, visitados);
+    liberar_arbol(nodo->n2, visitados);
+    liberar_arbol(nodo->n3, visitados);
     delete nodo;
 }
+
+// Sobrecarga para compatibilidad con llamadas de un solo argumento
+void ArbolTernario::liberar_arbol(estacion* nodo) {
+    std::set<estacion*> visitados;
+    liberar_arbol(nodo, visitados);
+}
+
+// --- Si necesitas compatibilidad con la firma anterior, puedes dejar esto vacío ---
+// Eliminada para evitar ambigüedad y errores de compilación.
+
 // busca cualquier habitacion a partir de su id
 estacion* ArbolTernario::buscar_estacion(estacion* nodo, int id) {
     if (nodo == NULL) return NULL;
