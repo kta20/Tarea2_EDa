@@ -11,7 +11,7 @@ struct estacion {
   string descripcion;
   estacion* n1; // puntero a nodos hijos
   estacion* n2;
-  estacion* n3;
+  estacion* n3; 
 };
 
 struct enemigo {
