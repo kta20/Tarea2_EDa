@@ -4,6 +4,11 @@
 #include <string>
 using namespace std;
 
+
+// Declaraciones adelantadas
+struct enemigo;
+struct evento;
+
 struct estacion {
   int id;
   string nombre;
@@ -11,7 +16,10 @@ struct estacion {
   string descripcion;
   estacion* n1; // puntero a nodos hijos
   estacion* n2;
-  estacion* n3; 
+  estacion* n3;
+  enemigo** enemigos;         // NUEVO: arreglo de punteros a enemigos
+  int cantidad_enemigos;      // NUEVO: cantidad de enemigos en la habitación
+  evento* evento_asociado; // NUEVO: puntero al evento de la estación (si es EVENTO)
 };
 
 struct enemigo {
@@ -19,19 +27,23 @@ struct enemigo {
   int vida;
   int ataque;
   float precision;
-  float prob_esq;
+  float prob_spawn;
+};
+
+struct opcion_evento {
+    string descripcion;
+    int cambio_vida;
+    int cambio_ataque;
+    float cambio_precision;
+    int cambio_recuperacion;
 };
 
 struct evento {
-  string nombre;
-  float prob_ev;
-  string desc_ev;
-  string opcionA;
-  string consecA;
-  string efectoA;
-  string opcionB;
-  string consecB;
-  string efectoB;
+    string nombre;
+    string descripcion;
+    float probabilidad;
+    opcion_evento* opciones;
+    int cantidad_opciones;
 };
 
 struct jugador{

@@ -6,6 +6,9 @@
 #include <iostream>
 using namespace std;
 
+// Definición real de la variable global
+evento** eventos_globales = NULL;
+
 int main() {
     int total_habitaciones = 0;
     int total_eventos = 0;
@@ -17,10 +20,6 @@ int main() {
     lector.leer_y_conectar_arcos("juego.map", habitaciones, total_habitaciones, arbol);
     estacion* actual = lector.obtener_raiz(habitaciones);
     arbol.set_raiz(actual);
-
-    // IMPORTANTE: Debes obtener eventos_globales y total_eventos desde leer_habitaciones o leer_eventos_globales
-    // Supón que los tienes accesibles aquí:
-    extern evento** eventos_globales;
 
     jugador player = {30, 7, 0.7, 5};
 
