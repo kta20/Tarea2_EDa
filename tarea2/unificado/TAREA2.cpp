@@ -21,15 +21,14 @@ enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
             enemigos = new enemigo*[total_enemigos];
             for (int i = 0; i < total_enemigos; ++i) {
                 getline(archivo, linea);
-                int p1 = linea.find('|');
-                int p2 = linea.find('|', p1 + 1);
-                int p3 = linea.find('|', p2 + 1);
-                int p4 = linea.find('|', p3 + 1);
-                string nombre = linea.substr(0, p1);
-                int vida = stoi(linea.substr(p1 + 1, p2 - p1 - 1));
-                int ataque = stoi(linea.substr(p2 + 1, p3 - p2 - 1));
-                float precision = stof(linea.substr(p3 + 1, p4 - p3 - 1));
-                float prob_spawn = stof(linea.substr(p4 + 1));
+                string partes[5];
+                int n_partes = 0;
+                split(linea, '|', partes, 5, n_partes);
+                string nombre = partes[0];
+                int vida = stoi(partes[1]);
+                int ataque = stoi(partes[2]);
+                float precision = stof(partes[3]);
+                float prob_spawn = stof(partes[4]);
                 enemigos[i] = new enemigo{nombre, vida, ataque, precision, prob_spawn};
             }
             break;
@@ -52,20 +51,10 @@ evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
             int evento_al_lei = 0;
             while (evento_al_lei < total_eventos && getline(archivo, linea)) {
                 if (linea.empty() || linea == "&") continue;
-
-                // Parsear la línea del evento SIN vector
                 string partes[9];
-                int partes_al_lei = 0;
-                size_t start = 0, end;
-                while ((end = linea.find('|', start)) != string::npos && partes_al_lei < 8) {
-                    partes[partes_al_lei++] = linea.substr(start, end - start);
-                    start = end + 1;
-                }
-                partes[partes_al_lei] = linea.substr(start); // última parte
-
-                // Rellenar vacíos si faltan partes
-                for (int i = partes_al_lei + 1; i < 9; ++i) partes[i] = "";
-
+                int n_partes = 0;
+                split(linea, '|', partes, 9, n_partes);
+                for (int i = n_partes; i < 9; ++i) partes[i] = "";
                 evento* ev = new evento;
                 ev->nombre = partes[0];
                 // Probabilidad
@@ -148,27 +137,26 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
             for (int i = 0; i < total_habitaciones; ++i) {
                 if (!getline(archivo, linea)) {
                     cout << "ERROR: No se pudo leer la línea de la habitación " << i << endl;
-                    habitaciones[i] = NULL; // <- Marca como nulo para evitar acceso posterior
+                    habitaciones[i] = NULL;
                     continue;
                 }
-                int pos1 = linea.find('|');
-                int pos2 = linea.find('|', pos1 + 1);
-                int pos3 = linea.find('|', pos2 + 1);
-                if (pos1 == -1 || pos2 == -1 || pos3 == -1) {
+                string partes[4];
+                int n_partes = 0;
+                split(linea, '|', partes, 4, n_partes);
+                if (n_partes < 4) {
                     cout << "ERROR: Formato incorrecto en línea de habitación: " << linea << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
-                string id_str = linea.substr(0, pos1);
-                int id = stoi(id_str);
+                int id = stoi(partes[0]);
                 if (id < 0 || id >= total_habitaciones) {
                     cout << "ERROR: id fuera de rango: " << id << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
-                string nombre = linea.substr(pos1 + 1, pos2 - pos1 - 1);
-                string tipo = linea.substr(pos2 + 1, pos3 - pos2 - 1);
-                string descripcion = linea.substr(pos3 + 1);
+                string nombre = partes[1];
+                string tipo = partes[2];
+                string descripcion = partes[3];
                 habitaciones[id] = arbol.crear_estacion(id, nombre, tipo, descripcion);
 
                 // EVENTOS
@@ -196,8 +184,18 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 }
 
                 // COMBATE
-                if (tipo.find("COMBATE") != string::npos && enemigos_globales && total_enemigos > 0) {
-                    int cant = 1 + rand() % 2;
+                // Forzar combate en estaciones específicas
+                bool forzar_combate = (
+                    nombre == "Linea 2" ||
+                    nombre == "Linea 3" ||
+                    nombre == "Plaza de Armas" ||
+                    nombre == "Baquedano" ||
+                    nombre == "Pajaritos"
+                );
+
+                if ((tipo.find("COMBATE") != string::npos && enemigos_globales && total_enemigos > 0) || forzar_combate) {
+                    // Cantidad aleatoria entre 1 y 3 si es forzado, o 1-2 si no
+                    int cant = forzar_combate ? (1 + rand() % 3) : (1 + rand() % 2);
                     habitaciones[id]->cantidad_enemigos = cant;
                     habitaciones[id]->enemigos = new enemigo*[cant];
                     for (int j = 0; j < cant; ++j) {
@@ -253,11 +251,11 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
             int total_arcos = stoi(arcos_str);
             for (int i = 0; i < total_arcos; ++i) {
                 getline(archivo, linea);
-                int pos_sep = linea.find('|');
-                string origen_str = linea.substr(0, pos_sep);
-                string destino_str = linea.substr(pos_sep + 1);
-                int id_origen = stoi(origen_str);
-                int id_destino = stoi(destino_str);
+                string partes[2];
+                int n_partes = 0;
+                split(linea, '|', partes, 2, n_partes);
+                int id_origen = stoi(partes[0]);
+                int id_destino = stoi(partes[1]);
                 arbol.agregar_hijo(habitaciones[id_origen], habitaciones[id_destino]);
             }
             break;
@@ -429,24 +427,22 @@ void guardar_arbol(estacion* raiz, ofstream& out) {
 }
 
 
-// Carga un árbol desde un archivo
+// carga un arbol (recibe un archivo y la estructura de un arbol donde almacenara los nodos/estaciones)
 estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     string linea;
     if (!getline(in, linea)) return NULL;
-    if (linea == "#") return NULL;
 
-    // Datos básicos
-    int p1 = linea.find('|');
-    int p2 = linea.find('|', p1 + 1);
-    int p3 = linea.find('|', p2 + 1);
-    int id = stoi(linea.substr(0, p1));
-    string nombre = linea.substr(p1 + 1, p2 - p1 - 1);
-    string tipo = linea.substr(p2 + 1, p3 - p2 - 1);
-    string descripcion = linea.substr(p3 + 1);
-
+    // extrae info de cada estacion/nodo (id, nombre, tipo y descripcion)
+    string partes[4];
+    int n_partes = 0;
+    split(linea, '|', partes, 4, n_partes);
+    int id = stoi(partes[0]);
+    string nombre = partes[1];
+    string tipo = partes[2];
+    string descripcion = partes[3];
     estacion* nodo = arbol.crear_estacion(id, nombre, tipo, descripcion);
 
-    // Enemigos
+    // extrae y almacena la info de cada enemigo, segun la cantidad que se haya definido en el .map, la almacena en el campo respectivo de cada nodo
     getline(in, linea);
     int cant_enemigos = stoi(linea);
     nodo->cantidad_enemigos = cant_enemigos;
@@ -454,15 +450,14 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
         nodo->enemigos = new enemigo*[cant_enemigos];
         for (int i = 0; i < cant_enemigos; ++i) {
             getline(in, linea);
-            int q1 = linea.find('|');
-            int q2 = linea.find('|', q1 + 1);
-            int q3 = linea.find('|', q2 + 1);
-            int q4 = linea.find('|', q3 + 1);
-            string enom = linea.substr(0, q1);
-            int evida = stoi(linea.substr(q1 + 1, q2 - q1 - 1));
-            int eataque = stoi(linea.substr(q2 + 1, q3 - q2 - 1));
-            float eprecision = stof(linea.substr(q3 + 1, q4 - q3 - 1));
-            float eprob = stof(linea.substr(q4 + 1));
+            string epartes[5];
+            int en = 0;
+            split(linea, '|', epartes, 5, en);
+            string enom = epartes[0];
+            int evida = stoi(epartes[1]);
+            int eataque = stoi(epartes[2]);
+            float eprecision = stof(epartes[3]);
+            float eprob = stof(epartes[4]);
             nodo->enemigos[i] = new enemigo{enom, evida, eataque, eprecision, eprob};
         }
     } else {
@@ -472,14 +467,13 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     // Evento asociado
     getline(in, linea);
     if (linea.find("EVENTO|") == 0) {
-        int e1 = linea.find('|');
-        int e2 = linea.find('|', e1 + 1);
-        int e3 = linea.find('|', e2 + 1);
-        int e4 = linea.find('|', e3 + 1);
-        string ev_nombre = linea.substr(e1 + 1, e2 - e1 - 1);
-        string ev_desc = linea.substr(e2 + 1, e3 - e2 - 1);
-        float ev_prob = stof(linea.substr(e3 + 1, e4 - e3 - 1));
-        int ev_cant = stoi(linea.substr(e4 + 1));
+        string evpartes[5];
+        int evn = 0;
+        split(linea, '|', evpartes, 5, evn);
+        string ev_nombre = evpartes[1];
+        string ev_desc = evpartes[2];
+        float ev_prob = stof(evpartes[3]);
+        int ev_cant = stoi(evpartes[4]);
         evento* ev = new evento;
         ev->nombre = ev_nombre;
         ev->descripcion = ev_desc;
@@ -488,15 +482,14 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
         ev->opciones = new opcion_evento[ev_cant];
         for (int i = 0; i < ev_cant; ++i) {
             getline(in, linea);
-            int o1 = linea.find('|');
-            int o2 = linea.find('|', o1 + 1);
-            int o3 = linea.find('|', o2 + 1);
-            int o4 = linea.find('|', o3 + 1);
-            ev->opciones[i].descripcion = linea.substr(0, o1);
-            ev->opciones[i].cambio_vida = stoi(linea.substr(o1 + 1, o2 - o1 - 1));
-            ev->opciones[i].cambio_ataque = stoi(linea.substr(o2 + 1, o3 - o2 - 1));
-            ev->opciones[i].cambio_precision = stof(linea.substr(o3 + 1, o4 - o3 - 1));
-            ev->opciones[i].cambio_recuperacion = stoi(linea.substr(o4 + 1));
+            string opartes[5];
+            int on = 0;
+            split(linea, '|', opartes, 5, on);
+            ev->opciones[i].descripcion = opartes[0];
+            ev->opciones[i].cambio_vida = stoi(opartes[1]);
+            ev->opciones[i].cambio_ataque = stoi(opartes[2]);
+            ev->opciones[i].cambio_precision = stof(opartes[3]);
+            ev->opciones[i].cambio_recuperacion = stoi(opartes[4]);
         }
         nodo->evento_asociado = ev;
         nodo->evento_dinamico = true;
@@ -509,6 +502,16 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     nodo->n2 = cargar_arbol(in, arbol);
     nodo->n3 = cargar_arbol(in, arbol);
     return nodo;
+}
+
+void split(const string& s, char delim, string partes[], int max_partes, int& partes_encontradas) {
+    size_t start = 0, end;
+    partes_encontradas = 0;
+    while ((end = s.find(delim, start)) != string::npos && partes_encontradas < max_partes - 1) {
+        partes[partes_encontradas++] = s.substr(start, end - start);
+        start = end + 1;
+    }
+    partes[partes_encontradas++] = s.substr(start);
 }
 
 
