@@ -8,14 +8,14 @@
 #include <string>
 using namespace std;
 
-void split(const string& s, char delim, string partes[], int max_partes, int& partes_encontradas) {
-    size_t start = 0, end;
-    partes_encontradas = 0;
-    while ((end = s.find(delim, start)) != string::npos && partes_encontradas < max_partes - 1) {
-        partes[partes_encontradas++] = s.substr(start, end - start);
-        start = end + 1;
+void dividir(const string& texto, char separador, string partes[], int max_partes, int& cantidad_partes) {
+    size_t inicio = 0, fin;
+    cantidad_partes = 0;
+    while ((fin = texto.find(separador, inicio)) != string::npos && cantidad_partes < max_partes - 1) {
+        partes[cantidad_partes++] = texto.substr(inicio, fin - inicio);
+        inicio = fin + 1;
     }
-    partes[partes_encontradas++] = s.substr(start);
+    partes[cantidad_partes++] = texto.substr(inicio);
 }
 
 void liberar_enemigos(enemigo** enemigos, int total) {
@@ -77,7 +77,7 @@ enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
                 getline(archivo, linea);
                 string partes[5];
                 int n_partes = 0;
-                split(linea, '|', partes, 5, n_partes);
+                dividir(linea, '|', partes, 5, n_partes);
                 string nombre = partes[0];
                 int vida = stoi(partes[1]);
                 int ataque = stoi(partes[2]);
@@ -107,7 +107,7 @@ evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
                 if (linea.empty() || linea == "&") continue;
                 string partes[9];
                 int n_partes = 0;
-                split(linea, '|', partes, 9, n_partes);
+                dividir(linea, '|', partes, 9, n_partes);
                 for (int i = n_partes; i < 9; ++i) partes[i] = "";
                 evento* ev = new evento;
                 ev->nombre = partes[0];
@@ -196,7 +196,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 }
                 string partes[4];
                 int n_partes = 0;
-                split(linea, '|', partes, 4, n_partes);
+                dividir(linea, '|', partes, 4, n_partes);
                 if (n_partes < 4) {
                     cout << "ERROR: Formato incorrecto en línea de habitación: " << linea << endl;
                     habitaciones[i] = NULL;
@@ -300,7 +300,7 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
                 getline(archivo, linea);
                 string partes[2];
                 int n_partes = 0;
-                split(linea, '|', partes, 2, n_partes);
+                dividir(linea, '|', partes, 2, n_partes);
                 int id_origen = stoi(partes[0]);
                 int id_destino = stoi(partes[1]);
                 arbol.agregar_hijo(habitaciones[id_origen], habitaciones[id_destino]);
@@ -482,7 +482,7 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     // extrae info de cada estacion/nodo (id, nombre, tipo y descripcion)
     string partes[4];
     int n_partes = 0;
-    split(linea, '|', partes, 4, n_partes);
+    dividir(linea, '|', partes, 4, n_partes);
     int id = stoi(partes[0]);
     string nombre = partes[1];
     string tipo = partes[2];
@@ -499,7 +499,7 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
             getline(in, linea);
             string epartes[5];
             int en = 0;
-            split(linea, '|', epartes, 5, en);
+            dividir(linea, '|', epartes, 5, en);
             string enom = epartes[0];
             int evida = stoi(epartes[1]);
             int eataque = stoi(epartes[2]);
@@ -516,7 +516,7 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     if (linea.find("EVENTO|") == 0) {
         string evpartes[5];
         int evn = 0;
-        split(linea, '|', evpartes, 5, evn);
+        dividir(linea, '|', evpartes, 5, evn);
         string ev_nombre = evpartes[1];
         string ev_desc = evpartes[2];
         float ev_prob = stof(evpartes[3]);
@@ -531,7 +531,7 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
             getline(in, linea);
             string opartes[5];
             int on = 0;
-            split(linea, '|', opartes, 5, on);
+            dividir(linea, '|', opartes, 5, on);
             ev->opciones[i].descripcion = opartes[0];
             ev->opciones[i].cambio_vida = stoi(opartes[1]);
             ev->opciones[i].cambio_ataque = stoi(opartes[2]);
