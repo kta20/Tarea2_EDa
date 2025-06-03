@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <fstream>
 #include <string>
 #include "estructuras.hpp"
@@ -111,7 +111,7 @@ enemigo* leerEnemigos(ifstream& archivo, int& total_enemigos) {
                 enemigos[i].ataque = stoi(linea.substr(p1 + 1, p2 - p1 - 1));
                 enemigos[i].vida = stoi(linea.substr(p2 + 1, p3 - p2 - 1));
                 enemigos[i].precision = stof(linea.substr(p3 + 1, p4 - p3 - 1));
-                enemigos[i].prob_esq = stof(linea.substr(p4 + 1));
+                enemigos[i].prob_spawn = stof(linea.substr(p4 + 1));
             }
             break;
         }
@@ -205,4 +205,4 @@ int main() {
     }
     return 0;
 }
-
+*/

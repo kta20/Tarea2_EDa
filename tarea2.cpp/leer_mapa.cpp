@@ -215,7 +215,13 @@ void LectorMapa::leer_y_conectar_arcos(string filename, estacion** habitaciones,
     while (getline(archivo, linea)) {
         if (linea.find("ARCOS|") == 0) {
             int pos = linea.find('|');
-            int total_arcos = stoi(linea.substr(pos + 1));
+            if (pos == -1) {
+                cout << "Error: línea sin '|': " << linea << endl;
+                return;
+            }
+            string arcos_str = linea.substr(pos + 1);
+            arcos_str.erase(0, arcos_str.find_first_not_of(" \t\r\n")); // quita espacios
+            int total_arcos = stoi(arcos_str);
             for (int i = 0; i < total_arcos; ++i) {
                 getline(archivo, linea);
                 int pos_sep = linea.find('|');
