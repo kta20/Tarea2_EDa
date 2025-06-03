@@ -239,7 +239,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
 }
 
 // Lee los arcos desde el archivo y conecta las habitaciones
-void leer_y_conectar_arcos(string filename, estacion** habitaciones, int total_habitaciones, ArbolTernario& arbol) {
+void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones, ArbolTernario& arbol) {
     ifstream archivo;
     archivo.open(filename.c_str());
     if (!archivo.is_open()) {
@@ -278,9 +278,6 @@ estacion* obtener_raiz(estacion** habitaciones) {
     return habitaciones[0];
 }
 
-// =======================
-// Manejo de la cola de enemigos
-// =======================
 cola_enemigo* crear_cola_enemigos() {
     return NULL;
 }
@@ -327,42 +324,6 @@ void liberar_cola(cola_enemigo*& frente) {
     }
 }
 
-// =======================
-// Combate
-// =======================
-bool combate(jugador* player, cola_enemigo*& frente, cola_enemigo*& fin) {
-    srand(time(NULL)); // Solo para pruebas, en el juego real inicializa una vez en main
-    while (!cola_vacia(frente) && player->vida > 0) {
-        enemigo* enemigo_actual = frente->dato;
-        float prob = (float)rand() / RAND_MAX;
-        if (prob < player->precision) {
-            enemigo_actual->vida -= player->ataque;
-            cout << "¡Jugador golpea a " << enemigo_actual->nombre << " por " << player->ataque << " de daño!" << endl;
-        } else {
-            cout << "¡Jugador falla el ataque!" << endl;
-        }
-        if (enemigo_actual->vida <= 0) {
-            cout << enemigo_actual->nombre << " ha sido derrotado." << endl;
-            desencolar(frente, fin);
-            continue;
-        }
-        cola_enemigo* temp = frente;
-        while (temp != NULL) {
-            float prob_e = (float)rand() / RAND_MAX;
-            if (prob_e < temp->dato->precision) {
-                player->vida -= temp->dato->ataque;
-                cout << temp->dato->nombre << " golpea al Jugador por " << temp->dato->ataque << " de daño!" << endl;
-            } else {
-                cout << temp->dato->nombre << " falla!" << endl;
-            }
-            temp = temp->sig;
-        }
-        cout << "Jugador vida: " << player->vida << endl;
-    }
-    return player->vida > 0;
-}
-
-// Estructura para registrar golpes
 
 void push_golpe(pila_golpes& pila, const string& atacante, const string& objetivo, int fuerza, bool acierto, int vida_objetivo) {
     golpe* nuevo = new golpe{atacante, objetivo, fuerza, acierto, vida_objetivo, pila.tope};
@@ -396,7 +357,7 @@ enemigo* seleccionar_enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
 }
 
 // Combate interactivo
-bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos) {
+bool combate(jugador* player, enemigo** enemigos, int total_enemigos) {
     enemigo enemigo_actual = *seleccionar_enemigo_aleatorio(enemigos, total_enemigos);
     cout << "¡Te enfrentas a " << enemigo_actual.nombre << "!" << endl;
 
@@ -447,9 +408,9 @@ bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos
     return player->vida > 0;
 }
 
-// =======================
-// Main
-// =======================
+
+
+
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
@@ -498,7 +459,7 @@ int main() {
     }
 
     // Conecta los arcos entre habitaciones
-    leer_y_conectar_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
+    leer_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
 
     // Establece la raíz del árbol
     arbol.set_raiz(obtener_raiz(habitaciones));
@@ -521,7 +482,7 @@ int main() {
         // Combate interactivo si corresponde
         if (actual->cantidad_enemigos > 0 && actual->enemigos != NULL) {
             cout << "\n¡Comienza un combate!" << endl;
-            if (!combate_interactivo(&player, actual->enemigos, actual->cantidad_enemigos)) {
+            if (!combate(&player, actual->enemigos, actual->cantidad_enemigos)) {
                 cout << "Has sido derrotado en combate.\n";
                 break;
             }
