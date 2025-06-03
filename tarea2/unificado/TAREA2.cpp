@@ -128,15 +128,12 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
     ifstream archivo;
     archivo.open(filename.c_str());
     if (!archivo.is_open()) {
-        cout << "No se ha podido abrir el archivo\n";
         total_habitaciones = 0;
         return NULL;
     }
-
     string linea;
     estacion** habitaciones = NULL;
 
-    // Leer enemigos globales primero
     int total_enemigos = 0;
     enemigo** enemigos_globales = leer_enemigos_globales_impl(filename, total_enemigos);
     int total_eventos = 0;
@@ -222,7 +219,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                     habitaciones[id]->enemigos = NULL;
                 }
             }
-            break; // Ya leíste las habitaciones
+            break; 
         }
     }
     archivo.close();
@@ -233,7 +230,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
             delete enemigos_globales[i];
         delete[] enemigos_globales;
     }
-    // NO liberes eventos_globales aquí
 
     return habitaciones;
 }
@@ -243,16 +239,13 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
     ifstream archivo;
     archivo.open(filename.c_str());
     if (!archivo.is_open()) {
-        cout << "No se ha podido abrir el archivo para leer arcos\n";
         return;
     }
-
     string linea;
     while (getline(archivo, linea)) {
         if (linea.find("ARCOS|") == 0) {
             int pos = linea.find('|');
             if (pos == -1) {
-                cout << "Error: línea sin '|': " << linea << endl;
                 return;
             }
             string arcos_str = linea.substr(pos + 1);
@@ -267,13 +260,12 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
                 int id_destino = stoi(destino_str);
                 arbol.agregar_hijo(habitaciones[id_origen], habitaciones[id_destino]);
             }
-            break; // Ya leíste los arcos
+            break;
         }
     }
     archivo.close();
 }
 
-// Devuelve la raíz del árbol (habitaciones[0])
 estacion* obtener_raiz(estacion** habitaciones) {
     return habitaciones[0];
 }
@@ -290,7 +282,6 @@ cola_enemigo* crear_nodo_cola(enemigo* e) {
     return nuevo;
 }
 
-// Encolar un enemigo
 void encolar(cola_enemigo*& frente, cola_enemigo*& fin, enemigo* e) {
     cola_enemigo* nuevo = crear_nodo_cola(e);
     if (fin == NULL) {
@@ -301,7 +292,6 @@ void encolar(cola_enemigo*& frente, cola_enemigo*& fin, enemigo* e) {
     }
 }
 
-// Desencolar un enemigo
 enemigo* desencolar(cola_enemigo*& frente, cola_enemigo*& fin) {
     if (frente == NULL) return NULL;
     cola_enemigo* temp = frente;
