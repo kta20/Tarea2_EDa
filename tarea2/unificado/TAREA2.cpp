@@ -49,22 +49,22 @@ evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
             int pos = linea.find('|');
             total_eventos = stoi(linea.substr(pos + 1));
             eventos = new evento*[total_eventos];
-            int evento_idx = 0;
-            while (evento_idx < total_eventos && getline(archivo, linea)) {
+            int evento_al_lei = 0;
+            while (evento_al_lei < total_eventos && getline(archivo, linea)) {
                 if (linea.empty() || linea == "&") continue;
 
                 // Parsear la línea del evento SIN vector
                 string partes[9];
-                int parte_idx = 0;
+                int partes_al_lei = 0;
                 size_t start = 0, end;
-                while ((end = linea.find('|', start)) != string::npos && parte_idx < 8) {
-                    partes[parte_idx++] = linea.substr(start, end - start);
+                while ((end = linea.find('|', start)) != string::npos && partes_al_lei < 8) {
+                    partes[partes_al_lei++] = linea.substr(start, end - start);
                     start = end + 1;
                 }
-                partes[parte_idx] = linea.substr(start); // última parte
+                partes[partes_al_lei] = linea.substr(start); // última parte
 
                 // Rellenar vacíos si faltan partes
-                for (int i = parte_idx + 1; i < 9; ++i) partes[i] = "";
+                for (int i = partes_al_lei + 1; i < 9; ++i) partes[i] = "";
 
                 evento* ev = new evento;
                 ev->nombre = partes[0];
@@ -114,7 +114,7 @@ evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
                 if (partes[8].find("Recuperacion:") != string::npos)
                     ev->opciones[1].cambio_recuperacion = stoi(partes[8].substr(partes[8].find("Recuperacion:") + 13));
 
-                eventos[evento_idx++] = ev;
+                eventos[evento_al_lei++] = ev;
             }
             break;
         }
@@ -579,13 +579,17 @@ int main() {
                 do {
                     cout << "Elige opción (A/B): ";
                     cin >> opcion;
-                    opcion = toupper(opcion);
-                    opcion_valida = (opcion == 'A' || opcion == 'B');
-                    if (!opcion_valida) {
+                    if (opcion == 'A' || opcion == 'a' || opcion == 'B' || opcion == 'b') {
+                        opcion_valida = true;
+                    } else {
+                        opcion_valida = false;
                         cin.clear();
                         cin.ignore(10000, '\n');
                     }
                 } while (!opcion_valida);
+                // Convierte a mayúscula para el índice
+                if (opcion == 'a') opcion = 'A';
+                if (opcion == 'b') opcion = 'B';
                 int idx = opcion - 'A';
                 if (idx >= 0 && idx < 2) {
                     // Mostrar consecuencia textual (lo que está entre paréntesis)
@@ -629,11 +633,9 @@ int main() {
         if (actual->n3) hijos[num_hijos++] = actual->n3;
 
         if (num_hijos == 0) {
-            cout << "No hay más caminos desde aquí. Fin del recorrido.\n";
             break;
         } else if (num_hijos == 1) {
             if (hijos[0] == NULL) {
-                cout << "ERROR: La siguiente habitación es nula. Fin del juego." << endl;
                 break;
             }
             cout << "Avanzas automáticamente a: " << hijos[0]->nombre << endl;
@@ -661,9 +663,7 @@ int main() {
     }
 
     if (player.vida > 0)
-        cout << "\n¡Felicidades, has sobrevivido la aventura!\n";
-    else
-        cout << "\nHas muerto. Fin del juego.\n";
+        cout << "\nFin del juego\n";
 
     cout << "\nEstado final del jugador:\n";
     cout << "[Jugador] Vida: " << player.vida
@@ -674,7 +674,7 @@ int main() {
     // Libera el árbol de habitaciones (y sus campos)
     arbol.liberar_arbol(arbol.get_raiz());
 
-    // Libera el arreglo de habitaciones
+    // Libera solo el arreglo de punteros (NO los objetos, ya están liberados)
     if (habitaciones != NULL) {
         delete[] habitaciones;
         habitaciones = NULL;
