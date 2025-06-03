@@ -1,0 +1,52 @@
+INICIO DE ARCHIVO
+ENEMIGOS|3
+Araña Gigante|10|2|0.8|0.3
+Saqueador|12|7|0.3|0.6
+Mutante|30|100|0.001|0.1
+EVENTOS|3
+Botellas|Probabilidad 0.4|Ves dos botellas. Una roja y otra verde chillon|A: Beber de la botella roja|Es jugo de frutilla|Vida:+15|B: Beber de la botella verde chillon|Es agua contaminada con algo desconocido. Te intoxicas|Vida:-10  
+Refugio|Probabilidad 0.3|Encuentras un refugio abandonado con suministros|A: Tomar kit medico|Te curas y recuperas vida|Vida:+20|B: Tomar un arma|Agarras una pistola y la guardas|Ataque:+7
+Ruidos|Probabilidad 0.3|Escuchas pasos detras de ti...|A: Correr|Te tropiezas y quedando en el piso adolorido|Vida:-7|B: Esconderte|Logras estar a salvo por el momento|Ninguna consecuencia
+HABITACIONES|17
+0|Puente Cal y Canto|(INICIO)|Eres un superviviente de una explosion nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estacion Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si estan vivas. Te lanzas resuelto en su busqueda teniendo en cuenta que su hogar era proximo a la estacion Ñuñoa. 
+1|Linea 2|(COMBATE)|Transitas por la boleteria para acceder a las vias del metro, cuando visualizas a lo lejos un tumulto acercandote.
+2|Santa Ana|(EVENTO)|Encuentras una oficina de seguridad abierta, vas a investigar... 
+3|Plaza de Armas|(COMBATE)|Ves una fogata entre la oscuridad de un anden, te acercas y te embiste algo. 
+4|Baquedano|(COMBATE)|Contemplas uno de los cuadros decorativos de la estacion, de repente escuchas gruñidos y sonidos metalicos. 
+5|Irarrazabal|(EVENTO)|Logras salir brevemente a las afueras del metro observando un panorama desolador...
+6|Ñuñoa|(FIN)|Finalmente hayas a tu familia, estan vivas y en buen estado. Vivian en un refugio a salvo, vas con ellas al refugio. 
+7|Plaza Egaña|(ESPECIAL)|Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas... 
+8|Ñuble|(FIN)|Estas exhausto, pierdes fuerzas y ya no quieres continuar. Te rindes y mueres. 
+9|Tobalaba|(FIN)|Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Moriras frente a los peligros que te asechan sin poder defenderte. 
+10|Bellas artes|(FIN)|Ves la estacion destrozada y en medio de ella 2 botellas con algo que parece agua. Piensas en cual beber... 
+11|Cumming|(FIN)|Sientes la tierra moverse bruscamente. La tierra se abre y te traga. 
+12|Patronato|(FIN)|La estacion esta llena de supervivientes en panico y desquiciados. Estas en medio del mar tumultuoso de gente. Mueres aplastado. 
+13|Linea 3|(COMBATE)|Te encuentras con un grupo de supervivientes que quieren robar tus recursos. De repente algo entre las sombras con tentaculos los agarra y arrastra a la oscuridad. Estas en alerta y sientes algo que se acerca...
+14|Parque Almagro|(EVENTO)|Divagas caminando pensando si vale la pena buscar a tu familia o preocuparte por seguir sobreviviendo...
+15|Pajaritos|(COMBATE)|Ves una farmacia saqueada al interior de la estacion. Te encaminas a ver si queda algo... 
+16|Estacion Central|(EVENTO)|Te diriges a revisar el anden pensando en que alguien habra abandonado su equipaje entre tanto caos...
+ARCOS|19 
+0|1 
+0|13 
+1|2 
+1|12 
+2|3 
+2|11 
+3|4 
+3|10 
+4|5 
+4|9 
+5|6 
+5|7
+5|8 
+13|5 
+13|14 
+14|15
+14|16 
+15|4
+16|4
+MEJORAS DE COMBATE
+5|0.1|3|3
+BONUS|1
+Viaje al pasado|7|RETORNO|Despiertas confundido en Cal y Canto sin recordar nada de tu travesia
+FIN DE ARCHIVO
