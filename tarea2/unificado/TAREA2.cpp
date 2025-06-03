@@ -346,7 +346,7 @@ void liberar_pila(pila_golpes& pila) {
 }
 
 // Selecciona un enemigo aleatorio según probabilidad de aparición
-enemigo* seleccionar_enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
+enemigo* enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
     float r = (float)rand() / RAND_MAX;
     float suma = 0;
     for (int i = 0; i < total_enemigos; ++i) {
@@ -358,7 +358,7 @@ enemigo* seleccionar_enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
 
 // Combate interactivo
 bool combate(jugador* player, enemigo** enemigos, int total_enemigos) {
-    enemigo enemigo_actual = *seleccionar_enemigo_aleatorio(enemigos, total_enemigos);
+    enemigo enemigo_actual = *enemigo_aleatorio(enemigos, total_enemigos);
     cout << "¡Te enfrentas a " << enemigo_actual.nombre << "!" << endl;
 
     while (player->vida > 0 && enemigo_actual.vida > 0) {
@@ -406,6 +406,119 @@ bool combate(jugador* player, enemigo** enemigos, int total_enemigos) {
     cout << "\nPorcentaje de vida restante: " << porcentaje << "%" << endl;
 
     return player->vida > 0;
+}
+
+void guardar_arbol(estacion* raiz, ofstream& out) {
+    if (!raiz) {
+        out << "#\n";
+        return;
+    }
+    // Datos básicos
+    out << raiz->id << "|" << raiz->nombre << "|" << raiz->tipo << "|" << raiz->descripcion << "\n";
+    // Enemigos
+    out << raiz->cantidad_enemigos << "\n";
+    for (int i = 0; i < raiz->cantidad_enemigos; ++i) {
+        enemigo* e = raiz->enemigos[i];
+        out << e->nombre << "|" << e->vida << "|" << e->ataque << "|" << e->precision << "|" << e->prob_spawn << "\n";
+    }
+    // Evento asociado
+    if (raiz->evento_asociado) {
+        evento* ev = raiz->evento_asociado;
+        out << "EVENTO|" << ev->nombre << "|" << ev->descripcion << "|" << ev->probabilidad << "|" << ev->cantidad_opciones << "\n";
+        for (int i = 0; i < ev->cantidad_opciones; ++i) {
+            out << ev->opciones[i].descripcion << "|" << ev->opciones[i].cambio_vida << "|" << ev->opciones[i].cambio_ataque
+                << "|" << ev->opciones[i].cambio_precision << "|" << ev->opciones[i].cambio_recuperacion << "\n";
+        }
+    } else {
+        out << "NO_EVENTO\n";
+    }
+    // Recursivo para hijos
+    guardar_arbol(raiz->n1, out);
+    guardar_arbol(raiz->n2, out);
+    guardar_arbol(raiz->n3, out);
+}
+
+
+// Carga un árbol desde un archivo
+estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
+    string linea;
+    if (!getline(in, linea)) return NULL;
+    if (linea == "#") return NULL;
+
+    // Datos básicos
+    int p1 = linea.find('|');
+    int p2 = linea.find('|', p1 + 1);
+    int p3 = linea.find('|', p2 + 1);
+    int id = stoi(linea.substr(0, p1));
+    string nombre = linea.substr(p1 + 1, p2 - p1 - 1);
+    string tipo = linea.substr(p2 + 1, p3 - p2 - 1);
+    string descripcion = linea.substr(p3 + 1);
+
+    estacion* nodo = arbol.crear_estacion(id, nombre, tipo, descripcion);
+
+    // Enemigos
+    getline(in, linea);
+    int cant_enemigos = stoi(linea);
+    nodo->cantidad_enemigos = cant_enemigos;
+    if (cant_enemigos > 0) {
+        nodo->enemigos = new enemigo*[cant_enemigos];
+        for (int i = 0; i < cant_enemigos; ++i) {
+            getline(in, linea);
+            int q1 = linea.find('|');
+            int q2 = linea.find('|', q1 + 1);
+            int q3 = linea.find('|', q2 + 1);
+            int q4 = linea.find('|', q3 + 1);
+            string enom = linea.substr(0, q1);
+            int evida = stoi(linea.substr(q1 + 1, q2 - q1 - 1));
+            int eataque = stoi(linea.substr(q2 + 1, q3 - q2 - 1));
+            float eprecision = stof(linea.substr(q3 + 1, q4 - q3 - 1));
+            float eprob = stof(linea.substr(q4 + 1));
+            nodo->enemigos[i] = new enemigo{enom, evida, eataque, eprecision, eprob};
+        }
+    } else {
+        nodo->enemigos = NULL;
+    }
+
+    // Evento asociado
+    getline(in, linea);
+    if (linea.find("EVENTO|") == 0) {
+        int e1 = linea.find('|');
+        int e2 = linea.find('|', e1 + 1);
+        int e3 = linea.find('|', e2 + 1);
+        int e4 = linea.find('|', e3 + 1);
+        string ev_nombre = linea.substr(e1 + 1, e2 - e1 - 1);
+        string ev_desc = linea.substr(e2 + 1, e3 - e2 - 1);
+        float ev_prob = stof(linea.substr(e3 + 1, e4 - e3 - 1));
+        int ev_cant = stoi(linea.substr(e4 + 1));
+        evento* ev = new evento;
+        ev->nombre = ev_nombre;
+        ev->descripcion = ev_desc;
+        ev->probabilidad = ev_prob;
+        ev->cantidad_opciones = ev_cant;
+        ev->opciones = new opcion_evento[ev_cant];
+        for (int i = 0; i < ev_cant; ++i) {
+            getline(in, linea);
+            int o1 = linea.find('|');
+            int o2 = linea.find('|', o1 + 1);
+            int o3 = linea.find('|', o2 + 1);
+            int o4 = linea.find('|', o3 + 1);
+            ev->opciones[i].descripcion = linea.substr(0, o1);
+            ev->opciones[i].cambio_vida = stoi(linea.substr(o1 + 1, o2 - o1 - 1));
+            ev->opciones[i].cambio_ataque = stoi(linea.substr(o2 + 1, o3 - o2 - 1));
+            ev->opciones[i].cambio_precision = stof(linea.substr(o3 + 1, o4 - o3 - 1));
+            ev->opciones[i].cambio_recuperacion = stoi(linea.substr(o4 + 1));
+        }
+        nodo->evento_asociado = ev;
+        nodo->evento_dinamico = true;
+    } else {
+        nodo->evento_asociado = NULL;
+    }
+
+    // Recursivo para hijos
+    nodo->n1 = cargar_arbol(in, arbol);
+    nodo->n2 = cargar_arbol(in, arbol);
+    nodo->n3 = cargar_arbol(in, arbol);
+    return nodo;
 }
 
 
@@ -666,127 +779,3 @@ int main() {
 
     return 0;
 }
-
-// Función para guardar el árbol en un archivo
-void guardar_arbol(estacion* raiz, ofstream& out) {
-    if (!raiz) {
-        out << "#\n";
-        return;
-    }
-    // Datos básicos
-    out << raiz->id << "|" << raiz->nombre << "|" << raiz->tipo << "|" << raiz->descripcion << "\n";
-    // Enemigos
-    out << raiz->cantidad_enemigos << "\n";
-    for (int i = 0; i < raiz->cantidad_enemigos; ++i) {
-        enemigo* e = raiz->enemigos[i];
-        out << e->nombre << "|" << e->vida << "|" << e->ataque << "|" << e->precision << "|" << e->prob_spawn << "\n";
-    }
-    // Evento asociado
-    if (raiz->evento_asociado) {
-        evento* ev = raiz->evento_asociado;
-        out << "EVENTO|" << ev->nombre << "|" << ev->descripcion << "|" << ev->probabilidad << "|" << ev->cantidad_opciones << "\n";
-        for (int i = 0; i < ev->cantidad_opciones; ++i) {
-            out << ev->opciones[i].descripcion << "|" << ev->opciones[i].cambio_vida << "|" << ev->opciones[i].cambio_ataque
-                << "|" << ev->opciones[i].cambio_precision << "|" << ev->opciones[i].cambio_recuperacion << "\n";
-        }
-    } else {
-        out << "NO_EVENTO\n";
-    }
-    // Recursivo para hijos
-    guardar_arbol(raiz->n1, out);
-    guardar_arbol(raiz->n2, out);
-    guardar_arbol(raiz->n3, out);
-}
-
-// Uso:
-// ofstream out("arbol.save");
-// guardar_arbol(arbol.get_raiz(), out);
-// out.close();
-
-// Carga un árbol desde un archivo
-estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
-    string linea;
-    if (!getline(in, linea)) return NULL;
-    if (linea == "#") return NULL;
-
-    // Datos básicos
-    int p1 = linea.find('|');
-    int p2 = linea.find('|', p1 + 1);
-    int p3 = linea.find('|', p2 + 1);
-    int id = stoi(linea.substr(0, p1));
-    string nombre = linea.substr(p1 + 1, p2 - p1 - 1);
-    string tipo = linea.substr(p2 + 1, p3 - p2 - 1);
-    string descripcion = linea.substr(p3 + 1);
-
-    estacion* nodo = arbol.crear_estacion(id, nombre, tipo, descripcion);
-
-    // Enemigos
-    getline(in, linea);
-    int cant_enemigos = stoi(linea);
-    nodo->cantidad_enemigos = cant_enemigos;
-    if (cant_enemigos > 0) {
-        nodo->enemigos = new enemigo*[cant_enemigos];
-        for (int i = 0; i < cant_enemigos; ++i) {
-            getline(in, linea);
-            int q1 = linea.find('|');
-            int q2 = linea.find('|', q1 + 1);
-            int q3 = linea.find('|', q2 + 1);
-            int q4 = linea.find('|', q3 + 1);
-            string enom = linea.substr(0, q1);
-            int evida = stoi(linea.substr(q1 + 1, q2 - q1 - 1));
-            int eataque = stoi(linea.substr(q2 + 1, q3 - q2 - 1));
-            float eprecision = stof(linea.substr(q3 + 1, q4 - q3 - 1));
-            float eprob = stof(linea.substr(q4 + 1));
-            nodo->enemigos[i] = new enemigo{enom, evida, eataque, eprecision, eprob};
-        }
-    } else {
-        nodo->enemigos = NULL;
-    }
-
-    // Evento asociado
-    getline(in, linea);
-    if (linea.find("EVENTO|") == 0) {
-        int e1 = linea.find('|');
-        int e2 = linea.find('|', e1 + 1);
-        int e3 = linea.find('|', e2 + 1);
-        int e4 = linea.find('|', e3 + 1);
-        string ev_nombre = linea.substr(e1 + 1, e2 - e1 - 1);
-        string ev_desc = linea.substr(e2 + 1, e3 - e2 - 1);
-        float ev_prob = stof(linea.substr(e3 + 1, e4 - e3 - 1));
-        int ev_cant = stoi(linea.substr(e4 + 1));
-        evento* ev = new evento;
-        ev->nombre = ev_nombre;
-        ev->descripcion = ev_desc;
-        ev->probabilidad = ev_prob;
-        ev->cantidad_opciones = ev_cant;
-        ev->opciones = new opcion_evento[ev_cant];
-        for (int i = 0; i < ev_cant; ++i) {
-            getline(in, linea);
-            int o1 = linea.find('|');
-            int o2 = linea.find('|', o1 + 1);
-            int o3 = linea.find('|', o2 + 1);
-            int o4 = linea.find('|', o3 + 1);
-            ev->opciones[i].descripcion = linea.substr(0, o1);
-            ev->opciones[i].cambio_vida = stoi(linea.substr(o1 + 1, o2 - o1 - 1));
-            ev->opciones[i].cambio_ataque = stoi(linea.substr(o2 + 1, o3 - o2 - 1));
-            ev->opciones[i].cambio_precision = stof(linea.substr(o3 + 1, o4 - o3 - 1));
-            ev->opciones[i].cambio_recuperacion = stoi(linea.substr(o4 + 1));
-        }
-        nodo->evento_asociado = ev;
-        nodo->evento_dinamico = true;
-    } else {
-        nodo->evento_asociado = NULL;
-    }
-
-    // Recursivo para hijos
-    nodo->n1 = cargar_arbol(in, arbol);
-    nodo->n2 = cargar_arbol(in, arbol);
-    nodo->n3 = cargar_arbol(in, arbol);
-    return nodo;
-}
-
-// Uso:
-// ifstream in("arbol.save");
-// estacion* raiz = cargar_arbol(in, arbol);
-// arbol.set_raiz(raiz);
-// in.close();
