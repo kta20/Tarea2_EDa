@@ -61,9 +61,10 @@ struct estacion {
     estacion* n1;
     estacion* n2;
     estacion* n3;
-    enemigo** enemigos;
+    enemigo** enemigos; // Se libera en liberar_arbol
     int cantidad_enemigos;
-    evento* evento_asociado;
+    evento* evento_asociado; // Se libera en liberar_arbol SOLO si evento_dinamico==true
+    bool evento_dinamico;
 };
 
 struct golpe {

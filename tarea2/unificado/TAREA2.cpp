@@ -52,64 +52,68 @@ evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
             int evento_idx = 0;
             while (evento_idx < total_eventos && getline(archivo, linea)) {
                 if (linea.empty() || linea == "&") continue;
-                // Nombre del evento
-                string nombre = linea;
-                // Probabilidad
-                getline(archivo, linea);
-                float prob = 0.0;
-                if (linea.find("Probabilidad") != string::npos) {
-                    size_t p = linea.find(' ');
-                    prob = stof(linea.substr(p + 1));
-                }
-                // Descripción
-                getline(archivo, linea);
-                string descripcion = linea;
 
-                // Opciones (A: ... | B: ...)
-                opcion_evento* opciones = new opcion_evento[2]; // Máximo 2 opciones por evento
-                int cant_opciones = 0;
-                for (int i = 0; i < 2; i++) {
-                    if (!getline(archivo, linea)) break;
-                    if (linea.empty()) break;
-                    if (linea[1] == ':') {
-                        opciones[cant_opciones].descripcion = linea.substr(3); // después de "A: " o "B: "
-                        // Consecuencia
-                        getline(archivo, linea);
-                        opciones[cant_opciones].cambio_vida = 0;
-                        opciones[cant_opciones].cambio_ataque = 0;
-                        opciones[cant_opciones].cambio_precision = 0;
-                        opciones[cant_opciones].cambio_recuperacion = 0;
-                        // Busca palabras clave en la consecuencia
-                        if (linea.find("Vida") != string::npos) {
-                            size_t posv = linea.find("Vida");
-                            int valor = stoi(linea.substr(0, posv));
-                            opciones[cant_opciones].cambio_vida = valor;
-                        }
-                        if (linea.find("Precision") != string::npos) {
-                            size_t posp = linea.find("Precision");
-                            float valor = stof(linea.substr(0, posp));
-                            opciones[cant_opciones].cambio_precision = valor;
-                        }
-                        if (linea.find("Ataque") != string::npos) {
-                            size_t posa = linea.find("Ataque");
-                            int valor = stoi(linea.substr(0, posa));
-                            opciones[cant_opciones].cambio_ataque = valor;
-                        }
-                        if (linea.find("Recuperacion") != string::npos) {
-                            size_t posr = linea.find("Recuperacion");
-                            int valor = stoi(linea.substr(0, posr));
-                            opciones[cant_opciones].cambio_recuperacion = valor;
-                        }
-                        cant_opciones++;
-                    }
+                // Parsear la línea del evento SIN vector
+                string partes[9];
+                int parte_idx = 0;
+                size_t start = 0, end;
+                while ((end = linea.find('|', start)) != string::npos && parte_idx < 8) {
+                    partes[parte_idx++] = linea.substr(start, end - start);
+                    start = end + 1;
                 }
-                // Crear evento
+                partes[parte_idx] = linea.substr(start); // última parte
+
+                // Rellenar vacíos si faltan partes
+                for (int i = parte_idx + 1; i < 9; ++i) partes[i] = "";
+
                 evento* ev = new evento;
-                ev->nombre = nombre;
-                ev->descripcion = descripcion;
-                ev->probabilidad = prob;
-                ev->opciones = opciones;
-                ev->cantidad_opciones = cant_opciones;
+                ev->nombre = partes[0];
+                // Probabilidad
+                size_t pos_prob = partes[1].find(' ');
+                ev->probabilidad = (pos_prob != string::npos) ? stof(partes[1].substr(pos_prob + 1)) : 0.5;
+                ev->descripcion = partes[2];
+
+                ev->opciones = new opcion_evento[2];
+                ev->cantidad_opciones = 2;
+
+                // Opción A
+                ev->opciones[0].descripcion = (partes[3].size() > 3 ? partes[3].substr(3) : partes[3]);
+                if (!partes[4].empty())
+                    ev->opciones[0].descripcion += " (" + partes[4] + ")";
+                else
+                    ev->opciones[0].descripcion += " (Sin consecuencia)";
+                ev->opciones[0].cambio_vida = 0;
+                ev->opciones[0].cambio_ataque = 0;
+                ev->opciones[0].cambio_precision = 0;
+                ev->opciones[0].cambio_recuperacion = 0;
+                if (partes[5].find("Vida:") != string::npos)
+                    ev->opciones[0].cambio_vida = stoi(partes[5].substr(partes[5].find("Vida:") + 5));
+                if (partes[5].find("Ataque:") != string::npos)
+                    ev->opciones[0].cambio_ataque = stoi(partes[5].substr(partes[5].find("Ataque:") + 7));
+                if (partes[5].find("Precision:") != string::npos)
+                    ev->opciones[0].cambio_precision = stof(partes[5].substr(partes[5].find("Precision:") + 10));
+                if (partes[5].find("Recuperacion:") != string::npos)
+                    ev->opciones[0].cambio_recuperacion = stoi(partes[5].substr(partes[5].find("Recuperacion:") + 13));
+
+                // Opción B
+                ev->opciones[1].descripcion = (partes[6].size() > 3 ? partes[6].substr(3) : partes[6]);
+                if (!partes[7].empty())
+                    ev->opciones[1].descripcion += " (" + partes[7] + ")";
+                else
+                    ev->opciones[1].descripcion += " (Sin consecuencia)";
+                ev->opciones[1].cambio_vida = 0;
+                ev->opciones[1].cambio_ataque = 0;
+                ev->opciones[1].cambio_precision = 0;
+                ev->opciones[1].cambio_recuperacion = 0;
+                if (partes[8].find("Vida:") != string::npos)
+                    ev->opciones[1].cambio_vida = stoi(partes[8].substr(partes[8].find("Vida:") + 5));
+                if (partes[8].find("Ataque:") != string::npos)
+                    ev->opciones[1].cambio_ataque = stoi(partes[8].substr(partes[8].find("Ataque:") + 7));
+                if (partes[8].find("Precision:") != string::npos)
+                    ev->opciones[1].cambio_precision = stof(partes[8].substr(partes[8].find("Precision:") + 10));
+                if (partes[8].find("Recuperacion:") != string::npos)
+                    ev->opciones[1].cambio_recuperacion = stoi(partes[8].substr(partes[8].find("Recuperacion:") + 13));
+
                 eventos[evento_idx++] = ev;
             }
             break;
@@ -147,20 +151,22 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
             for (int i = 0; i < total_habitaciones; ++i) {
                 if (!getline(archivo, linea)) {
                     cout << "ERROR: No se pudo leer la línea de la habitación " << i << endl;
-                    break;
+                    habitaciones[i] = NULL; // <- Marca como nulo para evitar acceso posterior
+                    continue;
                 }
                 int pos1 = linea.find('|');
                 int pos2 = linea.find('|', pos1 + 1);
                 int pos3 = linea.find('|', pos2 + 1);
                 if (pos1 == -1 || pos2 == -1 || pos3 == -1) {
                     cout << "ERROR: Formato incorrecto en línea de habitación: " << linea << endl;
+                    habitaciones[i] = NULL;
                     continue;
                 }
                 string id_str = linea.substr(0, pos1);
                 int id = stoi(id_str);
-                cout << "DEBUG: id_str = '" << id_str << "', id = " << id << ", total_habitaciones = " << total_habitaciones << endl;
                 if (id < 0 || id >= total_habitaciones) {
                     cout << "ERROR: id fuera de rango: " << id << endl;
+                    habitaciones[i] = NULL;
                     continue;
                 }
                 string nombre = linea.substr(pos1 + 1, pos2 - pos1 - 1);
@@ -180,7 +186,14 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                             break;
                         }
                     }
-                    habitaciones[id]->evento_asociado = eventos_globales[idx];
+                    if (suma < 1.0 && r > suma) idx = total_eventos - 1; // <-- Asegura que idx siempre sea válido
+                    // Validar evento antes de asignar
+                    if (eventos_globales[idx] && eventos_globales[idx]->opciones != NULL && eventos_globales[idx]->cantidad_opciones >= 2) {
+                        habitaciones[id]->evento_asociado = eventos_globales[idx];
+                        habitaciones[id]->evento_dinamico = false;
+                    } else {
+                        habitaciones[id]->evento_asociado = NULL;
+                    }
                 } else {
                     habitaciones[id]->evento_asociado = NULL;
                 }
@@ -213,6 +226,15 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
         }
     }
     archivo.close();
+
+    // Libera SOLO los enemigos globales aquí (no los eventos)
+    if (enemigos_globales) {
+        for (int i = 0; i < total_enemigos; ++i)
+            delete enemigos_globales[i];
+        delete[] enemigos_globales;
+    }
+    // NO liberes eventos_globales aquí
+
     return habitaciones;
 }
 
@@ -263,24 +285,32 @@ cola_enemigo* crear_cola_enemigos() {
     return NULL;
 }
 
-void encolar(cola_enemigo*& frente, cola_enemigo*& fin, enemigo* e) {
+// Crear un nuevo nodo de cola
+cola_enemigo* crear_nodo_cola(enemigo* e) {
     cola_enemigo* nuevo = new cola_enemigo;
     nuevo->dato = e;
     nuevo->sig = NULL;
-    if (fin) {
-        fin->sig = nuevo;
-    } else {
-        frente = nuevo;
-    }
-    fin = nuevo;
+    return nuevo;
 }
 
+// Encolar un enemigo
+void encolar(cola_enemigo*& frente, cola_enemigo*& fin, enemigo* e) {
+    cola_enemigo* nuevo = crear_nodo_cola(e);
+    if (fin == NULL) {
+        frente = fin = nuevo;
+    } else {
+        fin->sig = nuevo;
+        fin = nuevo;
+    }
+}
+
+// Desencolar un enemigo
 enemigo* desencolar(cola_enemigo*& frente, cola_enemigo*& fin) {
-    if (!frente) return NULL;
+    if (frente == NULL) return NULL;
     cola_enemigo* temp = frente;
     enemigo* e = temp->dato;
     frente = frente->sig;
-    if (!frente) fin = NULL;
+    if (frente == NULL) fin = NULL;
     delete temp;
     return e;
 }
@@ -290,7 +320,7 @@ bool cola_vacia(cola_enemigo* frente) {
 }
 
 void liberar_cola(cola_enemigo*& frente) {
-    while (frente) {
+    while (frente != NULL) {
         cola_enemigo* temp = frente;
         frente = frente->sig;
         delete temp;
@@ -340,7 +370,7 @@ void push_golpe(pila_golpes& pila, const string& atacante, const string& objetiv
 }
 
 golpe* pop_golpe(pila_golpes& pila) {
-    if (!pila.tope) return nullptr;
+    if (!pila.tope) return NULL;
     golpe* g = pila.tope;
     pila.tope = pila.tope->sig;
     return g;
@@ -367,25 +397,25 @@ enemigo* seleccionar_enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
 
 // Combate interactivo
 bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos) {
-    pila_golpes pila;
-    pila.tope = nullptr;
-
-    // Selecciona enemigo aleatorio
     enemigo enemigo_actual = *seleccionar_enemigo_aleatorio(enemigos, total_enemigos);
-
     cout << "¡Te enfrentas a " << enemigo_actual.nombre << "!" << endl;
 
     while (player->vida > 0 && enemigo_actual.vida > 0) {
         cout << "\nTu vida: " << player->vida << " | Vida de " << enemigo_actual.nombre << ": " << enemigo_actual.vida << endl;
-        cout << "Elige fuerza de tu golpe (1-" << player->ataque << "): ";
-        int fuerza;
-        cin >> fuerza;
-        if (fuerza < 1) fuerza = 1;
-        if (fuerza > player->ataque) fuerza = player->ataque;
+        cout << "Elige tipo de golpe:\n";
+        cout << "1. Golpe fuerte (más daño, menos probabilidad de acierto)\n";
+        cout << "2. Golpe regular (menos daño, más probabilidad de acierto)\n";
+        int tipo_golpe = 0;
+        do {
+            cout << "Opción (1-2): ";
+            cin >> tipo_golpe;
+        } while (tipo_golpe != 1 && tipo_golpe != 2);
 
-        // Determina si acierta el jugador
+        int fuerza = (tipo_golpe == 1) ? player->ataque : player->ataque / 2;
+        float prob_crit = (tipo_golpe == 1) ? player->precision * 0.6f : player->precision;
+
         float prob = (float)rand() / RAND_MAX;
-        bool acierto_jugador = (prob < player->precision);
+        bool acierto_jugador = (prob < prob_crit);
 
         if (acierto_jugador) {
             enemigo_actual.vida -= fuerza;
@@ -394,7 +424,6 @@ bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos
         } else {
             cout << "¡Fallaste el golpe!" << endl;
         }
-        push_golpe(pila, "Jugador", enemigo_actual.nombre, fuerza, acierto_jugador, enemigo_actual.vida);
 
         if (enemigo_actual.vida <= 0) break;
 
@@ -410,34 +439,8 @@ bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos
         } else {
             cout << enemigo_actual.nombre << " falla su ataque!" << endl;
         }
-        push_golpe(pila, enemigo_actual.nombre, "Jugador", fuerza_enemigo, acierto_enemigo, player->vida);
     }
 
-    // Pasa los golpes a un arreglo
-    int total_golpes = 0;
-    golpe* temp = pila.tope;
-    while (temp) {
-        total_golpes++;
-        temp = temp->sig;
-    }
-    golpe** historial = new golpe*[total_golpes];
-    for (int i = total_golpes-1; i >= 0; --i) {
-        golpe* g = pop_golpe(pila);
-        historial[i] = g;
-    }
-
-    // Muestra historial
-    cout << "\n--- Historial de golpes ---\n";
-    for (int i = 0; i < total_golpes; ++i) {
-        cout << historial[i]->atacante << " -> " << historial[i]->objetivo
-             << " | Fuerza: " << historial[i]->fuerza
-             << " | " << (historial[i]->acierto ? "Acierta" : "Falla")
-             << " | Vida objetivo: " << historial[i]->vida_objetivo << endl;
-        delete historial[i];
-    }
-    delete[] historial;
-
-    // Muestra porcentaje de vida restante
     float porcentaje = (float)player->vida / 100.0f * 100.0f;
     cout << "\nPorcentaje de vida restante: " << porcentaje << "%" << endl;
 
@@ -450,7 +453,7 @@ bool combate_interactivo(jugador* player, enemigo** enemigos, int total_enemigos
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
-    estacion** habitaciones = nullptr;
+    estacion** habitaciones = NULL;
     int total_habitaciones = 0;
 
     // Declarar variables globales para liberar memoria al final
@@ -462,9 +465,29 @@ int main() {
     // Lee habitaciones y construye el arreglo
     habitaciones = leer_habitaciones(archivo_mapa, total_habitaciones, arbol);
 
-    if (habitaciones == nullptr || total_habitaciones == 0) {
+    if (habitaciones == NULL || total_habitaciones == 0) {
         cout << "No se pudieron leer las habitaciones." << endl;
-        // Liberar memoria de enemigos y eventos globales si habitaciones no se pudo leer
+
+        // Libera habitaciones parcialmente creadas
+        if (habitaciones != NULL) {
+            for (int i = 0; i < total_habitaciones; ++i) {
+                if (habitaciones[i] != NULL) {
+                    if (habitaciones[i]->enemigos != NULL) {
+                        for (int j = 0; j < habitaciones[i]->cantidad_enemigos; ++j)
+                            if (habitaciones[i]->enemigos[j]) delete habitaciones[i]->enemigos[j];
+                        delete[] habitaciones[i]->enemigos;
+                    }
+                    if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado != NULL) {
+                        delete[] habitaciones[i]->evento_asociado->opciones;
+                        delete habitaciones[i]->evento_asociado;
+                    }
+                    delete habitaciones[i];
+                }
+            }
+            delete[] habitaciones;
+        }
+
+        // Libera enemigos y eventos globales
         for (int i = 0; i < total_enemigos; ++i)
             delete enemigos_globales[i];
         delete[] enemigos_globales;
@@ -485,49 +508,120 @@ int main() {
     estacion* actual = arbol.get_raiz();
 
     while (actual && player.vida > 0) {
-        cout << "\n=== Estás en: " << actual->nombre << " ===\n";
-        cout << actual->descripcion << endl;
+        // Validar que la estación no sea nula
+        if (actual == NULL) {
+            cout << "ERROR: Habitación actual es nula. Fin del juego." << endl;
+            break;
+        }
+
+        // Presentación de la estación
+        cout << "\n-- " << actual->nombre << " --\n" << endl;
+        cout << actual->descripcion << "\n" << endl;
 
         // Combate interactivo si corresponde
-        if (actual->cantidad_enemigos > 0 && actual->enemigos != nullptr) {
+        if (actual->cantidad_enemigos > 0 && actual->enemigos != NULL) {
             cout << "\n¡Comienza un combate!" << endl;
             if (!combate_interactivo(&player, actual->enemigos, actual->cantidad_enemigos)) {
                 cout << "Has sido derrotado en combate.\n";
                 break;
             }
+            // --- Recuperación tras combate ---
+            if (player.recuperacion > 0) {
+                player.vida += player.recuperacion;
+                cout << "Te recuperas tras el combate y recuperas " << player.recuperacion << " de vida. Vida actual: " << player.vida << endl;
+            }
+            // --- Lógica de mejora tras combate ---
+            cout << "\nElige una mejora:\n";
+            cout << "1. +10 Vida\n";
+            cout << "2. +2 Ataque\n";
+            cout << "3. +0.1 Precisión\n";
+            cout << "4. +1 Recuperación\n";
+            int mejora = 0;
+            do {
+                cout << "Ingresa el número de la mejora: ";
+                if (!(cin >> mejora)) {
+                    cin.clear();
+                    cin.ignore(10000, '\n');
+                    mejora = 0;
+                }
+            } while (mejora < 1 || mejora > 4);
+
+            switch (mejora) {
+                case 1:
+                    player.vida += 10;
+                    cout << "¡Has ganado +10 Vida! Vida actual: " << player.vida << endl;
+                    break;
+                case 2:
+                    player.ataque += 2;
+                    cout << "¡Has ganado +2 Ataque! Ataque actual: " << player.ataque << endl;
+                    break;
+                case 3:
+                    player.precision += 0.1;
+                    cout << "¡Has ganado +0.1 Precisión! Precisión actual: " << player.precision << endl;
+                    break;
+                case 4:
+                    player.recuperacion += 1;
+                    cout << "¡Has ganado +1 Recuperación! Recuperación actual: " << player.recuperacion << endl;
+                    break;
+            }
         }
 
         // Evento si corresponde
-        if (actual->evento_asociado != nullptr) {
+        if (actual->evento_asociado != NULL) {
             evento* ev = actual->evento_asociado;
-            cout << "\n¡Evento!: " << ev->nombre << endl;
-            cout << ev->descripcion << endl;
-            for (int i = 0; i < ev->cantidad_opciones; ++i) {
-                cout << char('A' + i) << ": " << ev->opciones[i].descripcion << endl;
-            }
-            cout << "Elige opción (A/B): ";
-            char opcion;
-            cin >> opcion;
-            int idx = toupper(opcion) - 'A';
-            if (idx >= 0 && idx < ev->cantidad_opciones) {
-                opcion_evento& op = ev->opciones[idx];
-                player.vida += op.cambio_vida;
-                player.ataque += op.cambio_ataque;
-                player.precision += op.cambio_precision;
-                player.recuperacion += op.cambio_recuperacion;
-                cout << "Resultado: ";
-                if (op.cambio_vida != 0) cout << "Vida " << (op.cambio_vida > 0 ? "+" : "") << op.cambio_vida << " ";
-                if (op.cambio_ataque != 0) cout << "Ataque " << (op.cambio_ataque > 0 ? "+" : "") << op.cambio_ataque << " ";
-                if (op.cambio_precision != 0) cout << "Precisión " << (op.cambio_precision > 0 ? "+" : "") << op.cambio_precision << " ";
-                if (op.cambio_recuperacion != 0) cout << "Recuperación " << (op.cambio_recuperacion > 0 ? "+" : "") << op.cambio_recuperacion << " ";
-                cout << endl;
+            if (ev && ev->opciones != NULL && ev->cantidad_opciones >= 2 &&
+                !ev->opciones[0].descripcion.empty() && !ev->opciones[1].descripcion.empty()) {
+                cout << "\n" << ev->descripcion << endl;
+                cout << "A: " << ev->opciones[0].descripcion.substr(0, ev->opciones[0].descripcion.find('(')) << endl;
+                cout << "B: " << ev->opciones[1].descripcion.substr(0, ev->opciones[1].descripcion.find('(')) << endl;
+                char opcion;
+                bool opcion_valida = false;
+                do {
+                    cout << "Elige opción (A/B): ";
+                    cin >> opcion;
+                    opcion = toupper(opcion);
+                    opcion_valida = (opcion == 'A' || opcion == 'B');
+                    if (!opcion_valida) {
+                        cin.clear();
+                        cin.ignore(10000, '\n');
+                    }
+                } while (!opcion_valida);
+                int idx = opcion - 'A';
+                if (idx >= 0 && idx < 2) {
+                    // Mostrar consecuencia textual (lo que está entre paréntesis)
+                    string desc = ev->opciones[idx].descripcion;
+                    size_t ini = desc.find('(');
+                    size_t fin = desc.find(')');
+                    if (ini != string::npos && fin != string::npos && fin > ini) {
+                        cout << desc.substr(ini + 1, fin - ini - 1) << endl;
+                    } else {
+                        // Si no hay paréntesis, muestra la descripción completa o un mensaje neutro
+                        cout << "Sin consecuencia especial." << endl;
+                    }
+                    // Aplicar efectos
+                    player.vida += ev->opciones[idx].cambio_vida;
+                    player.ataque += ev->opciones[idx].cambio_ataque;
+                    player.precision += ev->opciones[idx].cambio_precision;
+                    player.recuperacion += ev->opciones[idx].cambio_recuperacion;
+                    // Mostrar solo los efectos aplicados (opcional)
+                    if (ev->opciones[idx].cambio_vida != 0) cout << "Vida " << (ev->opciones[idx].cambio_vida > 0 ? "+" : "") << ev->opciones[idx].cambio_vida << " ";
+                    if (ev->opciones[idx].cambio_ataque != 0) cout << "Ataque " << (ev->opciones[idx].cambio_ataque > 0 ? "+" : "") << ev->opciones[idx].cambio_ataque << " ";
+                    if (ev->opciones[idx].cambio_precision != 0) cout << "Precisión " << (ev->opciones[idx].cambio_precision > 0 ? "+" : "") << ev->opciones[idx].cambio_precision << " ";
+                    if (ev->opciones[idx].cambio_recuperacion != 0) cout << "Recuperación " << (ev->opciones[idx].cambio_recuperacion > 0 ? "+" : "") << ev->opciones[idx].cambio_recuperacion << " ";
+                    cout << endl;
+                }
+            } else {
+                cout << "[ERROR] Evento mal formado o sin opciones válidas. Se omite el evento.\n";
             }
         }
 
-        // Mostrar estado del jugador
-        cout << "Estado del jugador: Vida=" << player.vida << " Ataque=" << player.ataque << " Precisión=" << player.precision << endl;
+        // Mostrar estado del jugador de forma estética
+        cout << "\n[Jugador] Vida: " << player.vida
+             << " | Ataque: " << player.ataque
+             << " | Precisión: " << player.precision
+             << " | Recuperación: " << player.recuperacion << endl;
 
-        // Mostrar opciones de hijos y dejar elegir (sin vector)
+        // Mostrar opciones de hijos y dejar elegir
         estacion* hijos[3];
         int num_hijos = 0;
         if (actual->n1) hijos[num_hijos++] = actual->n1;
@@ -538,18 +632,30 @@ int main() {
             cout << "No hay más caminos desde aquí. Fin del recorrido.\n";
             break;
         } else if (num_hijos == 1) {
+            if (hijos[0] == NULL) {
+                cout << "ERROR: La siguiente habitación es nula. Fin del juego." << endl;
+                break;
+            }
             cout << "Avanzas automáticamente a: " << hijos[0]->nombre << endl;
             actual = hijos[0];
         } else {
             cout << "¿A dónde quieres ir?\n";
             for (int i = 0; i < num_hijos; ++i) {
-                cout << (i+1) << ") " << hijos[i]->nombre << endl;
+                if (hijos[i] == NULL) {
+                    cout << (i+1) << ") [ERROR: Habitación nula]" << endl;
+                } else {
+                    cout << (i+1) << ") " << hijos[i]->nombre << endl;
+                }
             }
             int eleccion = 0;
             do {
                 cout << "Elige opción (1-" << num_hijos << "): ";
-                cin >> eleccion;
-            } while (eleccion < 1 || eleccion > num_hijos);
+                if (!(cin >> eleccion)) {
+                    cin.clear();
+                    cin.ignore(10000, '\n');
+                    eleccion = 0;
+                }
+            } while (eleccion < 1 || eleccion > num_hijos || hijos[eleccion-1] == NULL);
             actual = hijos[eleccion-1];
         }
     }
@@ -559,34 +665,46 @@ int main() {
     else
         cout << "\nHas muerto. Fin del juego.\n";
 
-    // --- Liberación de memoria (igual que ya tienes) ---
-    if (habitaciones != nullptr) {
-        for (int i = 0; i < total_habitaciones; ++i) {
-            if (habitaciones[i]) {
-                if (habitaciones[i]->enemigos != nullptr) {
-                    for (int j = 0; j < habitaciones[i]->cantidad_enemigos; ++j) {
-                        if (habitaciones[i]->enemigos[j]) {
-                            delete habitaciones[i]->enemigos[j];
-                        }
-                    }
-                    delete[] habitaciones[i]->enemigos;
-                }
-                // NO hacer delete habitaciones[i]->evento_asociado aquí
-                delete habitaciones[i];
-            }
-        }
+    cout << "\nEstado final del jugador:\n";
+    cout << "[Jugador] Vida: " << player.vida
+         << " | Ataque: " << player.ataque
+         << " | Precisión: " << player.precision
+         << " | Recuperación: " << player.recuperacion << endl;
+
+    // Libera el árbol de habitaciones (y sus campos)
+    arbol.liberar_arbol(arbol.get_raiz());
+
+    // Libera el arreglo de habitaciones
+    if (habitaciones != NULL) {
         delete[] habitaciones;
-        habitaciones = nullptr;
+        habitaciones = NULL;
     }
+
+    // Libera enemigos globales
     for (int i = 0; i < total_enemigos; ++i)
         delete enemigos_globales[i];
     delete[] enemigos_globales;
 
-    for (int i = 0; i < total_eventos; ++i)
-        delete eventos_globales[i];
+    // Libera eventos globales SOLO si no fueron liberados como dinámicos
+    for (int i = 0; i < total_eventos; ++i) {
+        bool fue_liberado = false;
+        for (int j = 0; j < total_habitaciones; ++j) {
+            if (habitaciones && habitaciones[j] &&
+                habitaciones[j]->evento_asociado == eventos_globales[i] &&
+                habitaciones[j]->evento_dinamico) {
+                fue_liberado = true;
+                break;
+            }
+        }
+        if (!fue_liberado) {
+            delete[] eventos_globales[i]->opciones;
+            delete eventos_globales[i];
+        }
+    }
     delete[] eventos_globales;
+
     return 0;
-};
+}
 
 // Función para guardar el árbol en un archivo
 void guardar_arbol(estacion* raiz, ofstream& out) {
@@ -627,8 +745,8 @@ void guardar_arbol(estacion* raiz, ofstream& out) {
 // Carga un árbol desde un archivo
 estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     string linea;
-    if (!getline(in, linea)) return nullptr;
-    if (linea == "#") return nullptr;
+    if (!getline(in, linea)) return NULL;
+    if (linea == "#") return NULL;
 
     // Datos básicos
     int p1 = linea.find('|');
@@ -661,7 +779,7 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
             nodo->enemigos[i] = new enemigo{enom, evida, eataque, eprecision, eprob};
         }
     } else {
-        nodo->enemigos = nullptr;
+        nodo->enemigos = NULL;
     }
 
     // Evento asociado
@@ -694,8 +812,9 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
             ev->opciones[i].cambio_recuperacion = stoi(linea.substr(o4 + 1));
         }
         nodo->evento_asociado = ev;
+        nodo->evento_dinamico = true;
     } else {
-        nodo->evento_asociado = nullptr;
+        nodo->evento_asociado = NULL;
     }
 
     // Recursivo para hijos

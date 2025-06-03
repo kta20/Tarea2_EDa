@@ -36,6 +36,10 @@ estacion* ArbolTernario::crear_estacion(int id, string nombre, string tipo, stri
     nueva->n1 = NULL;
     nueva->n2 = NULL;
     nueva->n3 = NULL;
+    nueva->enemigos = NULL;
+    nueva->cantidad_enemigos = 0;
+    nueva->evento_asociado = NULL;
+    nueva->evento_dinamico = false;
     return nueva;
 }
 
@@ -67,12 +71,32 @@ void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
 
 // --- CORREGIDO: Liberar árbol evitando doble free ---
 void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados) {
-    if (nodo == nullptr) return;
+    if (nodo == NULL) return;
     if (visitados.count(nodo)) return; // Ya fue liberado
     visitados.insert(nodo);
+
+    // PRIMERO libera recursivamente los hijos
     liberar_arbol(nodo->n1, visitados);
     liberar_arbol(nodo->n2, visitados);
     liberar_arbol(nodo->n3, visitados);
+
+    // LUEGO libera enemigos de la estación
+    if (nodo->enemigos != NULL) {
+        for (int i = 0; i < nodo->cantidad_enemigos; ++i) {
+            if (nodo->enemigos[i]) delete nodo->enemigos[i];
+        }
+        delete[] nodo->enemigos;
+        nodo->enemigos = NULL;
+    }
+
+    // LUEGO libera evento dinámico (NO global)
+    if (nodo->evento_dinamico && nodo->evento_asociado != NULL) {
+        delete[] nodo->evento_asociado->opciones;
+        delete nodo->evento_asociado;
+        nodo->evento_asociado = NULL;
+    }
+
+    // POR ÚLTIMO libera el nodo
     delete nodo;
 }
 

@@ -11,8 +11,7 @@ class ArbolTernario {
 private:
     estacion* raiz;
     void recorrer_preorden(estacion* nodo, int nivel);
-    void liberar_arbol(estacion* nodo, set<estacion*>& visitados); // <-- AGREGA ESTA LÍNEA
-    void liberar_arbol(estacion* nodo); // (puedes dejarla si tienes la sobrecarga)
+    void liberar_arbol(estacion* nodo, set<estacion*>& visitados); // <-- Esta puede quedar privada
     estacion* buscar_estacion(estacion* nodo, int id);
 
 public:
@@ -24,6 +23,7 @@ public:
     estacion* buscar(int id);
     estacion* crear_estacion(int id, string nombre, string tipo, string descripcion);
     bool agregar_hijo(estacion* padre, estacion* hijo);
+    void liberar_arbol(estacion* nodo); // <-- Mueve esta línea aquí
 };
 
 #endif

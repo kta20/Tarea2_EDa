@@ -1,0 +1,1807 @@
+==21075== Memcheck, a memory error detector
+==21075== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==21075== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info
+==21075== Command: ./juego
+==21075== 
+
+-- Puente Cal y Canto --
+
+Eres un superviviente de una explosion nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estacion Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si estan vivas. Te lanzas resuelto en su busqueda teniendo en cuenta que su hogar era proximo a la estacion Ñuñoa. 
+
+
+[Jugador] Vida: 100 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+¿A dónde quieres ir?
+1) Linea 2
+2) Linea 3
+Elige opción (1-2): 
+-- Linea 2 --
+
+Transitas por la boleteria para acceder a las vias del metro, cuando visualizas a lo lejos un tumulto acercandote.
+
+
+¡Comienza un combate!
+¡Te enfrentas a Saqueador!
+
+Tu vida: 100 | Vida de Saqueador: 12
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Saqueador por 10 de daño!
+Saqueador falla su ataque!
+
+Tu vida: 100 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Saqueador por 10 de daño!
+
+Porcentaje de vida restante: 100%
+
+Elige una mejora:
+1. +10 Vida
+2. +2 Ataque
+3. +0.1 Precisión
+4. +1 Recuperación
+Ingresa el número de la mejora: ¡Has ganado +10 Vida! Vida actual: 110
+
+[Jugador] Vida: 110 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+¿A dónde quieres ir?
+1) Santa Ana
+2) Patronato
+Elige opción (1-2): 
+-- Santa Ana --
+
+Encuentras una oficina de seguridad abierta, vas a investigar... 
+
+
+Ves dos botellas. Una roja y otra verde chillon
+A: Beber de la botella roja 
+B: Beber de la botella verde chillon 
+Elige opción (A/B): Es jugo de frutilla
+Vida +15 
+
+[Jugador] Vida: 125 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+¿A dónde quieres ir?
+1) Plaza de Armas
+2) Cumming
+Elige opción (1-2): 
+-- Plaza de Armas --
+
+Ves una fogata entre la oscuridad de un anden, te acercas y te embiste algo. 
+
+
+¡Comienza un combate!
+¡Te enfrentas a Saqueador!
+
+Tu vida: 125 | Vida de Saqueador: 12
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Saqueador falla su ataque!
+
+Tu vida: 125 | Vida de Saqueador: 12
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Saqueador por 10 de daño!
+Saqueador falla su ataque!
+
+Tu vida: 125 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Saqueador falla su ataque!
+
+Tu vida: 125 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Saqueador falla su ataque!
+
+Tu vida: 125 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Saqueador te golpea por 7 de daño!
+
+Tu vida: 118 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Saqueador falla su ataque!
+
+Tu vida: 118 | Vida de Saqueador: 2
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Saqueador por 10 de daño!
+
+Porcentaje de vida restante: 118%
+
+Elige una mejora:
+1. +10 Vida
+2. +2 Ataque
+3. +0.1 Precisión
+4. +1 Recuperación
+Ingresa el número de la mejora: ¡Has ganado +10 Vida! Vida actual: 128
+
+[Jugador] Vida: 128 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+¿A dónde quieres ir?
+1) Baquedano
+2) Bellas artes
+Elige opción (1-2): 
+-- Baquedano --
+
+Contemplas uno de los cuadros decorativos de la estacion, de repente escuchas gruñidos y sonidos metalicos. 
+
+
+¡Comienza un combate!
+¡Te enfrentas a Mutante!
+
+Tu vida: 128 | Vida de Mutante: 30
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Mutante por 10 de daño!
+Mutante falla su ataque!
+
+Tu vida: 128 | Vida de Mutante: 20
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Fallaste el golpe!
+Mutante falla su ataque!
+
+Tu vida: 128 | Vida de Mutante: 20
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Mutante por 10 de daño!
+Mutante falla su ataque!
+
+Tu vida: 128 | Vida de Mutante: 10
+Elige tipo de golpe:
+1. Golpe fuerte (más daño, menos probabilidad de acierto)
+2. Golpe regular (menos daño, más probabilidad de acierto)
+Opción (1-2): ¡Golpeaste a Mutante por 10 de daño!
+
+Porcentaje de vida restante: 128%
+
+Elige una mejora:
+1. +10 Vida
+2. +2 Ataque
+3. +0.1 Precisión
+4. +1 Recuperación
+Ingresa el número de la mejora: ¡Has ganado +10 Vida! Vida actual: 138
+
+[Jugador] Vida: 138 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+¿A dónde quieres ir?
+1) Irarrazabal
+2) Tobalaba
+Elige opción (1-2): 
+-- Tobalaba --
+
+Luego de ayudar a la familia, te quedas sin recursos y no tienes nada con que defenderte. Moriras frente a los peligros que te asechan sin poder defenderte. 
+
+
+[Jugador] Vida: 138 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+No hay más caminos desde aquí. Fin del recorrido.
+
+¡Felicidades, has sobrevivido la aventura!
+
+Estado final del jugador:
+[Jugador] Vida: 138 | Ataque: 10 | Precisión: 0.7 | Recuperación: 0
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15808 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15c48 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16038 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e162c8 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16d60 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16d68 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16d70 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16d88 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x407480: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const (basic_string.h:239)
+==21075==    by 0x40764E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const (basic_string.h:280)
+==21075==    by 0x40754F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:298)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066E7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==  Address 0x4e16d38 is 72 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40755B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:299)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066E7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16d48 is 88 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x407480: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const (basic_string.h:239)
+==21075==    by 0x407BCE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) (basic_string.h:305)
+==21075==    by 0x40756D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:299)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066E7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==  Address 0x4e16d38 is 72 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40891C: std::__new_allocator<char>::deallocate(char*, unsigned long) (new_allocator.h:172)
+==21075==    by 0x407C00: deallocate (alloc_traits.h:649)
+==21075==    by 0x407C00: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) (basic_string.h:305)
+==21075==    by 0x40756D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:299)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066E7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==  Address 0x4e16dd0 is 0 bytes inside a block of size 118 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40891C: std::__new_allocator<char>::deallocate(char*, unsigned long) (new_allocator.h:172)
+==21075==    by 0x407C00: deallocate (alloc_traits.h:649)
+==21075==    by 0x407C00: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_destroy(unsigned long) (basic_string.h:305)
+==21075==    by 0x40756D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:299)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066E7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408CCC: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==21075==    by 0x4086B9: allocate (alloc_traits.h:614)
+==21075==    by 0x4086B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+==21075==    by 0x4084AC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+==21075==    by 0x407CCA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:319)
+==21075==    by 0x407F8E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1771)
+==21075==    by 0x407188: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:906)
+==21075==    by 0x408E40: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:35)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40766C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const (basic_string.h:282)
+==21075==    by 0x40754F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:298)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x4066F7: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==  Address 0x4e16d20 is 48 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40766C: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const (basic_string.h:282)
+==21075==    by 0x40754F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:298)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x406707: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==  Address 0x4e16d00 is 16 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16cf0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17038 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17040 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17048 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17050 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17068 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16fd0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e172d8 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e172e0 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e172e8 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e172f0 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17308 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17270 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4090A8: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16040 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16048 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16050 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e16068 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15c50 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17ee8 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17ef0 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17ef8 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17f00 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e17f18 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15c58 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15c60 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15c78 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15be0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15810 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e182d8 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e182e0 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18768 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18a38 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18a40 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18a48 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18a50 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18a68 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e189d0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x409072: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18770 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40905C: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:79)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18f08 is 104 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409077: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18f10 is 112 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18f18 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18f20 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18f38 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x40755B: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() (basic_string.h:299)
+==21075==    by 0x406B1F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (basic_string.h:896)
+==21075==    by 0x406707: estacion::~estacion() (estructuras.hpp:56)
+==21075==    by 0x409280: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18eb8 is 24 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18ea0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18778 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18780 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18798 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e182e8 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e182f0 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18308 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e18270 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x40908D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:80)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x409092: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:81)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15818 is 120 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 8
+==21075==    at 0x4090AD: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:84)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15820 is 128 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid read of size 1
+==21075==    at 0x409164: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:93)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e15838 is 152 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== Invalid free() / delete / delete[] / realloc()
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x408D17: ArbolTernario::~ArbolTernario() (arbol.cpp:10)
+==21075==    by 0x404F2B: main (TAREA2.cpp:707)
+==21075==  Address 0x4e157a0 is 0 bytes inside a block of size 160 free'd
+==21075==    at 0x4842E78: operator delete(void*, unsigned long) (vg_replace_malloc.c:1181)
+==21075==    by 0x40928D: ArbolTernario::liberar_arbol(estacion*, std::set<estacion*, std::less<estacion*>, std::allocator<estacion*> >&) (arbol.cpp:100)
+==21075==    by 0x4092CD: ArbolTernario::liberar_arbol(estacion*) (arbol.cpp:106)
+==21075==    by 0x404C82: main (TAREA2.cpp:675)
+==21075==  Block was alloc'd at
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408DCD: ArbolTernario::crear_estacion(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (arbol.cpp:31)
+==21075==    by 0x4020DE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:175)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 
+==21075== HEAP SUMMARY:
+==21075==     in use at exit: 1,065 bytes in 16 blocks
+==21075==   total heap usage: 254 allocs, 274 frees, 148,775 bytes allocated
+==21075== 
+==21075== 128 bytes in 3 blocks are indirectly lost in loss record 1 of 6
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408CCC: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==21075==    by 0x4086B9: allocate (alloc_traits.h:614)
+==21075==    by 0x4086B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+==21075==    by 0x4084AC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+==21075==    by 0x407CCA: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:319)
+==21075==    by 0x407F8E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1771)
+==21075==    by 0x407188: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:906)
+==21075==    by 0x401058: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:74)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 148 bytes in 3 blocks are indirectly lost in loss record 2 of 6
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408CCC: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==21075==    by 0x4086B9: allocate (alloc_traits.h:614)
+==21075==    by 0x4086B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+==21075==    by 0x4084AC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+==21075==    by 0x408B78: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+==21075==    by 0x40886F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+==21075==    by 0x408762: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+==21075==    by 0x408200: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1536)
+==21075==    by 0x4072D2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1478)
+==21075==    by 0x4011BC: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:82)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 189 bytes in 3 blocks are indirectly lost in loss record 3 of 6
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x408CCC: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==21075==    by 0x4086B9: allocate (alloc_traits.h:614)
+==21075==    by 0x4086B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+==21075==    by 0x4084AC: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+==21075==    by 0x408B78: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+==21075==    by 0x40886F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+==21075==    by 0x408762: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+==21075==    by 0x408200: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1536)
+==21075==    by 0x4072D2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1478)
+==21075==    by 0x4015D5: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:101)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 264 bytes in 3 blocks are indirectly lost in loss record 4 of 6
+==21075==    at 0x483F2AC: operator new(unsigned long) (vg_replace_malloc.c:487)
+==21075==    by 0x400F6A: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:69)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 312 bytes in 3 blocks are indirectly lost in loss record 5 of 6
+==21075==    at 0x4840A3A: operator new[](unsigned long) (vg_replace_malloc.c:729)
+==21075==    by 0x401062: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:76)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== 1,065 (24 direct, 1,041 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 6
+==21075==    at 0x4840A3A: operator new[](unsigned long) (vg_replace_malloc.c:729)
+==21075==    by 0x400D9F: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:51)
+==21075==    by 0x401CF6: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:143)
+==21075==    by 0x403825: main (TAREA2.cpp:466)
+==21075== 
+==21075== LEAK SUMMARY:
+==21075==    definitely lost: 24 bytes in 1 blocks
+==21075==    indirectly lost: 1,041 bytes in 15 blocks
+==21075==      possibly lost: 0 bytes in 0 blocks
+==21075==    still reachable: 0 bytes in 0 blocks
+==21075==         suppressed: 0 bytes in 0 blocks
+==21075== 
+==21075== For lists of detected and suppressed errors, rerun with: -s
+==21075== ERROR SUMMARY: 243 errors from 71 contexts (suppressed: 0 from 0)
