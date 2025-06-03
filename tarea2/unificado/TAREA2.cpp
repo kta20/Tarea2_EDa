@@ -523,54 +523,24 @@ int main() {
     estacion** habitaciones = NULL;
     int total_habitaciones = 0;
 
-    // Declarar variables globales para liberar memoria al final
     int total_enemigos = 0;
     enemigo** enemigos_globales = leer_enemigos_globales_impl(archivo_mapa, total_enemigos);
     int total_eventos = 0;
     evento** eventos_globales = leer_eventos_globales_impl(archivo_mapa, total_eventos);
 
-    // Lee habitaciones y construye el arreglo
     habitaciones = leer_habitaciones(archivo_mapa, total_habitaciones, arbol);
 
     if (habitaciones == NULL || total_habitaciones == 0) {
         cout << "No se pudieron leer las habitaciones." << endl;
-
-        // Libera habitaciones parcialmente creadas
-        if (habitaciones != NULL) {
-            for (int i = 0; i < total_habitaciones; ++i) {
-                if (habitaciones[i] != NULL) {
-                    if (habitaciones[i]->enemigos != NULL) {
-                        for (int j = 0; j < habitaciones[i]->cantidad_enemigos; ++j)
-                            if (habitaciones[i]->enemigos[j]) delete habitaciones[i]->enemigos[j];
-                        delete[] habitaciones[i]->enemigos;
-                    }
-                    if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado != NULL) {
-                        delete[] habitaciones[i]->evento_asociado->opciones;
-                        delete habitaciones[i]->evento_asociado;
-                    }
-                    delete habitaciones[i];
-                }
-            }
-            delete[] habitaciones;
-        }
-
-        // Libera enemigos y eventos globales
-        for (int i = 0; i < total_enemigos; ++i)
-            delete enemigos_globales[i];
-        delete[] enemigos_globales;
-        for (int i = 0; i < total_eventos; ++i)
-            delete eventos_globales[i];
-        delete[] eventos_globales;
+        liberar_habitaciones(habitaciones, total_habitaciones);
+        liberar_enemigos(enemigos_globales, total_enemigos);
+        liberar_eventos(eventos_globales, total_eventos);
         return 1;
     }
 
-    // Conecta los arcos entre habitaciones
     leer_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
-
-    // Establece la raíz del árbol
     arbol.set_raiz(obtener_raiz(habitaciones));
 
-    // --- Bucle principal del juego ---
     jugador player = {100, 10, 0.7, 0};
     estacion* actual = arbol.get_raiz();
 
@@ -738,37 +708,46 @@ int main() {
          << " | Precisión: " << player.precision
          << " | Recuperación: " << player.recuperacion << endl;
 
-    // Libera el árbol de habitaciones (y sus campos)
     arbol.liberar_arbol(arbol.get_raiz());
 
-    // Libera solo el arreglo de punteros (NO los objetos, ya están liberados)
-    if (habitaciones != NULL) {
-        delete[] habitaciones;
-        habitaciones = NULL;
-    }
-
-    // Libera enemigos globales
-    for (int i = 0; i < total_enemigos; ++i)
-        delete enemigos_globales[i];
-    delete[] enemigos_globales;
-
-    // Libera eventos globales SOLO si no fueron liberados como dinámicos
-    for (int i = 0; i < total_eventos; ++i) {
-        bool fue_liberado = false;
-        for (int j = 0; j < total_habitaciones; ++j) {
-            if (habitaciones && habitaciones[j] &&
-                habitaciones[j]->evento_asociado == eventos_globales[i] &&
-                habitaciones[j]->evento_dinamico) {
-                fue_liberado = true;
-                break;
-            }
-        }
-        if (!fue_liberado) {
-            delete[] eventos_globales[i]->opciones;
-            delete eventos_globales[i];
-        }
-    }
-    delete[] eventos_globales;
+    liberar_habitaciones(habitaciones, total_habitaciones);
+    liberar_enemigos(enemigos_globales, total_enemigos);
+    liberar_eventos(eventos_globales, total_eventos);
 
     return 0;
+}
+
+void liberar_enemigos(enemigo** enemigos, int total) {
+    if (!enemigos) return;
+    for (int i = 0; i < total; ++i)
+        if (enemigos[i]) delete enemigos[i];
+    delete[] enemigos;
+}
+
+void liberar_eventos(evento** eventos, int total) {
+    if (!eventos) return;
+    for (int i = 0; i < total; ++i) {
+        if (eventos[i]) {
+            if (eventos[i]->opciones) delete[] eventos[i]->opciones;
+            delete eventos[i];
+        }
+    }
+    delete[] eventos;
+}
+
+void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
+    if (!habitaciones) return;
+    for (int i = 0; i < total_habitaciones; ++i) {
+        if (habitaciones[i]) {
+            if (habitaciones[i]->enemigos)
+                liberar_enemigos(habitaciones[i]->enemigos, habitaciones[i]->cantidad_enemigos);
+            if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado) {
+                if (habitaciones[i]->evento_asociado->opciones)
+                    delete[] habitaciones[i]->evento_asociado->opciones;
+                delete habitaciones[i]->evento_asociado;
+            }
+            delete habitaciones[i];
+        }
+    }
+    delete[] habitaciones;
 }
