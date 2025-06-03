@@ -53,6 +53,15 @@ void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
     delete[] habitaciones;
 }
 
+int seleccionar_por_probabilidad(float* probs, int total) {
+    float r = (float)rand() / RAND_MAX;
+    float suma = 0;
+    for (int i = 0; i < total; ++i) {
+        suma += probs[i];
+        if (r <= suma) return i;
+    }
+    return total - 1;
+}
 
 // Lee todos los enemigos definidos en el archivo y retorna un arreglo
 enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
@@ -244,18 +253,11 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                     habitaciones[id]->cantidad_enemigos = cant;
                     habitaciones[id]->enemigos = new enemigo*[cant];
                     for (int j = 0; j < cant; ++j) {
-                        float r = (float)rand() / RAND_MAX;
-                        float suma = 0;
-                        habitaciones[id]->enemigos[j] = NULL;
-                        for (int k = 0; k < total_enemigos; k++) {
-                            suma += enemigos_globales[k]->prob_spawn;
-                            if (r <= suma) {
-                                habitaciones[id]->enemigos[j] = new enemigo(*enemigos_globales[k]);
-                                break;
-                            }
-                        }
-                        if (habitaciones[id]->enemigos[j] == NULL)
-                            habitaciones[id]->enemigos[j] = new enemigo(*enemigos_globales[total_enemigos-1]);
+                        float probs_enemigos[total_enemigos];
+                        for (int k = 0; k < total_enemigos; ++k)
+                            probs_enemigos[k] = enemigos_globales[k]->prob_spawn;
+                        int idx_enemigo = seleccionar_por_probabilidad(probs_enemigos, total_enemigos);
+                        habitaciones[id]->enemigos[j] = new enemigo(*enemigos_globales[idx_enemigo]);
                     }
                 } else {
                     habitaciones[id]->cantidad_enemigos = 0;
