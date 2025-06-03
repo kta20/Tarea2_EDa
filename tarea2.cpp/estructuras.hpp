@@ -66,4 +66,19 @@ struct estacion {
     evento* evento_asociado;
 };
 
+struct golpe {
+    string atacante;
+    string objetivo;
+    int fuerza;
+    bool acierto;
+    int vida_objetivo;
+    golpe* sig; // Para la pila
+};
+
+// Pila de golpes
+struct pila_golpes {
+    golpe* tope;
+};
+
+
 #endif

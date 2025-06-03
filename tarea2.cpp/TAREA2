@@ -1,0 +1,9 @@
+if (tipo.find("COMBATE") != string::npos && (!enemigos_globales || total_enemigos == 0)) {
+    cout << "ERROR: No hay enemigos globales cargados para la habitación " << id << endl;
+    habitaciones[id]->cantidad_enemigos = 0;
+    habitaciones[id]->enemigos = NULL;
+}
+if (tipo.find("EVENTO") != string::npos && (!eventos_globales || total_eventos == 0)) {
+    cout << "ERROR: No hay eventos globales cargados para la habitación " << id << endl;
+    habitaciones[id]->evento_asociado = NULL;
+}
