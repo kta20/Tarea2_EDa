@@ -8,6 +8,51 @@
 #include <string>
 using namespace std;
 
+void split(const string& s, char delim, string partes[], int max_partes, int& partes_encontradas) {
+    size_t start = 0, end;
+    partes_encontradas = 0;
+    while ((end = s.find(delim, start)) != string::npos && partes_encontradas < max_partes - 1) {
+        partes[partes_encontradas++] = s.substr(start, end - start);
+        start = end + 1;
+    }
+    partes[partes_encontradas++] = s.substr(start);
+}
+
+void liberar_enemigos(enemigo** enemigos, int total) {
+    if (!enemigos) return;
+    for (int i = 0; i < total; ++i)
+        if (enemigos[i]) delete enemigos[i];
+    delete[] enemigos;
+}
+
+void liberar_eventos(evento** eventos, int total) {
+    if (!eventos) return;
+    for (int i = 0; i < total; ++i) {
+        if (eventos[i]) {
+            if (eventos[i]->opciones) delete[] eventos[i]->opciones;
+            delete eventos[i];
+        }
+    }
+    delete[] eventos;
+}
+
+void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
+    if (!habitaciones) return;
+    for (int i = 0; i < total_habitaciones; ++i) {
+        if (habitaciones[i]) {
+            if (habitaciones[i]->enemigos)
+                liberar_enemigos(habitaciones[i]->enemigos, habitaciones[i]->cantidad_enemigos);
+            if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado) {
+                if (habitaciones[i]->evento_asociado->opciones)
+                    delete[] habitaciones[i]->evento_asociado->opciones;
+                delete habitaciones[i]->evento_asociado;
+            }
+            delete habitaciones[i];
+        }
+    }
+    delete[] habitaciones;
+}
+
 
 // Lee todos los enemigos definidos en el archivo y retorna un arreglo
 enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
@@ -504,19 +549,6 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     return nodo;
 }
 
-void split(const string& s, char delim, string partes[], int max_partes, int& partes_encontradas) {
-    size_t start = 0, end;
-    partes_encontradas = 0;
-    while ((end = s.find(delim, start)) != string::npos && partes_encontradas < max_partes - 1) {
-        partes[partes_encontradas++] = s.substr(start, end - start);
-        start = end + 1;
-    }
-    partes[partes_encontradas++] = s.substr(start);
-}
-
-
-
-
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
@@ -715,39 +747,4 @@ int main() {
     liberar_eventos(eventos_globales, total_eventos);
 
     return 0;
-}
-
-void liberar_enemigos(enemigo** enemigos, int total) {
-    if (!enemigos) return;
-    for (int i = 0; i < total; ++i)
-        if (enemigos[i]) delete enemigos[i];
-    delete[] enemigos;
-}
-
-void liberar_eventos(evento** eventos, int total) {
-    if (!eventos) return;
-    for (int i = 0; i < total; ++i) {
-        if (eventos[i]) {
-            if (eventos[i]->opciones) delete[] eventos[i]->opciones;
-            delete eventos[i];
-        }
-    }
-    delete[] eventos;
-}
-
-void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
-    if (!habitaciones) return;
-    for (int i = 0; i < total_habitaciones; ++i) {
-        if (habitaciones[i]) {
-            if (habitaciones[i]->enemigos)
-                liberar_enemigos(habitaciones[i]->enemigos, habitaciones[i]->cantidad_enemigos);
-            if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado) {
-                if (habitaciones[i]->evento_asociado->opciones)
-                    delete[] habitaciones[i]->evento_asociado->opciones;
-                delete habitaciones[i]->evento_asociado;
-            }
-            delete habitaciones[i];
-        }
-    }
-    delete[] habitaciones;
 }
