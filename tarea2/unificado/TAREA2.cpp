@@ -439,7 +439,7 @@ int main() {
     }
 
     leer_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
-    arbol.set_raiz(habitaciones[0]);
+    arbol.set_raiz(obtener_raiz(habitaciones));
 
     jugador dr_wolves = {100, 10, 0.7, 0};
     estacion* actual = arbol.get_raiz();
