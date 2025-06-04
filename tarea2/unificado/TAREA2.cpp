@@ -199,7 +199,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 }
                 int id = stoi(partes[0]);
                 if (id < 0 || id >= total_habitaciones) {
-                    cout << "ERROR: id fuera de rango: " << id << endl;
+                  //  cout << "ERROR: id fuera de rango: " << id << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
@@ -534,7 +534,7 @@ int main() {
         }
 
         // Mostrar estado del jugador de forma estética
-        cout << "\nEstado de Dr Wolves... Vida: " << player.vida
+        cout << "\n[Dr.Wolves] Vida: " << player.vida
              << " | Ataque: " << player.ataque
              << " | Precisión: " << player.precision
              << " | Recuperación: " << player.recuperacion << endl;
@@ -587,8 +587,8 @@ int main() {
     if (player.vida > 0)
         cout << "\nFin del juego\n";
 
-    cout << "\nEstado final de Dr.wolves:\n";
-    cout << player.vida
+    cout << "\nEstado final del jugador:\n";
+    cout << "[Dr.Wolves] Vida: " << player.vida
          << " | Ataque: " << player.ataque
          << " | Precisión: " << player.precision
          << " | Recuperación: " << player.recuperacion << endl;
