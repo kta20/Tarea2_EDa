@@ -696,8 +696,7 @@ int main() {
 
         // BONUS: Viaje al pasado
         if (!bonus_usado && total_bonus > 0 && actual->id == bonus_arr[0].id_origen) {
-            cout << "\n*** BONUS ACTIVADO: " << bonus_arr[0].nombre << " ***\n";
-            cout << bonus_arr[0].desc_post << endl;
+            cout << '\n' <<bonus_arr[0].desc_post << endl;
             actual = arbol.get_raiz(); // Retorna a Cal y Canto
             bonus_usado = true;
             continue; // Vuelve a mostrar la raíz y repite el ciclo
