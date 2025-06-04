@@ -276,13 +276,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
     }
     archivo.close();
 
-    // Libera SOLO los enemigos globales aquí (no los eventos)
-    if (enemigos_globales) {
-        for (int i = 0; i < total_enemigos; ++i)
-            delete enemigos_globales[i];
-        delete[] enemigos_globales;
-    }
-
+    // NO liberes enemigos_globales aquí
     return habitaciones;
 }
 
@@ -321,7 +315,7 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
 estacion* obtener_raiz(estacion** habitaciones) {
     return habitaciones[0];
 }
-
+/*
 cola_enemigo* crear_cola_enemigos() {
     return NULL;
 }
@@ -385,7 +379,7 @@ void liberar_pila(pila_golpes& pila) {
         pila.tope = pila.tope->sig;
         delete temp;
     }
-}
+}*/
 
 // Selecciona un enemigo aleatorio según probabilidad de aparición
 enemigo* enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
@@ -450,7 +444,7 @@ bool combate(jugador* player, enemigo** enemigos, int total_enemigos) {
     return player->vida > 0;
 }
 
-void guardar_arbol(estacion* raiz, ofstream& out) {
+/*void guardar_arbol(estacion* raiz, ofstream& out) {
     if (!raiz) {
         out << "#\n";
         return;
@@ -479,7 +473,7 @@ void guardar_arbol(estacion* raiz, ofstream& out) {
     guardar_arbol(raiz->n2, out);
     guardar_arbol(raiz->n3, out);
 }
-
+*/
 
 // carga un arbol (recibe un archivo y la estructura de un arbol donde almacenara los nodos/estaciones)
 estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
@@ -574,8 +568,6 @@ int main() {
     if (habitaciones == NULL || total_habitaciones == 0) {
         cout << "No se pudieron leer las habitaciones." << endl;
         liberar_habitaciones(habitaciones, total_habitaciones);
-        liberar_enemigos(enemigos_globales, total_enemigos);
-        liberar_eventos(eventos_globales, total_eventos);
         return 1;
     }
 
@@ -752,6 +744,7 @@ int main() {
     arbol.liberar_arbol(arbol.get_raiz());
 
     liberar_habitaciones(habitaciones, total_habitaciones);
+
     liberar_enemigos(enemigos_globales, total_enemigos);
     liberar_eventos(eventos_globales, total_eventos);
 
