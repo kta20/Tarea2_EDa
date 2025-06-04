@@ -534,7 +534,7 @@ int main() {
         }
 
         // Mostrar estado del jugador de forma estética
-        cout << "\n[Dr.Wolves] Vida: " << player.vida
+        cout << "\nEstado de Dr Wolves... Vida:" << player.vida
              << " | Ataque: " << player.ataque
              << " | Precisión: " << player.precision
              << " | Recuperación: " << player.recuperacion << endl;
@@ -587,7 +587,7 @@ int main() {
     if (player.vida > 0)
         cout << "\nFin del juego\n";
 
-    cout << "\nEstado final del jugador:\n";
+    cout << "\nEstado final de Dr.Wolves:\n";
     cout << "[Dr.Wolves] Vida: " << player.vida
          << " | Ataque: " << player.ataque
          << " | Precisión: " << player.precision
