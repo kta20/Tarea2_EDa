@@ -47,7 +47,6 @@ void liberar_eventos(evento** eventos, int total) {
 
 void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
     if (!habitaciones) return;
-    // NO hagas: for (int i = 0; i < total_habitaciones; ++i) delete habitaciones[i];
     delete[] habitaciones;
 }
 
@@ -199,7 +198,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 }
                 int id = stoi(partes[0]);
                 if (id < 0 || id >= total_habitaciones) {
-                  //  cout << "ERROR: id fuera de rango: " << id << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
@@ -220,7 +218,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                             break;
                         }
                     }
-                    if (suma < 1.0 && r > suma) j = total_eventos - 1; // <-- Asegura que idx siempre sea válido
+                    if (suma < 1.0 && r > suma) j = total_eventos - 1; 
                     // Validar evento antes de asignar
                     if (eventos_globales[j] && eventos_globales[j]->opciones != NULL && eventos_globales[j]->cantidad_opciones >= 2) {
                         habitaciones[id]->evento_asociado = eventos_globales[j];
@@ -232,8 +230,8 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                     habitaciones[id]->evento_asociado = NULL;
                 }
 
-                // COMBATE
-                // Forzar combate en estaciones específicas
+
+                // Forzar combate en estaciones
                 bool forzar_combate = (
                     nombre == "Linea 2" ||
                     nombre == "Linea 3" ||
@@ -243,7 +241,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 );
 
                 if ((tipo.find("COMBATE") != string::npos && enemigos_globales && total_enemigos > 0) || forzar_combate) {
-                    // Cantidad aleatoria entre 1 y 3 si es forzado, o 1-2 si no
                     int cant = forzar_combate ? (1 + rand() % 3) : (1 + rand() % 2);
                     habitaciones[id]->cantidad_enemigos = cant;
                     habitaciones[id]->enemigos = new enemigo*[cant];
@@ -263,8 +260,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
         }
     }
     archivo.close();
-
-    // NO liberes enemigos_globales aquí
     return habitaciones;
 }
 
@@ -533,9 +528,9 @@ int main() {
 
         // Mostrar estado del jugador 
         cout << "\nEstado de Dr Wolves... Vida:" << jugador_.vida
-             << " | Ataque: " << jugador_.ataque
-             << " | Precisión: " << jugador_.precision
-             << " | Recuperación: " << jugador_.recuperacion << endl;
+            << " | Ataque: " << jugador_.ataque
+            << " | Precisión: " << jugador_.precision
+            << " | Recuperación: " << jugador_.recuperacion << endl;
 
 
         estacion* hijos[3];
@@ -563,12 +558,8 @@ int main() {
             int eleccion = 0;
             do {
                 cout << "Elige opción (1-" << num_hijos << "): ";
-                if (!(cin >> eleccion)) {
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-                    eleccion = 0;
-                }
-            } while (eleccion < 1 || eleccion > num_hijos || hijos[eleccion-1] == NULL);
+                cin >> eleccion;
+            } while (eleccion < 1 || eleccion > num_hijos);
             actual = hijos[eleccion-1];
         }
 
@@ -586,9 +577,9 @@ int main() {
 
     cout << "\nEstado final de Dr.Wolves:\n";
     cout << "[Dr.Wolves] Vida: " << jugador_.vida
-         << " | Ataque: " << jugador_.ataque
-         << " | Precisión: " << jugador_.precision
-         << " | Recuperación: " << jugador_.recuperacion << endl;
+        << " | Ataque: " << jugador_.ataque
+        << " | Precisión: " << jugador_.precision
+        << " | Recuperación: " << jugador_.recuperacion << endl;
 
 
     liberar_habitaciones(habitaciones, total_habitaciones);
