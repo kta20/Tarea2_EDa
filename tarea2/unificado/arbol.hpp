@@ -11,7 +11,7 @@ class ArbolTernario {
 private:
     estacion* raiz;
     void recorrer_preorden(estacion* nodo, int nivel);
-    void liberar_arbol(estacion* nodo, set<estacion*>& visitados); // <-- Esta puede quedar privada
+    void liberar_arbol(estacion* nodo, set<estacion*>& visitados); 
     estacion* buscar_estacion(estacion* nodo, int id);
 
 public:

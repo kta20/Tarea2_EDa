@@ -2,26 +2,26 @@
 #include <set>
 #include <iostream>
 using namespace std;
-
+//constructor
 ArbolTernario::ArbolTernario() : raiz(NULL) {}
-
+//destructor
 ArbolTernario::~ArbolTernario() {
     std::set<estacion*> visitados;
     liberar_arbol(raiz, visitados);
 }
-
+// asigna raiz
 void ArbolTernario::set_raiz(estacion* r) {
     raiz = r;
 }
-
+//retorna raiz
 estacion* ArbolTernario::get_raiz() {
     return raiz;
 }
-
+//muestra arbol en preoden 
 void ArbolTernario::mostrar_preorden() {
     recorrer_preorden(raiz, 0);
 }
-
+//busca estacion por id
 estacion* ArbolTernario::buscar(int id) {
     return buscar_estacion(raiz, id);
 }
@@ -68,16 +68,16 @@ void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
     recorrer_preorden(nodo->n2, nivel + 1);
     recorrer_preorden(nodo->n3, nivel + 1);
 }
-
+//libera recursivamente memoria de estaciones
 void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados) {
     if (nodo == NULL) return;
-    if (visitados.count(nodo)) return; // Ya fue liberado
+    if (visitados.count(nodo)) return; 
     visitados.insert(nodo);
 
     liberar_arbol(nodo->n1, visitados);
     liberar_arbol(nodo->n2, visitados);
     liberar_arbol(nodo->n3, visitados);
-
+//libera enemigos 
     if (nodo->enemigos != NULL) {
         for (int i = 0; i < nodo->cantidad_enemigos; ++i) {
             if (nodo->enemigos[i]) delete nodo->enemigos[i];
@@ -85,7 +85,7 @@ void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados
         delete[] nodo->enemigos;
         nodo->enemigos = NULL;
     }
-
+//libera evento si correspond
     if (nodo->evento_dinamico && nodo->evento_asociado != NULL) {
         delete[] nodo->evento_asociado->opciones;
         delete nodo->evento_asociado;
