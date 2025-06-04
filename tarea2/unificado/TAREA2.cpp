@@ -560,6 +560,32 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     return nodo;
 }
 
+bonus* leer_bonus(string filename, int& total_bonus) {
+    ifstream archivo(filename.c_str());
+    string linea;
+    bonus* bonus_arr = NULL;
+    while (getline(archivo, linea)) {
+        if (linea.find("BONUS|") == 0) {
+            int pos = linea.find('|');
+            total_bonus = stoi(linea.substr(pos + 1));
+            bonus_arr = new bonus[total_bonus];
+            for (int i = 0; i < total_bonus; ++i) {
+                getline(archivo, linea);
+                string partes[4];
+                int n_partes = 0;
+                split(linea, '|', partes, 4, n_partes);
+                bonus_arr[i].nombre = partes[0];
+                bonus_arr[i].id_origen = stoi(partes[1]);
+                bonus_arr[i].accion = partes[2];
+                bonus_arr[i].desc_post = partes[3];
+            }
+            break;
+        }
+    }
+    archivo.close();
+    return bonus_arr;
+}
+
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
@@ -586,6 +612,10 @@ int main() {
 
     jugador player = {100, 10, 0.7, 0};
     estacion* actual = arbol.get_raiz();
+
+    int total_bonus = 0;
+    bonus* bonus_arr = leer_bonus(archivo_mapa, total_bonus);
+    bool bonus_usado = false;
 
     while (actual && player.vida > 0) {
         // Validar que la estación no sea nula
@@ -740,6 +770,15 @@ int main() {
             } while (eleccion < 1 || eleccion > num_hijos || hijos[eleccion-1] == NULL);
             actual = hijos[eleccion-1];
         }
+
+        // BONUS: Viaje al pasado
+        if (!bonus_usado && total_bonus > 0 && actual->id == bonus_arr[0].id_origen) {
+            cout << "\n*** BONUS ACTIVADO: " << bonus_arr[0].nombre << " ***\n";
+            cout << bonus_arr[0].desc_post << endl;
+            actual = arbol.get_raiz(); // Retorna a Cal y Canto
+            bonus_usado = true;
+            continue; // Vuelve a mostrar la raíz y repite el ciclo
+        }
     }
 
     if (player.vida > 0)
@@ -756,6 +795,7 @@ int main() {
     liberar_habitaciones(habitaciones, total_habitaciones);
     liberar_enemigos(enemigos_globales, total_enemigos);
     liberar_eventos(eventos_globales, total_eventos);
+    if (bonus_arr) delete[] bonus_arr;
 
     return 0;
 }
