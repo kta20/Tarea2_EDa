@@ -303,10 +303,6 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
     archivo.close();
 }
 
-estacion* obtener_raiz(estacion** habitaciones) {
-    return habitaciones[0];
-}
-
 // Selecciona un enemigo aleatorio según probabilidad de aparición
 enemigo* enemigo_aleatorio(enemigo** enemigos, int total_enemigos) {
     float r = (float)rand() / RAND_MAX;
@@ -453,7 +449,7 @@ int main() {
     }
 
     leer_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
-    arbol.set_raiz(obtener_raiz(habitaciones));
+    arbol.set_raiz(habitaciones[0]);
 
     jugador player = {100, 10, 0.7, 0};
     estacion* actual = arbol.get_raiz();
