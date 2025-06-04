@@ -23,7 +23,7 @@ public:
     estacion* buscar(int id);
     estacion* crear_estacion(int id, string nombre, string tipo, string descripcion);
     bool agregar_hijo(estacion* padre, estacion* hijo);
-    void liberar_arbol(estacion* nodo); // <-- Mueve esta línea aquí
+    void liberar_arbol(estacion* nodo); 
 };
 
 #endif
