@@ -8,7 +8,7 @@ Botellas|Probabilidad 0.4|Ves dos botellas. Una roja y otra verde chillon|A: Beb
 Refugio|Probabilidad 0.3|Encuentras un refugio abandonado con suministros|A: Tomar kit medico|Te curas y recuperas vida|Vida:+20|B: Tomar un arma|Agarras una pistola y la guardas|Ataque:+7
 Ruidos|Probabilidad 0.3|Escuchas pasos detras de ti...|A: Correr|Te tropiezas y quedando en el piso adolorido|Vida:-7|B: Esconderte|Logras estar a salvo por el momento|Ninguna consecuencia
 HABITACIONES|17
-0|Puente Cal y Canto|(INICIO)|Eres un superviviente de una explosion nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estacion Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si estan vivas. Te lanzas resuelto en su busqueda teniendo en cuenta que su hogar era proximo a la estacion Ñuñoa. 
+0|Puente Cal y Canto|(INICIO)|Eres un supervivientem, llamdo Dr.Wolves, de una explosion nuclear, milagrosamente te encontrabas a salvo en las profundidades de la estacion Cal y Canto, ansias reencontrarte con tu familia (esposa e hija) y saber si estan vivas. Te lanzas resuelto en su busqueda teniendo en cuenta que su hogar era proximo a la estacion Ñuñoa. 
 1|Linea 2|(COMBATE)|Transitas por la boleteria para acceder a las vias del metro, cuando visualizas a lo lejos un tumulto acercandote.
 2|Santa Ana|(EVENTO)|Encuentras una oficina de seguridad abierta, vas a investigar... 
 3|Plaza de Armas|(COMBATE)|Ves una fogata entre la oscuridad de un anden, te acercas y te embiste algo. 
