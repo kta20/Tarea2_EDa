@@ -59,7 +59,7 @@ int seleccionar_por_probabilidad(float* probs, int total) {
     return total - 1;
 }
 
-enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
+enemigo** leer_enemigos(string filename, int& total_enemigos) {
     ifstream archivo(filename.c_str());
     string linea;
     enemigo** enemigos = NULL;
@@ -88,7 +88,7 @@ enemigo** leer_enemigos_globales_impl(string filename, int& total_enemigos) {
 }
 
 // Lee todos los eventos definidos en el archivo y retorna un arreglo
-evento** leer_eventos_globales_impl(string filename, int& total_eventos) {
+evento** leer_eventos(string filename, int& total_eventos) {
     ifstream archivo(filename.c_str());
     string linea;
     evento** eventos = NULL;
@@ -172,9 +172,9 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
     estacion** habitaciones = NULL;
 
     int total_enemigos = 0;
-    enemigo** enemigos_globales = leer_enemigos_globales_impl(filename, total_enemigos);
+    enemigo** enemigos_globales = leer_enemigos(filename, total_enemigos);
     int total_eventos = 0;
-    evento** eventos_globales = leer_eventos_globales_impl(filename, total_eventos);
+    evento** eventos_globales = leer_eventos(filename, total_eventos);
     srand(time(NULL)); 
 
     while (getline(archivo, linea)) {
@@ -428,9 +428,9 @@ int main() {
     int total_habitaciones = 0;
 
     int total_enemigos = 0;
-    enemigo** enemigos_globales = leer_enemigos_globales_impl(archivo_mapa, total_enemigos);
+    enemigo** enemigos_globales = leer_enemigos(archivo_mapa, total_enemigos);
     int total_eventos = 0;
-    evento** eventos_globales = leer_eventos_globales_impl(archivo_mapa, total_eventos);
+    evento** eventos_globales = leer_eventos(archivo_mapa, total_eventos);
 
     habitaciones = leer_habitaciones(archivo_mapa, total_habitaciones, arbol);
 
