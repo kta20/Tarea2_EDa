@@ -69,18 +69,15 @@ void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
     recorrer_preorden(nodo->n3, nivel + 1);
 }
 
-// --- CORREGIDO: Liberar árbol evitando doble free ---
 void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados) {
     if (nodo == NULL) return;
     if (visitados.count(nodo)) return; // Ya fue liberado
     visitados.insert(nodo);
 
-    // PRIMERO libera recursivamente los hijos
     liberar_arbol(nodo->n1, visitados);
     liberar_arbol(nodo->n2, visitados);
     liberar_arbol(nodo->n3, visitados);
 
-    // LUEGO libera enemigos de la estación
     if (nodo->enemigos != NULL) {
         for (int i = 0; i < nodo->cantidad_enemigos; ++i) {
             if (nodo->enemigos[i]) delete nodo->enemigos[i];
@@ -89,25 +86,19 @@ void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados
         nodo->enemigos = NULL;
     }
 
-    // LUEGO libera evento dinámico (NO global)
     if (nodo->evento_dinamico && nodo->evento_asociado != NULL) {
         delete[] nodo->evento_asociado->opciones;
         delete nodo->evento_asociado;
         nodo->evento_asociado = NULL;
     }
 
-    // POR ÚLTIMO libera el nodo
     delete nodo;
 }
 
-// Sobrecarga para compatibilidad con llamadas de un solo argumento
 void ArbolTernario::liberar_arbol(estacion* nodo) {
     std::set<estacion*> visitados;
     liberar_arbol(nodo, visitados);
 }
-
-// --- Si necesitas compatibilidad con la firma anterior, puedes dejar esto vacío ---
-// Eliminada para evitar ambigüedad y errores de compilación.
 
 // busca cualquier habitacion a partir de su id
 estacion* ArbolTernario::buscar_estacion(estacion* nodo, int id) {

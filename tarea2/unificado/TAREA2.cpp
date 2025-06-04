@@ -47,18 +47,7 @@ void liberar_eventos(evento** eventos, int total) {
 
 void liberar_habitaciones(estacion** habitaciones, int total_habitaciones) {
     if (!habitaciones) return;
-    for (int i = 0; i < total_habitaciones; ++i) {
-        if (habitaciones[i]) {
-            if (habitaciones[i]->enemigos)
-                liberar_enemigos(habitaciones[i]->enemigos, habitaciones[i]->cantidad_enemigos);
-            if (habitaciones[i]->evento_dinamico && habitaciones[i]->evento_asociado) {
-                if (habitaciones[i]->evento_asociado->opciones)
-                    delete[] habitaciones[i]->evento_asociado->opciones;
-                delete habitaciones[i]->evento_asociado;
-            }
-            delete habitaciones[i];
-        }
-    }
+    // NO hagas: for (int i = 0; i < total_habitaciones; ++i) delete habitaciones[i];
     delete[] habitaciones;
 }
 
@@ -416,8 +405,8 @@ void guardar_arbol(estacion* raiz, ofstream& out) {
 estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     string linea;
     if (!getline(in, linea)) return NULL;
-
-    // extrae info de cada estacion/nodo (id, nombre, tipo y descripcion)
+    // extrae y almacena la info de estacion
+    getline(in, linea);
     string partes[4];
     int n_partes = 0;
     split(linea, '|', partes, 4, n_partes);
@@ -716,10 +705,8 @@ int main() {
          << " | Precisión: " << player.precision
          << " | Recuperación: " << player.recuperacion << endl;
 
-    arbol.liberar_arbol(arbol.get_raiz());
 
     liberar_habitaciones(habitaciones, total_habitaciones);
-
     liberar_enemigos(enemigos_globales, total_enemigos);
     liberar_eventos(eventos_globales, total_eventos);
     if (bonus_arr) delete[] bonus_arr;
