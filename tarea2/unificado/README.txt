@@ -4,7 +4,6 @@ archivo tambi´en deber´a contener una explicaci´on del formato de su archivo
 data.map y la justificaci´on para optar a los 10 pts del requisito especial, en
 caso de haberlo implementado.
 
-nombre 1
 Felipe Luengo 202473509-8
 Catalina Fernandez 202473645-0
 
@@ -20,3 +19,6 @@ ARCOS:
 inicio|llegada
 MEJORAS DE COMBATE:
 vida|precision|ataque|recuperacion
+
+ejemplo de compilacion: 
+
