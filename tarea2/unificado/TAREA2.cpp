@@ -586,23 +586,19 @@ int main() {
             break;
         }
 
-        // Presentación de la estación
         cout << "\n-- " << actual->nombre << " --\n" << endl;
         cout << actual->descripcion << "\n" << endl;
 
-        // Combate interactivo si corresponde
         if (actual->cantidad_enemigos > 0 && actual->enemigos != NULL) {
             cout << "\n¡Comienza un combate!" << endl;
             if (!combate(&player, actual->enemigos, actual->cantidad_enemigos)) {
                 cout << "Has sido derrotado en combate.\n";
                 break;
             }
-            // --- Recuperación tras combate ---
             if (player.recuperacion > 0) {
                 player.vida += player.recuperacion;
                 cout << "Te recuperas tras el combate y recuperas " << player.recuperacion << " de vida. Vida actual: " << player.vida << endl;
             }
-            // --- Lógica de mejora tras combate ---
             cout << "\nElige una mejora:\n";
             cout << "1. +10 Vida\n";
             cout << "2. +2 Ataque\n";
