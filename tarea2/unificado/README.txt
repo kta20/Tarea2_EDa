@@ -20,5 +20,6 @@ inicio|llegada
 MEJORAS DE COMBATE:
 vida|precision|ataque|recuperacion
 
-ejemplo de compilacion: 
+requisito  especial: Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas..., no sabes que ocurrio, solo abres los ojos y te das cuenta que volviste a la estacion donde inicio todo, Cal y Canto.
+ejemplo de compilacion:
 

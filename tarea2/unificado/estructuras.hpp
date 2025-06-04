@@ -34,12 +34,6 @@ struct jugador {
     int recuperacion;
 };
 
-struct mejora {
-    int vida;
-    float precision;
-    int ataque;
-    int recuperacion;
-};
 
 struct bonus {
     string nombre;
@@ -66,20 +60,5 @@ struct estacion {
     evento* evento_asociado; // Se libera en liberar_arbol SOLO si evento_dinamico==true
     bool evento_dinamico;
 };
-
-struct golpe {
-    string atacante;
-    string objetivo;
-    int fuerza;
-    bool acierto;
-    int vida_objetivo;
-    golpe* sig; // Para la pila
-};
-
-// Pila de golpes
-struct pila_golpes {
-    golpe* tope;
-};
-
 
 #endif
