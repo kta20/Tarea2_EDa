@@ -10,6 +10,7 @@ using namespace std;
 
 const unsigned NO_ENCONTRADO = (unsigned)-1;
 
+//almacena partes de un string en un arreglo. util para almacenar la info de cada linea (eventos, estaciones...)
 void split(const string& texto, char separador, string partes[], int max_partes, int& cantidad_partes) {
     unsigned pos_in = 0;
     cantidad_partes = 0;
