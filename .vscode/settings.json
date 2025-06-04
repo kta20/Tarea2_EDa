@@ -45,6 +45,8 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "text_encoding": "cpp"
+    "text_encoding": "cpp",
+    "ctime": "cpp",
+    "set": "cpp"
   }
 }
