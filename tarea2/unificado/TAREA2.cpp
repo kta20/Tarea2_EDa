@@ -8,13 +8,14 @@
 #include <string>
 using namespace std;
 
-//almacena partes de un string en un arreglo. util para almacenar la info de cada linea (eventos, estaciones...)
+const unsigned NO_ENCONTRADO = (unsigned)-1;
+
 void split(const string& texto, char separador, string partes[], int max_partes, int& cantidad_partes) {
     unsigned pos_in = 0;
-    unsigned pos_separador = texto.find(separador, pos_in);
     cantidad_partes = 0;
+    unsigned pos_separador = texto.find(separador, pos_in);
 
-    while (pos_separador != (unsigned)-1 && cantidad_partes < max_partes - 1) {
+    while (pos_separador != NO_ENCONTRADO && cantidad_partes < max_partes - 1) {
         partes[cantidad_partes] = texto.substr(pos_in, pos_separador - pos_in);
         cantidad_partes++;
         pos_in = pos_separador + 1;
