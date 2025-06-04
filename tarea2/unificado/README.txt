@@ -6,6 +6,7 @@ caso de haberlo implementado.
 
 nombre 1
 Felipe Luengo 202473509-8
+Catalina Fernandez 202473645-0
 
 formato del .map:
 INICIO DE ARCHIVO
