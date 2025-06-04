@@ -515,6 +515,42 @@ bonus* leer_bonus(string filename, int& total_bonus) {
     return bonus_arr;
 }
 
+void aplicar_mejora(jugador& player) {
+    cout << "\nElige una mejora:\n";
+    cout << "1. +10 Vida\n";
+    cout << "2. +2 Ataque\n";
+    cout << "3. +0.1 Precisión\n";
+    cout << "4. +1 Recuperación\n";
+    int mejora = 0;
+    do {
+        cout << "Ingresa el número de la mejora: ";
+        if (!(cin >> mejora)) {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            mejora = 0;
+        }
+    } while (mejora < 1 || mejora > 4);
+
+    switch (mejora) {
+        case 1:
+            player.vida += 10;
+            cout << "¡Has ganado +10 Vida! Vida actual: " << player.vida << endl;
+            break;
+        case 2:
+            player.ataque += 2;
+            cout << "¡Has ganado +2 Ataque! Ataque actual: " << player.ataque << endl;
+            break;
+        case 3:
+            player.precision += 0.1;
+            cout << "¡Has ganado +0.1 Precisión! Precisión actual: " << player.precision << endl;
+            break;
+        case 4:
+            player.recuperacion += 1;
+            cout << "¡Has ganado +1 Recuperación! Recuperación actual: " << player.recuperacion << endl;
+            break;
+    }
+}
+
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
@@ -564,39 +600,7 @@ int main() {
                 player.vida += player.recuperacion;
                 cout << "Te recuperas tras el combate y recuperas " << player.recuperacion << " de vida. Vida actual: " << player.vida << endl;
             }
-            cout << "\nElige una mejora:\n";
-            cout << "1. +10 Vida\n";
-            cout << "2. +2 Ataque\n";
-            cout << "3. +0.1 Precisión\n";
-            cout << "4. +1 Recuperación\n";
-            int mejora = 0;
-            do {
-                cout << "Ingresa el número de la mejora: ";
-                if (!(cin >> mejora)) {
-                    cin.clear();
-                    cin.ignore(10000, '\n');
-                    mejora = 0;
-                }
-            } while (mejora < 1 || mejora > 4);
-
-            switch (mejora) {
-                case 1:
-                    player.vida += 10;
-                    cout << "¡Has ganado +10 Vida! Vida actual: " << player.vida << endl;
-                    break;
-                case 2:
-                    player.ataque += 2;
-                    cout << "¡Has ganado +2 Ataque! Ataque actual: " << player.ataque << endl;
-                    break;
-                case 3:
-                    player.precision += 0.1;
-                    cout << "¡Has ganado +0.1 Precisión! Precisión actual: " << player.precision << endl;
-                    break;
-                case 4:
-                    player.recuperacion += 1;
-                    cout << "¡Has ganado +1 Recuperación! Recuperación actual: " << player.recuperacion << endl;
-                    break;
-            }
+            aplicar_mejora(player);
         }
 
         // Evento si corresponde
