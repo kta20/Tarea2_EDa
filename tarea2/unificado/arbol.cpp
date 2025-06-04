@@ -17,10 +17,7 @@ void ArbolTernario::set_raiz(estacion* r) {
 estacion* ArbolTernario::get_raiz() {
     return raiz;
 }
-//muestra arbol en preoden 
-void ArbolTernario::mostrar_preorden() {
-    recorrer_preorden(raiz, 0);
-}
+
 //busca estacion por id
 estacion* ArbolTernario::buscar(int id) {
     return buscar_estacion(raiz, id);
@@ -59,15 +56,7 @@ bool ArbolTernario::agregar_hijo(estacion* padre, estacion* hijo) {
     return false;
 }
 
-// recorre y muestra el arbol en preorden (visita nodo actual y luego a sus hijos de izq a derecha)
-void ArbolTernario::recorrer_preorden(estacion* nodo, int nivel) {
-    if (nodo == NULL) return;
-    for (int i = 0; i < nivel; ++i) cout << "  ";
-    cout << nodo->nombre << " (" << nodo->tipo << ")\n";
-    recorrer_preorden(nodo->n1, nivel + 1);
-    recorrer_preorden(nodo->n2, nivel + 1);
-    recorrer_preorden(nodo->n3, nivel + 1);
-}
+
 //libera recursivamente memoria de estaciones
 void ArbolTernario::liberar_arbol(estacion* nodo, std::set<estacion*>& visitados) {
     if (nodo == NULL) return;
