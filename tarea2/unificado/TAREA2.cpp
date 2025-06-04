@@ -278,13 +278,7 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
     }
     archivo.close();
 
-    // Libera SOLO los enemigos globales aquí (no los eventos)
-    if (enemigos_globales) {
-        for (int i = 0; i < total_enemigos; ++i)
-            delete enemigos_globales[i];
-        delete[] enemigos_globales;
-    }
-
+    // NO liberes enemigos_globales aquí
     return habitaciones;
 }
 
@@ -322,71 +316,6 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
 
 estacion* obtener_raiz(estacion** habitaciones) {
     return habitaciones[0];
-}
-
-cola_enemigo* crear_cola_enemigos() {
-    return NULL;
-}
-
-// Crear un nuevo nodo de cola
-cola_enemigo* crear_nodo_cola(enemigo* e) {
-    cola_enemigo* nuevo = new cola_enemigo;
-    nuevo->dato = e;
-    nuevo->sig = NULL;
-    return nuevo;
-}
-
-void encolar(cola_enemigo*& frente, cola_enemigo*& fin, enemigo* e) {
-    cola_enemigo* nuevo = crear_nodo_cola(e);
-    if (fin == NULL) {
-        frente = fin = nuevo;
-    } else {
-        fin->sig = nuevo;
-        fin = nuevo;
-    }
-}
-
-enemigo* desencolar(cola_enemigo*& frente, cola_enemigo*& fin) {
-    if (frente == NULL) return NULL;
-    cola_enemigo* temp = frente;
-    enemigo* e = temp->dato;
-    frente = frente->sig;
-    if (frente == NULL) fin = NULL;
-    delete temp;
-    return e;
-}
-
-bool cola_vacia(cola_enemigo* frente) {
-    return frente == NULL;
-}
-
-void liberar_cola(cola_enemigo*& frente) {
-    while (frente != NULL) {
-        cola_enemigo* temp = frente;
-        frente = frente->sig;
-        delete temp;
-    }
-}
-
-
-void push_golpe(pila_golpes& pila, const string& atacante, const string& objetivo, int fuerza, bool acierto, int vida_objetivo) {
-    golpe* nuevo = new golpe{atacante, objetivo, fuerza, acierto, vida_objetivo, pila.tope};
-    pila.tope = nuevo;
-}
-
-golpe* pop_golpe(pila_golpes& pila) {
-    if (!pila.tope) return NULL;
-    golpe* g = pila.tope;
-    pila.tope = pila.tope->sig;
-    return g;
-}
-
-void liberar_pila(pila_golpes& pila) {
-    while (pila.tope) {
-        golpe* temp = pila.tope;
-        pila.tope = pila.tope->sig;
-        delete temp;
-    }
 }
 
 // Selecciona un enemigo aleatorio según probabilidad de aparición
@@ -560,32 +489,6 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     return nodo;
 }
 
-bonus* leer_bonus(string filename, int& total_bonus) {
-    ifstream archivo(filename.c_str());
-    string linea;
-    bonus* bonus_arr = NULL;
-    while (getline(archivo, linea)) {
-        if (linea.find("BONUS|") == 0) {
-            int pos = linea.find('|');
-            total_bonus = stoi(linea.substr(pos + 1));
-            bonus_arr = new bonus[total_bonus];
-            for (int i = 0; i < total_bonus; ++i) {
-                getline(archivo, linea);
-                string partes[4];
-                int n_partes = 0;
-                split(linea, '|', partes, 4, n_partes);
-                bonus_arr[i].nombre = partes[0];
-                bonus_arr[i].id_origen = stoi(partes[1]);
-                bonus_arr[i].accion = partes[2];
-                bonus_arr[i].desc_post = partes[3];
-            }
-            break;
-        }
-    }
-    archivo.close();
-    return bonus_arr;
-}
-
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
@@ -602,8 +505,6 @@ int main() {
     if (habitaciones == NULL || total_habitaciones == 0) {
         cout << "No se pudieron leer las habitaciones." << endl;
         liberar_habitaciones(habitaciones, total_habitaciones);
-        liberar_enemigos(enemigos_globales, total_enemigos);
-        liberar_eventos(eventos_globales, total_eventos);
         return 1;
     }
 
@@ -624,23 +525,19 @@ int main() {
             break;
         }
 
-        // Presentación de la estación
         cout << "\n-- " << actual->nombre << " --\n" << endl;
         cout << actual->descripcion << "\n" << endl;
 
-        // Combate interactivo si corresponde
         if (actual->cantidad_enemigos > 0 && actual->enemigos != NULL) {
             cout << "\n¡Comienza un combate!" << endl;
             if (!combate(&player, actual->enemigos, actual->cantidad_enemigos)) {
                 cout << "Has sido derrotado en combate.\n";
                 break;
             }
-            // --- Recuperación tras combate ---
             if (player.recuperacion > 0) {
                 player.vida += player.recuperacion;
                 cout << "Te recuperas tras el combate y recuperas " << player.recuperacion << " de vida. Vida actual: " << player.vida << endl;
             }
-            // --- Lógica de mejora tras combate ---
             cout << "\nElige una mejora:\n";
             cout << "1. +10 Vida\n";
             cout << "2. +2 Ataque\n";
@@ -793,6 +690,7 @@ int main() {
     arbol.liberar_arbol(arbol.get_raiz());
 
     liberar_habitaciones(habitaciones, total_habitaciones);
+
     liberar_enemigos(enemigos_globales, total_enemigos);
     liberar_eventos(eventos_globales, total_eventos);
     if (bonus_arr) delete[] bonus_arr;
