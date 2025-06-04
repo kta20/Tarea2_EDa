@@ -1,13 +1,7 @@
-README.txt con los nombres y roles de los integrantes, adem´as de un apartado con
-instrucciones de compilaci´on y ejecuci´on en caso de ser distintas a las esperadas. Este
-archivo tambi´en deber´a contener una explicaci´on del formato de su archivo
-data.map y la justificaci´on para optar a los 10 pts del requisito especial, en
-caso de haberlo implementado.
-
 Felipe Luengo 202473509-8
 Catalina Fernandez 202473645-0
 
-formato del .map:
+formato del .map, lo dejamos con esas separaciones y sin lineas vacias para parsearlo de manera mas comoda:
 INICIO DE ARCHIVO
 ENEMIGOS:
 enemigo|vida|ataque|precision|probabilidad
@@ -20,6 +14,8 @@ inicio|llegada
 MEJORAS DE COMBATE:
 vida|precision|ataque|recuperacion
 
-requisito  especial: Te empiezas a sentir mareado y confundido, hueles algo extraño y te desplomas..., no sabes que ocurrio, solo abres los ojos y te das cuenta que volviste a la estacion donde inicio todo, Cal y Canto.
-ejemplo de compilacion:
+ejemplo de compilacion (incluye el archivo principal con el main y funciones, y el tda arbol con sus operadores asociados): 
+g++ -o juego TAREA2.cpp arbol.cpp
+
+justificacion requisito especial: existe una estacion (p.egaña) que te lleva a la raiz. Como dice la descripcion eres arrastrado por unos seres desconocidos. 
 
