@@ -215,18 +215,18 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 if (tipo.find("EVENTO") != string::npos && eventos_globales && total_eventos > 0) {
                     float r = (float)rand() / RAND_MAX;
                     float suma = 0;
-                    int idx = 0;
+                    int j = 0;
                     for (int e = 0; e < total_eventos; ++e) {
                         suma += eventos_globales[e]->probabilidad;
                         if (r <= suma) {
-                            idx = e;
+                            j = e;
                             break;
                         }
                     }
-                    if (suma < 1.0 && r > suma) idx = total_eventos - 1; // <-- Asegura que idx siempre sea válido
+                    if (suma < 1.0 && r > suma) j = total_eventos - 1; // <-- Asegura que idx siempre sea válido
                     // Validar evento antes de asignar
-                    if (eventos_globales[idx] && eventos_globales[idx]->opciones != NULL && eventos_globales[idx]->cantidad_opciones >= 2) {
-                        habitaciones[id]->evento_asociado = eventos_globales[idx];
+                    if (eventos_globales[j] && eventos_globales[j]->opciones != NULL && eventos_globales[j]->cantidad_opciones >= 2) {
+                        habitaciones[id]->evento_asociado = eventos_globales[j];
                         habitaciones[id]->evento_dinamico = false;
                     } else {
                         habitaciones[id]->evento_asociado = NULL;
@@ -405,8 +405,8 @@ void guardar_arbol(estacion* raiz, ofstream& out) {
 estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     string linea;
     if (!getline(in, linea)) return NULL;
-    // extrae y almacena la info de estacion
-    getline(in, linea);
+
+    // extrae info de cada estacion/nodo (id, nombre, tipo y descripcion)
     string partes[4];
     int n_partes = 0;
     split(linea, '|', partes, 4, n_partes);
