@@ -489,6 +489,32 @@ estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
     return nodo;
 }
 
+bonus* leer_bonus(string filename, int& total_bonus) {
+    ifstream archivo(filename.c_str());
+    string linea;
+    bonus* bonus_arr = NULL;
+    while (getline(archivo, linea)) {
+        if (linea.find("BONUS|") == 0) {
+            int pos = linea.find('|');
+            total_bonus = stoi(linea.substr(pos + 1));
+            bonus_arr = new bonus[total_bonus];
+            for (int i = 0; i < total_bonus; ++i) {
+                getline(archivo, linea);
+                string partes[4];
+                int n_partes = 0;
+                split(linea, '|', partes, 4, n_partes);
+                bonus_arr[i].nombre = partes[0];
+                bonus_arr[i].id_origen = stoi(partes[1]);
+                bonus_arr[i].accion = partes[2];
+                bonus_arr[i].desc_post = partes[3];
+            }
+            break;
+        }
+    }
+    archivo.close();
+    return bonus_arr;
+}
+
 int main() {
     string archivo_mapa = "juego.map";
     ArbolTernario arbol;
