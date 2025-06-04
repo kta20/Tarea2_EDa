@@ -1,92 +1,89 @@
-==30691== Memcheck, a memory error detector
-==30691== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==30691== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
-==30691== Command: ./juego
-==30691== 
-==30691== 
-==30691== HEAP SUMMARY:
-==30691==     in use at exit: 1,233 bytes in 20 blocks
-==30691==   total heap usage: 258 allocs, 238 frees, 155,367 bytes allocated
-==30691== 
-==30691== 128 bytes in 3 blocks are indirectly lost in loss record 1 of 8
-==30691==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
-==30691==    by 0x113C66: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
-==30691==    by 0x11347F: allocate (allocator.h:188)
-==30691==    by 0x11347F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
-==30691==    by 0x112E27: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:155)
-==30691==    by 0x113506: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:284)
-==30691==    by 0x112CED: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1571)
-==30691==    by 0x1122F0: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:805)
-==30691==    by 0x10CFB9: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:114)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 144 bytes in 3 blocks are indirectly lost in loss record 2 of 8
-==30691==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
-==30691==    by 0x10CAFD: leer_enemigos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:83)
-==30691==    by 0x10DC5F: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:178)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 148 bytes in 3 blocks are indirectly lost in loss record 3 of 8
-==30691==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
-==30691==    by 0x113C66: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
-==30691==    by 0x11347F: allocate (allocator.h:188)
-==30691==    by 0x11347F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
-==30691==    by 0x112E27: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:155)
-==30691==    by 0x113A6A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:328)
-==30691==    by 0x113399: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:420)
-==30691==    by 0x113094: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1422)
-==30691==    by 0x1128B6: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1388)
-==30691==    by 0x112444: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1330)
-==30691==    by 0x10D111: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:122)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 168 (24 direct, 144 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 8
-==30691==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
-==30691==    by 0x10C9D2: leer_enemigos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:72)
-==30691==    by 0x10DC5F: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:178)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 189 bytes in 3 blocks are indirectly lost in loss record 5 of 8
-==30691==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
-==30691==    by 0x113C66: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
-==30691==    by 0x11347F: allocate (allocator.h:188)
-==30691==    by 0x11347F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
-==30691==    by 0x112E27: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:155)
-==30691==    by 0x113A6A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:328)
-==30691==    by 0x113399: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:420)
-==30691==    by 0x113094: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1422)
-==30691==    by 0x1128B6: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1388)
-==30691==    by 0x112444: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.h:1330)
-==30691==    by 0x10D561: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:141)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 264 bytes in 3 blocks are indirectly lost in loss record 6 of 8
-==30691==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
-==30691==    by 0x10CEE1: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:109)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 312 bytes in 3 blocks are indirectly lost in loss record 7 of 8
-==30691==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
-==30691==    by 0x10CFC3: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:116)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== 1,065 (24 direct, 1,041 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 8
-==30691==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
-==30691==    by 0x10CDE6: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (TAREA2.cpp:101)
-==30691==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (TAREA2.cpp:180)
-==30691==    by 0x10F8EB: main (TAREA2.cpp:444)
-==30691== 
-==30691== LEAK SUMMARY:
-==30691==    definitely lost: 48 bytes in 2 blocks
-==30691==    indirectly lost: 1,185 bytes in 18 blocks
-==30691==      possibly lost: 0 bytes in 0 blocks
-==30691==    still reachable: 0 bytes in 0 blocks
-==30691==         suppressed: 0 bytes in 0 blocks
-==30691== 
-==30691== For lists of detected and suppressed errors, rerun with: -s
-==30691== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==42220== Memcheck, a memory error detector
+==42220== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==42220== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==42220== Command: ./juego
+==42220== 
+==42220== 
+==42220== HEAP SUMMARY:
+==42220==     in use at exit: 1,233 bytes in 20 blocks
+==42220==   total heap usage: 270 allocs, 250 frees, 156,045 bytes allocated
+==42220== 
+==42220== 128 bytes in 3 blocks are indirectly lost in loss record 1 of 8
+==42220==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
+==42220==    by 0x113B86: std::__new_allocator<char>::allocate(unsigned long, void const*) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x11339F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112D47: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x113426: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112C0D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112210: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10CFB9: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 144 bytes in 3 blocks are indirectly lost in loss record 2 of 8
+==42220==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
+==42220==    by 0x10CAFD: leer_enemigos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DC5F: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 148 bytes in 3 blocks are indirectly lost in loss record 3 of 8
+==42220==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
+==42220==    by 0x113B86: std::__new_allocator<char>::allocate(unsigned long, void const*) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x11339F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112D47: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x11398A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x1132B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112FB4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x1127D6: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112364: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10D111: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 168 (24 direct, 144 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 8
+==42220==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
+==42220==    by 0x10C9D2: leer_enemigos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DC5F: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 189 bytes in 3 blocks are indirectly lost in loss record 5 of 8
+==42220==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
+==42220==    by 0x113B86: std::__new_allocator<char>::allocate(unsigned long, void const*) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x11339F: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112D47: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x11398A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x1132B9: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112FB4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x1127D6: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x112364: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10D561: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 264 bytes in 3 blocks are indirectly lost in loss record 6 of 8
+==42220==    at 0x4841F2F: operator new(unsigned long) (vg_replace_malloc.c:422)
+==42220==    by 0x10CEE1: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 312 bytes in 3 blocks are indirectly lost in loss record 7 of 8
+==42220==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
+==42220==    by 0x10CFC3: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== 1,065 (24 direct, 1,041 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 8
+==42220==    at 0x484320F: operator new[](unsigned long) (vg_replace_malloc.c:640)
+==42220==    by 0x10CDE6: leer_eventos_globales_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10DCAE: leer_habitaciones(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int&, ArbolTernario&) (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220==    by 0x10F8B0: main (in /home/pipazo/Tarea2_EDa/tarea2/unificado/juego)
+==42220== 
+==42220== LEAK SUMMARY:
+==42220==    definitely lost: 48 bytes in 2 blocks
+==42220==    indirectly lost: 1,185 bytes in 18 blocks
+==42220==      possibly lost: 0 bytes in 0 blocks
+==42220==    still reachable: 0 bytes in 0 blocks
+==42220==         suppressed: 0 bytes in 0 blocks
+==42220== 
+==42220== For lists of detected and suppressed errors, rerun with: -s
+==42220== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
