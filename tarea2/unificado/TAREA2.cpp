@@ -226,18 +226,18 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 if (tipo.find("EVENTO") != string::npos && eventos_globales && total_eventos > 0) {
                     float r = (float)rand() / RAND_MAX;
                     float suma = 0;
-                    int idx = 0;
+                    int j = 0;
                     for (int e = 0; e < total_eventos; ++e) {
                         suma += eventos_globales[e]->probabilidad;
                         if (r <= suma) {
-                            idx = e;
+                            j = e;
                             break;
                         }
                     }
-                    if (suma < 1.0 && r > suma) idx = total_eventos - 1; // <-- Asegura que idx siempre sea válido
+                    if (suma < 1.0 && r > suma) j = total_eventos - 1; // <-- Asegura que idx siempre sea válido
                     // Validar evento antes de asignar
-                    if (eventos_globales[idx] && eventos_globales[idx]->opciones != NULL && eventos_globales[idx]->cantidad_opciones >= 2) {
-                        habitaciones[id]->evento_asociado = eventos_globales[idx];
+                    if (eventos_globales[j] && eventos_globales[j]->opciones != NULL && eventos_globales[j]->cantidad_opciones >= 2) {
+                        habitaciones[id]->evento_asociado = eventos_globales[j];
                         habitaciones[id]->evento_dinamico = false;
                     } else {
                         habitaciones[id]->evento_asociado = NULL;
@@ -381,113 +381,7 @@ bool combate(jugador* player, enemigo** enemigos, int total_enemigos) {
     return player->vida > 0;
 }
 
-void guardar_arbol(estacion* raiz, ofstream& out) {
-    if (!raiz) {
-        out << "#\n";
-        return;
-    }
-    // Datos básicos
-    out << raiz->id << "|" << raiz->nombre << "|" << raiz->tipo << "|" << raiz->descripcion << "\n";
-    // Enemigos
-    out << raiz->cantidad_enemigos << "\n";
-    for (int i = 0; i < raiz->cantidad_enemigos; ++i) {
-        enemigo* e = raiz->enemigos[i];
-        out << e->nombre << "|" << e->vida << "|" << e->ataque << "|" << e->precision << "|" << e->prob_spawn << "\n";
-    }
-    // Evento asociado
-    if (raiz->evento_asociado) {
-        evento* ev = raiz->evento_asociado;
-        out << "EVENTO|" << ev->nombre << "|" << ev->descripcion << "|" << ev->probabilidad << "|" << ev->cantidad_opciones << "\n";
-        for (int i = 0; i < ev->cantidad_opciones; ++i) {
-            out << ev->opciones[i].descripcion << "|" << ev->opciones[i].cambio_vida << "|" << ev->opciones[i].cambio_ataque
-                << "|" << ev->opciones[i].cambio_precision << "|" << ev->opciones[i].cambio_recuperacion << "\n";
-        }
-    } else {
-        out << "NO_EVENTO\n";
-    }
-    // Recursivo para hijos
-    guardar_arbol(raiz->n1, out);
-    guardar_arbol(raiz->n2, out);
-    guardar_arbol(raiz->n3, out);
-}
 
-
-// carga un arbol (recibe un archivo y la estructura de un arbol donde almacenara los nodos/estaciones)
-estacion* cargar_arbol(ifstream& in, ArbolTernario& arbol) {
-    string linea;
-    if (!getline(in, linea)) return NULL;
-
-    // extrae info de cada estacion/nodo (id, nombre, tipo y descripcion)
-    string partes[4];
-    int n_partes = 0;
-    split(linea, '|', partes, 4, n_partes);
-    int id = stoi(partes[0]);
-    string nombre = partes[1];
-    string tipo = partes[2];
-    string descripcion = partes[3];
-    estacion* nodo = arbol.crear_estacion(id, nombre, tipo, descripcion);
-
-    // extrae y almacena la info de cada enemigo, segun la cantidad que se haya definido en el .map, la almacena en el campo respectivo de cada nodo
-    getline(in, linea);
-    int cant_enemigos = stoi(linea);
-    nodo->cantidad_enemigos = cant_enemigos;
-    if (cant_enemigos > 0) {
-        nodo->enemigos = new enemigo*[cant_enemigos];
-        for (int i = 0; i < cant_enemigos; ++i) {
-            getline(in, linea);
-            string epartes[5];
-            int en = 0;
-            split(linea, '|', epartes, 5, en);
-            string enom = epartes[0];
-            int evida = stoi(epartes[1]);
-            int eataque = stoi(epartes[2]);
-            float eprecision = stof(epartes[3]);
-            float eprob = stof(epartes[4]);
-            nodo->enemigos[i] = new enemigo{enom, evida, eataque, eprecision, eprob};
-        }
-    } else {
-        nodo->enemigos = NULL;
-    }
-
-    // Evento asociado
-    getline(in, linea);
-    if (linea.find("EVENTO|") == 0) {
-        string evpartes[5];
-        int evn = 0;
-        split(linea, '|', evpartes, 5, evn);
-        string ev_nombre = evpartes[1];
-        string ev_desc = evpartes[2];
-        float ev_prob = stof(evpartes[3]);
-        int ev_cant = stoi(evpartes[4]);
-        evento* ev = new evento;
-        ev->nombre = ev_nombre;
-        ev->descripcion = ev_desc;
-        ev->probabilidad = ev_prob;
-        ev->cantidad_opciones = ev_cant;
-        ev->opciones = new opcion_evento[ev_cant];
-        for (int i = 0; i < ev_cant; ++i) {
-            getline(in, linea);
-            string opartes[5];
-            int on = 0;
-            split(linea, '|', opartes, 5, on);
-            ev->opciones[i].descripcion = opartes[0];
-            ev->opciones[i].cambio_vida = stoi(opartes[1]);
-            ev->opciones[i].cambio_ataque = stoi(opartes[2]);
-            ev->opciones[i].cambio_precision = stof(opartes[3]);
-            ev->opciones[i].cambio_recuperacion = stoi(opartes[4]);
-        }
-        nodo->evento_asociado = ev;
-        nodo->evento_dinamico = true;
-    } else {
-        nodo->evento_asociado = NULL;
-    }
-
-    // Recursivo para hijos
-    nodo->n1 = cargar_arbol(in, arbol);
-    nodo->n2 = cargar_arbol(in, arbol);
-    nodo->n3 = cargar_arbol(in, arbol);
-    return nodo;
-}
 
 bonus* leer_bonus(string filename, int& total_bonus) {
     ifstream archivo(filename.c_str());
