@@ -184,7 +184,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
             habitaciones = new estacion*[total_habitaciones];
             for (int i = 0; i < total_habitaciones; ++i) {
                 if (!getline(archivo, linea)) {
-                //    cout << "ERROR: No se pudo leer la línea de la habitación " << i << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
@@ -192,7 +191,6 @@ estacion** leer_habitaciones(string filename, int& total_habitaciones, ArbolTern
                 int n_partes = 0;
                 split(linea, '|', partes, 4, n_partes);
                 if (n_partes < 4) {
-                  //  cout << "ERROR: Formato incorrecto en línea de habitación: " << linea << endl;
                     habitaciones[i] = NULL;
                     continue;
                 }
@@ -291,6 +289,10 @@ void leer_arcos(string filename, estacion** habitaciones, int total_habitaciones
         }
     }
     archivo.close();
+}
+
+estacion* obtener_raiz(estacion** habitaciones) {
+    return habitaciones[0];
 }
 
 // Selecciona un enemigo aleatorio según probabilidad de aparición
@@ -439,7 +441,7 @@ int main() {
     }
 
     leer_arcos(archivo_mapa, habitaciones, total_habitaciones, arbol);
-    arbol.set_raiz(habitaciones[0]);
+    arbol.set_raiz(obtener_raiz(habitaciones));
 
     jugador dr_wolves = {100, 10, 0.7, 0};
     estacion* actual = arbol.get_raiz();
@@ -519,8 +521,6 @@ int main() {
                     if (ev->opciones[idx].cambio_recuperacion != 0) cout << "Recuperación " << (ev->opciones[idx].cambio_recuperacion > 0 ? "+" : "") << ev->opciones[idx].cambio_recuperacion << " ";
                     cout << endl;
                 }
-            } else {
-                cout << "[ERROR] Evento mal formado o sin opciones válidas. Se omite el evento.\n";
             }
         }
 
